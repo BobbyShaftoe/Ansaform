@@ -1,0 +1,29 @@
+[
+
+    {
+        "Environment Variables": {{ environment | to_nice_json | indent(8, indentfirst=False) }}
+    },
+
+
+    {
+        "GROUP NAMES Variables": {{ group_names | to_nice_json | indent(8, indentfirst=False) }}
+    },
+
+
+    {
+        "GROUPS Variables": {{ groups | to_nice_json | indent(8, indentfirst=False) }}
+    },
+
+
+    {
+        "Module Variables": {{ vars | to_nice_json | indent(8, indentfirst=False) }}
+    },
+
+
+    {
+        "HOST Variables": {{ hostvars['127.0.0.1'] | to_nice_json | indent(8, indentfirst=False) }}
+    }
+
+]
+
+

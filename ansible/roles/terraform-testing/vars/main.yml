@@ -1,0 +1,5 @@
+
+#project_name: "docker-server-stack"
+#terraform_template_directory: "template"
+#terraform_statefile_path: "{{ playbook_dir }}/../{{ terraform_template_directory }}/{{ project_name }}"
+

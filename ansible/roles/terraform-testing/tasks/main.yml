@@ -1,0 +1,30 @@
+---
+
+#- name: fetch Terraform networking outputs from Ireland region
+#  fetch_terraform_backend_outputs:
+#    bucket: "terraform-state-repository"
+#    object: "ireland/katapult_cloud_networking.tfstate"
+#  register: vpc_networking
+
+# https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html
+# https://docs.ansible.com/ansible/latest/modules/include_vars_module.html
+# https://docs.ansible.com/ansible/2.4/playbooks_lookups.html#intro-to-lookups-getting-file-contents
+# https://github.com/adammck/terraform-inventory
+
+
+
+
+- include: lookup-tfstate-facts.yml
+
+
+- name: Debug Ansible vars
+  debug:
+    msg: "{{ vars.ansible_all_ipv4_addresses }}"
+
+- include: test-setup.yml
+
+
+
+# ---------- ADDITIONAL TESTS  ----------
+- include: goss-tests.yml
+

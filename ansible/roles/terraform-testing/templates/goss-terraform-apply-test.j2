@@ -1,0 +1,29 @@
+
+{#matching:#}
+{#  check_instance_count: # Make sure there is at least one instance#}
+{#    content: "{{ .Vars.instance_count }}"#}
+{#    matches:#}
+{#      gt: 0#}
+
+
+command:
+    'hostname':
+        exit-status: 0
+        stdout:
+            - {{ vars.ansible_hostname }}
+
+
+matching:
+    local ip address:
+            content: {{ vars.ansible_all_ipv4_addresses | first }}
+            matches:
+                match-regexp: "[0-9]+.[0-9].*"
+
+
+
+{#    has_substr:#}
+{#            content: some string#}
+{#            matches:#}
+{#                match-regexp: some str#}
+
+

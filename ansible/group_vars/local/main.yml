@@ -1,0 +1,27 @@
+
+
+# Directories to be created
+
+tmp_dir: "{{ playbook_dir }}/tmp"
+test_results_dir: "{{ tmp_dir }}/tests"
+goss_results_dir: "{{ test_results_dir }}/goss"
+
+goss_version: 0.3.6
+
+# Variable to allow inclusion of goss-test
+goss_test_role: "{{ playbook_dir }}/roles/goss-test/tasks/main.yml"
+
+goss:
+  download: "https://github.com/aelsabbahy/goss/releases/download/{{ goss_version }}/goss-linux-amd64"
+  binary: "/usr/local/bin/goss"
+
+goss_binary_local_source_path: "/Users/nicksinclair/go/src/github.com/aelsabbahy/goss/release/goss-darwin-amd64"
+
+
+project_name: "docker-server-stack"
+terraform_template_directory: "template"
+#terraform_statefile_path: "{{ playbook_dir }}/../{{ terraform_template_directory }}/{{ project_name }}/terraform.tfstate"
+
+
+terraform_statefile_path: "/Users/nicksinclair/Projects/Testing/terratest/template/docker-server-stack/terraform.tfstate"
+

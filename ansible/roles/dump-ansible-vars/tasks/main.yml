@@ -1,0 +1,71 @@
+---
+
+- name: Dump all vars
+  template:
+    src: dumpall.j2
+    dest: ansible-facts-{{ inventory_hostname }}.json
+
+
+
+- name: Dump all vars to json
+  template:
+    src: dumpall.json.j2
+    dest: ansible-facts-all-{{ inventory_hostname }}.json
+    mode: 0600
+  tags:
+    - dumpall
+    - debug
+
+
+- name: Dump all vars to yaml
+  template:
+    src: dumpall.yml.j2
+    dest: ansible-facts-{{ inventory_hostname }}.yml
+    mode: 0600
+  tags:
+    - dumpall
+    - debug
+
+
+#- name: fetch remote files
+#  # fetch is fail-safe for remote files that don't exist
+#  # setting mode is not an option
+#  fetch:
+#    src: "/tmp/{{ item }}"
+#    dest: "/tmp/{{ ansible_hostname }}-{{item}}"
+#    flat: True
+#  with_items:
+#    - ansible.all.json
+#    - ansible.all.yml
+#    - lms.env.json
+#    - lms.auth.json
+#    - lms-preview.env.json
+#    - lms-preview.auth.json
+#    - cms.env.json
+#    - cms.auth.json
+#  tags:
+#    - dumpall
+#    - debug
+
+
+
+#- name: Dump lms auth|env file
+#  template:
+#    src: "../../edxapp/templates/lms.{{ item }}.json.j2"
+#    dest: "/tmp/lms.{{ item }}.json"
+#    mode: 0600
+#  with_items:
+#    - env
+#    - auth
+#  when: "'lms' in service_variants_enabled"
+#  tags:
+#    - dumpall
+#    - debug
+
+
+
+#
+#- name: Generate files for the frontends and backends
+#  template:
+#    src: service.j2
+#    dest: "{{ haproxy_config_fragments_folder }}/{{ item.key }}"

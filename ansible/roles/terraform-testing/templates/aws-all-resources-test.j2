@@ -1,0 +1,53 @@
+
+{#matching:#}
+{#    'suppliedAWSResourceVars':#}
+{#        content:#}
+{#    {% raw %}#}
+{#    {{ range .vars.aws_resource_vars }}#}
+{#        - {{.}}#}
+{#    {{ end }}#}
+{#    {% endraw %}#}
+{#        matches:#}
+{#            match-regexp: ".*"#}
+
+
+matching:
+    'suppliedAWSResourceVars':
+        content: 'bbb'
+        matches:
+            match-regexp: "bbb.*"
+    'suppliedAWSResourceVars2':
+        content: 'baa'
+        matches:
+            match-regexp: "b.*"
+
+
+matching:
+{% for resource_var in vars.aws_resource_vars %}
+  suppliedAWSResourceVar_{{ resource_var }}
+    content: {{ resource_var }}
+    matches:
+      match-regexp: "."
+{% endfor %}
+
+
+
+
+
+command:
+    'hostname':
+        exit-status: 0
+        stdout:
+            - {{ vars.ansible_hostname }}
+
+
+
+
+{#matching:#}
+{#    'suppliedAWSResourceVars':#}
+{#        content:#}
+{#    {% for resource in vars.aws_resource_vars %}#}
+{#        {{ resource }}#}
+{#    {%  endfor %}#}
+{#        matches:#}
+{#            match-regexp: ".*"#}

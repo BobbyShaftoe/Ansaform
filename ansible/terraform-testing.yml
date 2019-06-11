@@ -1,0 +1,15 @@
+
+
+- hosts: local
+#  connection: local
+#  gather_facts: True
+  user: nicksinclair
+#  vars:
+#    statefile_vars: "{{ lookup('file', terraform_statefile_path ) }}"
+  roles:
+    - "dump-ansible-vars"
+    - "goss"
+    - "terraform-testing"
+
+
+

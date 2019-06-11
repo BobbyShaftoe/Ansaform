@@ -1,0 +1,375 @@
+---
+
+#- name: fetch Terraform networking outputs from Ireland region
+#  fetch_terraform_backend_outputs:
+#    bucket: "terraform-state-repository"
+#    object: "ireland/katapult_cloud_networking.tfstate"
+#  register: vpc_networking
+
+
+# https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html
+# https://docs.ansible.com/ansible/latest/modules/include_vars_module.html
+# https://docs.ansible.com/ansible/2.4/playbooks_lookups.html#intro-to-lookups-getting-file-contents
+# https://github.com/adammck/terraform-inventory
+
+
+- name: Lookup Terraform state
+  set_fact:
+    tfstate: "{{ lookup('tfstate', terraform_statefile_path) }}"
+  no_log: True
+
+
+- name: Lookup Terraform state modules
+  set_fact:
+    tfstate_modules: "{{ lookup('tfstate', terraform_statefile_path, section='modules') }}"
+  no_log: True
+
+
+
+- name: Lookup Terraform state module paths
+  set_fact:
+    tfstate_module_paths: "{{ lookup('tfstate', terraform_statefile_path,
+                        section='modules', enumerate='path') }}"
+
+
+
+- name: Lookup Terraform state module resources
+  set_fact:
+    tfstate_module_resources: "{{ lookup('tfstate', terraform_statefile_path,
+                        section='modules', enumerate='resources') }}"
+
+
+
+- name: Lookup Terraform state module resources with paths
+  set_fact:
+    tfstate_module_resources_with_paths: "{{ lookup('tfstate', terraform_statefile_path,
+                        enumerate_with_path='resources', section='modules') }}"
+
+
+
+- name: Lookup Terraform state module resource attributes
+  set_fact:
+    tfstate_module_resource_attributes: "{{ lookup('tfstate', terraform_statefile_path,
+                        enumerate_attributes='resources', section='modules') }}"
+
+
+
+- name: Lookup Terraform state attributes
+  set_fact:
+    tfstate_module_output_attributes: "{{ lookup('tfstate', terraform_statefile_path,
+                        enumerate_attributes='outputs', section='modules') }}"
+
+
+
+
+#- name: Lookup Terraform state asset attributes
+#  set_fact:
+#    tfstate_module_resources_with_all: "{{ lookup('tfstate', terraform_statefile_path,
+#        enumerate_asset_attribute='resources', section='modules', attributes=['outputs', 'depends_on']) }}"
+
+
+
+
+
+# --------------- BUILD CUSTOM DATA STRUCTURES FROM EXISTING ---------------
+
+
+
+- name: Create working dict of resources from tfstate_module_resources_with_paths using items2dict
+  set_fact:
+    tfstate_module_path_resources: "{{ tfstate_module_resources_with_paths | items2dict(key_name='path',
+    value_name='resources')
+     }}"
+  no_log: True
+
+
+
+- name: Create tfstate_resources list from tfstate_module_resource_attributes
+  vars:
+    tfstate_resources: []
+  set_fact:
+    tfstate_resources: "{{ tfstate_resources + [{
+              'resource': item['resource'],
+              'type': item['resource_attributes']['type'],
+              'path': item['path'],
+              'depends_on': item['resource_attributes']['depends_on'] }] }}"
+  loop: "{{ tfstate_module_resource_attributes }}"
+  no_log: True
+
+
+
+
+# --------------- BUILD CUSTOM DATA STRUCTURES FROM EXISTING ---------------
+
+
+
+
+- name: Debug Terraform statefile path
+  debug:
+    var: terraform_statefile_path
+    verbosity: 0
+
+
+- name: Debug Terraform state module paths - this is a list
+  debug:
+    var: tfstate_module_paths
+    verbosity: 0
+
+
+
+- name: Dump all tfstate raw to json
+  template:
+    src: dumpall-tfstate-raw.j2
+    dest: tfstate-facts-raw.yml
+    mode: 0644
+
+- name: Dump all vars to yaml
+  template:
+    src: dumpall-tfstate.j2
+    dest: tfstate-facts-all.yml
+    mode: 0644
+
+
+
+- name: tfstate_module_path_resources keys
+  debug:
+    var: tfstate_module_path_resources.keys()
+
+
+- name: tfstate_module_path_resources root.subnet
+  debug:
+    var: tfstate_module_path_resources['root.subnet']
+
+
+
+- name: Debug Terraform tfstate_module_resource_attributes
+  debug:
+    var: tfstate_module_resource_attributes
+    verbosity: 0
+
+
+
+# This looks up resources based on the module paths
+#- debug:
+#    msg: "{{ tfstate_module_resource_attributes|json_query(\"[?path=='\" + item + \"'].[resource,
+#    resource_attributes.type, resource_attributes.depends_on]\") }}"
+#  loop: "{{ tfstate_module_paths }}"
+
+
+
+
+
+# -------------------- SELECT TEST FIXTURES HERE --------------------
+
+
+- name: "AWS EC2 Test Fixtures"
+  include: "{{ goss_test_role }}"
+  vars:
+    test_name: aws-ec2-test
+    resource_type: "{{ tfstate_resources['type'] }}
+    aws_resource_name: "{{ item }}"
+  when: item == 'root.ec2-instances'
+  loop: "{{ tfstate_module_paths }}"
+
+
+
+#- name: "AWS All Resource Test Fixtures"
+#  include: "{{ goss_test_role }}"
+#  vars:
+#    test_name: aws-all-resources-test
+#    aws_resource_vars:
+#      - "var1"
+#      - "var2"
+
+
+
+
+
+# This looks up resources based on the module paths
+#- name: Create depends on
+#  vars:
+#    depends_on: []
+#  set_fact:
+#    depends_on: "{{ depends_on + [ {'depends_on': item['depends_on'], 'resources': item.keys | join(',') } ] }}"
+#  loop: "{{ tfstate_modules }}"
+
+
+
+
+#    "{{ tfstate_modules | json_query(\"[?path=='\" + item + \"'].[resource,
+#    resource_attributes.type, resource_attributes.depends_on]\") }}"
+
+
+
+
+
+
+
+
+#- name: Debug Terraform tfstate_module_output_attributes
+#  debug:
+#    var: tfstate_module_output_attributes
+#    verbosity: 0
+#
+#- name: Debug Terraform tfstate_module_output_attributes
+#  debug:
+#    msg: "{{ tfstate_module_output_attributes|json_query(\"[?path=='\" + item + \"'].output\") }}"
+#  loop: "{{ tfstate_module_paths }}"
+
+
+
+
+
+
+#
+#- name: "Set fact resources keys"
+#  set_fact:
+#    resources_keys: "{{ item.resources.keys() }}"
+#  loop: "{{ tfstate_module_resources }}"
+#  no_log: True
+#
+#- name: Debug resources keys
+#  debug:
+#    var: resources_keys
+#    verbosity: 0
+
+
+
+#  loop: "{{ tfstate_module_resources | items2dict| json_query('resources') }}"
+
+#- name: "Display all cluster names"
+#  set_fact:
+#    tfstate_groups: "{{ item|json_query('resources[*].type') }}"
+#  loop: "{{ tfstate_module_resources_with_paths }}"
+#  no_log: True
+
+
+#
+#- name: tfstate_resources
+#  debug:
+#    var: tfstate_resources
+
+
+
+
+#- name: tfstate_groups
+#  debug:
+#    var: tfstate_groups
+
+
+
+
+
+#- name: create a tag dictionary of non-empty tags
+#  set_fact:
+#    tags_dict: "{{ (tags_dict|default({}))|combine({item.key: item.value}) }}"
+#  loop: "{{ tfstate_module_resources_with_paths }}"
+
+
+
+#
+#- name: Debug Terraform state resources with module paths - this is a list
+#  debug:
+#    var: item|dict2items
+#    verbosity: 0
+#  loop: "{{ tfstate_module_resources_with_paths }}"
+#
+
+
+
+#
+#- name: tags dict
+#  debug:
+#    var: tags_dict
+#
+
+#msg: "{{ item.0.name }} - {{ item.1 }}"
+#  loop: "{{ users|subelements('mysql.hosts') }}"
+
+#- name: Debug Terraform state json
+#  debug:
+#    msg: "{{ item }}"
+#  with_items: "{{ tfstate }}"
+#
+#
+#- name: Debug Terraform state modules - this is a list
+#  debug:
+#    msg: "{{ item }}"
+#  with_items: "{{ tfstate_modules }}"
+
+
+
+#
+#- name: Debug Terraform state module outputs - this is a list
+#  debug:
+#    var: "{{ item['outputs'] }}"
+#    verbosity: 0
+#  with_items: "{{ tfstate_modules }}"
+#  when: item.ouputs is defined
+#
+#
+#- name: Set fact for Terraform state module outputs - this is a list
+#  set_fact:
+#    module_outputs: "{{ item['outputs'] }}"
+#    verbosity: 0
+#  with_items: "{{ tfstate_modules }}"
+#  when: item.ouputs is defined
+#
+#
+
+
+
+##- name: Debug Terraform statefile keys
+##  debug:
+##    msg: "{{ item }}"
+##  with_items: "{{ tfstate }}"
+#
+#
+#
+#- name: Debug Terraform statefile keys
+#  debug:
+#    msg: "{{ item.key }}"
+#  with_dict: "{{ tfstate }}"
+
+#
+
+
+#- name: Debug Terraform statefile path
+#  debug:
+#    msg: "{{ item }}"
+#  with_items: "{{ terraform_statefile_path }}"
+#
+#- name: Debug Terraform statefile keys
+#  debug:
+#    msg: "{{ item }}"
+#  with_items: "{{ statefile_vars.keys() }}"
+
+
+#- name: Debug Terraform
+#  debug:
+#    msg: "{{ item }}"
+#  with_items: "{{ statefile_vars.modules.keys() }}"
+
+
+
+
+#- name: Iterate JSON
+#  debug:
+#    var: "{{ item }}"
+#  with_items: "{{ statefile_vars.modules }}"
+
+
+#- name: set vpc id
+#  set_fact:
+#    vpc_id: "{{ vpc_networking.vars.katapult_cloud_vpc_id }}"
+
+
+
+
+
+#- name: Include vars of stuff.yaml into the 'stuff' variable (2.2).
+#  include_vars:
+#    file: "{{ terraform_statefile_path }}"
+#    name: statefile_vars
+
+#

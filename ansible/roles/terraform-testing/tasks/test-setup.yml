@@ -1,0 +1,10 @@
+
+
+
+- name: Test that a template can be rendered with ansible facts
+  template:
+    src: templates/test.j2
+    dest: tmp/tests/test-setup.txt
+
+
+

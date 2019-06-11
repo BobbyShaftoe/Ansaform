@@ -1,0 +1,9 @@
+
+
+# --------- TESTS ARE HERE ---------
+
+#- include: "{{ goss_test_role }}"
+#  vars:
+#    test_name: goss-terraform-apply-test
+
+

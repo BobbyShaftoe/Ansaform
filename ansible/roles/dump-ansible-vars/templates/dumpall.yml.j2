@@ -1,0 +1,9 @@
+vars:
+    - name: "Environment Variables"
+        - {{ environment | to_nice_yaml | indent(8, indentfirst=False) }}
+    - name: "GROUP NAMES Variables"
+        {{ group_names | to_nice_yaml | indent(8, indentfirst=False) }}
+    - name: "GROUPS Variables"
+        {{ groups | to_nice_yaml | indent(8, indentfirst=False) }}
+    - name: "Module Variables"
+        {{ vars | to_nice_yaml | indent(8, indentfirst=False) }}
