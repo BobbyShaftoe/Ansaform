@@ -120,13 +120,13 @@
 - name: Dump all tfstate raw to json
   template:
     src: dumpall-tfstate-raw.j2
-    dest: tfstate-facts-raw.yml
+    dest: "{{ outputs_dir }}/tfstate-facts-raw.yml"
     mode: 0644
 
 - name: Dump all vars to yaml
   template:
     src: dumpall-tfstate.j2
-    dest: tfstate-facts-all.yml
+    dest: "{{ outputs_dir }}/tfstate-facts-all.yml"
     mode: 0644
 
 
@@ -162,14 +162,38 @@
 # -------------------- SELECT TEST FIXTURES HERE --------------------
 
 
-- name: "AWS EC2 Test Fixtures"
+#- name: "AWS EC2 Test Fixtures"
+#  include: "{{ goss_test_role }}"
+#  vars:
+#    test_name: aws-ec2-test
+#    resource_type: "{{ tfstate_resources['type'] }}"
+#    aws_resource_name: "{{ item }}"
+#  when: item == 'root.ec2_instances'
+#  loop: "{{ tfstate_module_paths }}"
+#
+
+
+- name: "AWS Resource Attribute Name"
   include: "{{ goss_test_role }}"
   vars:
-    test_name: aws-ec2-test
-    resource_type: "{{ tfstate_resources['type'] }}
-    aws_resource_name: "{{ item }}"
-  when: item == 'root.ec2-instances'
-  loop: "{{ tfstate_module_paths }}"
+    test_name: assert-attrib
+    test_case_name: "{{ item['resource'] }}"
+    resource_type: "{{ item['type'] }}"
+    resource_attribute_name: "{{ item['resource'] }}"
+  with_items: "{{ tfstate_resources }}"
+
+
+
+
+
+- name: "AWS Resource Attribute Names"
+  debug:
+    msg: "type {{ item['type'] }} resource {{ item['resource'] }}"
+  loop: "{{ tfstate_resources }}"
+
+
+
+
 
 
 

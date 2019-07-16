@@ -1,0 +1,190 @@
+h1 {
+    font-family: Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: lighter;
+    color: #586078;
+}
+
+h2 {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.4em;
+    color: #40495d;
+    font-weight: lighter;
+    padding-top: .5em;
+}
+
+ul > li {
+    font-size: 1em;
+    line-height: 1.4em;
+    text-indent: .2em;
+}
+
+li > a {
+    font-family: Helvetica, sans-serif;
+    color: #416e97;
+    font-size: .9em;
+    line-height: 1.3em;
+}
+
+hr {
+    color: #dddddd;
+    margin-bottom: 1em;
+}
+
+
+body {
+    margin-bottom: 3em;
+    padding-left: .2em;
+    font-family: Helvetica, sans-serif;
+    color: #616677;
+}
+
+.testclass > td {
+    border-bottom: .4em solid #949494;
+    color: #4c484e;
+    background-color: #c7c7c7;
+    padding: 2em;
+    padding-bottom: 1em;
+    font-size: 1em;
+}
+
+table > tbody > tr > td {
+    background-color: #f0f0f7;
+    padding-left: 1em;
+    padding-right: 2em;
+    padding-bottom: .3em;
+    padding-top: .3em;
+    text-align: left;
+}
+
+table > tbody > tr > th {
+    background-color: #efefeb;
+    padding-left: 2em;
+    padding-right: 1em;
+    padding-bottom: .3em;
+    padding-top: .3em;
+}
+
+
+.testclass > div {
+    padding: 2em;
+    padding-top: 1em;
+
+}
+
+.testclass > a > div {
+    font-size: 1.2em;
+    color: #5f6773;
+    font-family: Helvetica, sans-serif;
+    padding-bottom: .7em;
+}
+
+.testcase > div {
+    border-left: .3em solid #2365a9;
+    padding-left: 1em;
+}
+
+.testcase pre {
+    display: block;
+    padding: .6em;
+    padding-left: 2em;
+    margin-right: 1em;
+    margin-top: 1em;
+
+    background-color: #f8faff;
+    color: #2f2f2f;
+    white-space: pre-wrap;
+    border-radius: 1em;
+    text-indent: .5em;
+    line-height: 1.4em;
+}
+
+
+.testcase .details b {
+    font-size: 1em;
+    font-family: Helvetica, sans-serif;
+    color: #4c6366;
+}
+
+.testcase .details .testname b {
+    display: block;
+    padding-top: .4em;
+}
+
+.testcase-link {
+    text-decoration: none;
+}
+
+.testcase-cell {
+    height: 1.8em;
+    width: 1.8em;
+    margin: .3em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.testcase-cell a {
+    display: inline-block;
+    margin: -1em;
+    padding: 1em;
+}
+
+.testcase-combined {
+    white-space: pre;
+    padding-left: 1em;
+}
+
+.stdout, .stderr, .property {
+    background-color: #e4f0e9;
+    color: #1f431a;
+    padding-top: .6em;
+    padding-bottom: .1em;
+    margin-top: -.9em;
+}
+
+.skipped {
+    background-color: #fffceb;
+    color: #716e3c;
+    padding-top: .6em;
+    padding-bottom: .1em;
+    margin-top: -.9em;
+}
+
+.failure {
+    background-color: #f9ece2;
+    color: #8b6353;
+    padding-top: .6em;
+    padding-bottom: .1em;
+    margin-top: -.9em;
+}
+
+.passed {
+    background-color: limegreen;
+}
+
+.tooltip {
+    visibility: hidden;
+    padding: .2em;
+    z-index: 1;
+    position: absolute;
+    background: #fff8dc;
+    border: .1em solid #333333;
+    margin-top: 1.5em;
+    margin-left: 1em;
+    opacity: 0;
+}
+
+.tooltip-parent:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.testcase:hover {
+    background-color: #f2f0f0;
+    color: #1c8078;
+}
+
+.result-stats {
+    margin: auto;
+}
+

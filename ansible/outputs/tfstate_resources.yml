@@ -1,0 +1,119 @@
+
+
+- name: "tfstate_resources"
+  -   depends_on: []
+      path: root
+      resource: data.aws_ami.centos
+      type: aws_ami
+  -   depends_on:
+      - aws_instance.ec2
+      path: root.ec2_instances
+      resource: aws_eip.default
+      type: aws_eip
+  -   depends_on: []
+      path: root.ec2_instances
+      resource: aws_instance.ec2
+      type: aws_instance
+  -   depends_on: []
+      path: root.ec2_instances_security_group
+      resource: aws_security_group.main_security_group
+      type: aws_security_group
+  -   depends_on:
+      - aws_security_group.main_security_group
+      path: root.ec2_instances_security_group
+      resource: aws_security_group_rule.main_security_group_rule
+      type: aws_security_group_rule
+  -   depends_on: []
+      path: root.route
+      resource: aws_main_route_table_association.docker_ext_route_0
+      type: aws_main_route_table_association
+  -   depends_on: []
+      path: root.route
+      resource: aws_route.docker_ext_route_0
+      type: aws_route
+  -   depends_on: []
+      path: root.route
+      resource: aws_route_table.docker_ext_route_0
+      type: aws_route_table
+  -   depends_on: []
+      path: root.route
+      resource: aws_route_table.docker_int_route_1
+      type: aws_route_table
+  -   depends_on:
+      - aws_route_table.docker_ext_route_0
+      path: root.route
+      resource: aws_route_table_association.api_ext_ass0
+      type: aws_route_table_association
+  -   depends_on:
+      - aws_route_table.docker_ext_route_0
+      path: root.route
+      resource: aws_route_table_association.api_ext_ass1
+      type: aws_route_table_association
+  -   depends_on:
+      - aws_route_table.docker_ext_route_0
+      path: root.route
+      resource: aws_route_table_association.api_ext_ass2
+      type: aws_route_table_association
+  -   depends_on:
+      - aws_route_table.docker_int_route_1
+      path: root.route
+      resource: aws_route_table_association.api_int_ass3
+      type: aws_route_table_association
+  -   depends_on:
+      - aws_route_table.docker_int_route_1
+      path: root.route
+      resource: aws_route_table_association.api_int_ass4
+      type: aws_route_table_association
+  -   depends_on:
+      - aws_route_table.docker_int_route_1
+      path: root.route
+      resource: aws_route_table_association.api_int_ass5
+      type: aws_route_table_association
+  -   depends_on:
+      - data.aws_vpc.selected
+      path: root.subnet
+      resource: aws_subnet.docker_ext_subnet_0
+      type: aws_subnet
+  -   depends_on:
+      - data.aws_vpc.selected
+      path: root.subnet
+      resource: aws_subnet.docker_ext_subnet_1
+      type: aws_subnet
+  -   depends_on:
+      - data.aws_vpc.selected
+      path: root.subnet
+      resource: aws_subnet.docker_ext_subnet_2
+      type: aws_subnet
+  -   depends_on:
+      - data.aws_vpc.selected
+      path: root.subnet
+      resource: aws_subnet.docker_int_subnet_3
+      type: aws_subnet
+  -   depends_on:
+      - data.aws_vpc.selected
+      path: root.subnet
+      resource: aws_subnet.docker_int_subnet_4
+      type: aws_subnet
+  -   depends_on:
+      - data.aws_vpc.selected
+      path: root.subnet
+      resource: aws_subnet.docker_int_subnet_5
+      type: aws_subnet
+  -   depends_on: []
+      path: root.subnet
+      resource: data.aws_vpc.selected
+      type: aws_vpc
+  -   depends_on: []
+      path: root.vpc
+      resource: aws_vpc_dhcp_options.docker_vpc_dhcp_id
+      type: aws_vpc_dhcp_options
+  -   depends_on: []
+      path: root.vpc
+      resource: data.aws_internet_gateway.ig
+      type: aws_internet_gateway
+  -   depends_on: []
+      path: root.vpc
+      resource: data.aws_vpc.this_vpc
+      type: aws_vpc
+
+

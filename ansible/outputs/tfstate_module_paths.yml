@@ -1,0 +1,9 @@
+
+
+- name: "tfstate_module_paths"
+  - root
+  - root.ec2_instances
+  - root.ec2_instances_security_group
+  - root.route
+  - root.subnet
+  - root.vpc

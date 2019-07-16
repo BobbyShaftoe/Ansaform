@@ -15,7 +15,7 @@
 .directory
 
 #Terraform
-.terraform
+template/.terraform
 
 # Icon must end with two \r
 Icon
@@ -71,7 +71,8 @@ Temporary Items
 .apdisk
 
 # Test output directories for ansible-container stuff, leaving the base directory for safety though
-ansible/tests/*
+#ansible/tests/*
 
 # Symlink to ansible/ansible.cfg
 ./ansible.cfg
+

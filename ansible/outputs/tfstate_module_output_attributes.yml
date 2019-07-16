@@ -1,0 +1,119 @@
+
+
+- name: "tfstate_module_output_attributes"
+  -   output: ec2_id
+    output_attributes:
+        sensitive: false
+        type: string
+        value: i-096f20d9e17aeab1f
+    path: root.ec2_instances
+-   output: ec2_public_ip
+    output_attributes:
+        sensitive: false
+        type: string
+        value: 3.217.66.195
+    path: root.ec2_instances
+-   output: main_security_group_id
+    output_attributes:
+        sensitive: false
+        type: string
+        value: sg-0b51a5736b352e40e
+    path: root.ec2_instances_security_group
+-   output: main_security_group_rule_description
+    output_attributes:
+        sensitive: false
+        type: string
+        value: Security group rule for main security group
+    path: root.ec2_instances_security_group
+-   output: main_security_group_rule_from_port
+    output_attributes:
+        sensitive: false
+        type: string
+        value: '443'
+    path: root.ec2_instances_security_group
+-   output: main_security_group_rule_id
+    output_attributes:
+        sensitive: false
+        type: string
+        value: sgrule-3804328200
+    path: root.ec2_instances_security_group
+-   output: main_security_group_rule_to_port
+    output_attributes:
+        sensitive: false
+        type: string
+        value: '443'
+    path: root.ec2_instances_security_group
+-   output: docker_ext_route_0_id
+    output_attributes:
+        sensitive: false
+        type: string
+        value: r-rtb-34c6424d1080289494
+    path: root.route
+-   output: docker_int_route_1_id
+    output_attributes:
+        sensitive: false
+        type: string
+        value: rtb-0cbec5df4a4c11c72
+    path: root.route
+-   output: docker_ext_subnet_id_0
+    output_attributes:
+        sensitive: false
+        type: string
+        value: subnet-0ea30b7e10a5b2f10
+    path: root.subnet
+-   output: docker_ext_subnet_id_1
+    output_attributes:
+        sensitive: false
+        type: string
+        value: subnet-0a90b12a530851542
+    path: root.subnet
+-   output: docker_ext_subnet_id_2
+    output_attributes:
+        sensitive: false
+        type: string
+        value: subnet-0d6357c2ff58241f0
+    path: root.subnet
+-   output: docker_int_subnet_id_3
+    output_attributes:
+        sensitive: false
+        type: string
+        value: subnet-0794a260a0d529688
+    path: root.subnet
+-   output: docker_int_subnet_id_4
+    output_attributes:
+        sensitive: false
+        type: string
+        value: subnet-0bd4510df3dfd555d
+    path: root.subnet
+-   output: docker_int_subnet_id_5
+    output_attributes:
+        sensitive: false
+        type: string
+        value: subnet-046415e6f894cb355
+    path: root.subnet
+-   output: docker_int_gw_id
+    output_attributes:
+        sensitive: false
+        type: string
+        value: igw-37888150
+    path: root.vpc
+-   output: docker_route_table_id
+    output_attributes:
+        sensitive: false
+        type: string
+        value: rtb-34c6424d
+    path: root.vpc
+-   output: docker_vpc_dhcp_id
+    output_attributes:
+        sensitive: false
+        type: string
+        value: dopt-51e68b36
+    path: root.vpc
+-   output: docker_vpc_id
+    output_attributes:
+        sensitive: false
+        type: string
+        value: vpc-22b2cf44
+    path: root.vpc
+
+

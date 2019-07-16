@@ -1,4 +1,6 @@
 
+archive_dir: ".ARCHIVE"
+outputs_dir: "outputs"
 
 # Directories to be created
 
@@ -9,6 +11,7 @@ goss_results_dir: "{{ test_results_dir }}/goss"
 goss_version: 0.3.6
 
 # Variable to allow inclusion of goss-test
+#goss_test_role: "{{ playbook_dir }}/roles/goss-test"
 goss_test_role: "{{ playbook_dir }}/roles/goss-test/tasks/main.yml"
 
 goss:

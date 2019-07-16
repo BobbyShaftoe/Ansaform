@@ -1,7 +1,0 @@
-
-matching:
-    ec2 public ip:
-        content: "ec2_name"
-        matches:
-            match-regexp: ".*"
-

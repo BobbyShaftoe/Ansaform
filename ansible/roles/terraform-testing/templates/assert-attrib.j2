@@ -1,0 +1,12 @@
+
+matching:
+    resource attribute name:
+        content: {{ resource_attribute_name }}
+        matches:
+            match-regexp: ".*[a-z].*"
+
+matching:
+    aws resource type for {{ resource_attribute_name }}:
+        content: {{ resource_type }}
+        matches:
+            match-regexp: ".*"
