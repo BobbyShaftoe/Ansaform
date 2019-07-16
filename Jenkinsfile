@@ -36,8 +36,7 @@ node('aws-node-00') {
             }
 
             stage('Download Terraform') {
-                sh "curl -o Ansaform/terraform https://releases.hashicorp.com/terraform/0.12.4/terraform_0.12" +
-                        ".4_linux_amd64.zip"
+                sh "curl -o ${WORKSPACE}/Ansaform/terraform https://releases.hashicorp.com/terraform/0.12.4/terraform_0.12.4_linux_amd64.zip"
                 sh "chmod ugo+x terraform"
             }
 
