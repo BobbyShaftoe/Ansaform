@@ -3,6 +3,7 @@
 
 env.JOB_NODE_NAME = 'aws-node-00'
 
+def BUILD_DIR = env.BUILD_DIR
 
 
 
@@ -14,6 +15,7 @@ node('aws-node-00') {
 
             stage('Set default workspace') {
                 echo env.WORKSPACE
+                echo BUILD_DIR
             }
 
             stage('Retrieve scm vars') {
