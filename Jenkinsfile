@@ -36,6 +36,11 @@ node('aws-node-00') {
                 checkoutRepo('https://github.com/BobbyShaftoe/Ansaform.git')
             }
 
+            stage('Download Terraform') {
+                def workspace = env.THIS_WORKSPACE
+                sh "curl -o $workspace/terraform https://releases.hashicorp.com/terraform/0.12.4/terraform_0.12.4_linux_amd64.zip"
+            }
+
             stage('Setup Check') {
                 setupCheck {}
             }
