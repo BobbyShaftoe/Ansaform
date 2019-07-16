@@ -31,6 +31,10 @@ node('aws-node-00') {
                 checkout scm
             }
 
+            stage('Checkout ansaform repo') {
+                checkoutRepo('https://github.com/BobbyShaftoe/Ansaform.git')
+            }
+
             stage('Download Terraform') {
                 sh "curl -o terraform https://releases.hashicorp.com/terraform/0.12.4/terraform_0.12.4_linux_amd64.zip"
             }
