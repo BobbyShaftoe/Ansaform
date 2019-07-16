@@ -12,7 +12,7 @@ node('aws-node-00') {
             JOB_DEFINITION = 'Test'
         }
 
-        ws("$env.THIS_WORKSPACE") {
+        ws(env.THIS_WORKSPACE) {
 
 
             stage('Set default workspace') {
