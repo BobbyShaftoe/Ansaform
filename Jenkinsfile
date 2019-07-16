@@ -14,7 +14,7 @@ node('aws-node-00') {
 
             stage('Set default workspace') {
                 echo env.WORKSPACE
-                echo env.BUILD_DIR
+
             }
 
             stage('Retrieve scm vars') {
@@ -36,9 +36,15 @@ node('aws-node-00') {
             }
 
             stage('Download Terraform') {
+                sh "curl -o Ansaform/terraform https://releases.hashicorp.com/terraform/0.12.4/terraform_0.12" +
+                        ".4_linux_amd64.zip"
+                sh "chmod ugo+x terraform"
+            }
 
-//                sh "curl -o $WORKSPACE/terraform https://releases.hashicorp.com/terraform/0.12.4/terraform_0.12.4_linux_amd64.zip"
-                sh "curl -o terraform https://releases.hashicorp.com/terraform/0.12.4/terraform_0.12.4_linux_amd64.zip"
+            stage("Terraform plan") {
+
+                sh "terraform init -var-file=Ansaform/dev/terraform.tfvars Ansaform/template"
+                sh "terraform plan -var-file=Ansaform/dev/terraform.tfvars"
             }
 
             stage('Setup Check') {
