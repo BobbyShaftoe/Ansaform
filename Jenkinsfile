@@ -51,6 +51,9 @@ node('aws-node-00') {
             stage("Terraform plan") {
                     dir("Ansaform") {
 
+                        sh "pwd"
+                        sh "ls -la"
+
                         sh "terraform init template"
                         sh "terraform get template"
                         sh "terraform plan -var-file=../dev/terraform.tfvars template"
