@@ -39,7 +39,7 @@ node('aws-node-00') {
                 dir("Ansaform") {
                     def out='$(pwd)/terraform'
                     sh "curl https://releases.hashicorp.com/terraform/0.12.4/terraform_0.12.4_linux_amd64.zip -o " + out
-                    sh "chmod ugo+x terraform"
+                    sh "chmod ugo+x " + out
                 }
             }
 
