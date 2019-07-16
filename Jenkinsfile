@@ -42,12 +42,13 @@ node('aws-node-00') {
             }
 
             stage("Terraform plan") {
+                dir("Ansaform/template") {
 
-                sh "terraform init Ansaform/template"
-                sh "terraform get  Ansaform/template"
-                sh "terraform plan -var-file=Ansaform/dev/terraform.tfvars Ansaform/template"
+                    sh "terraform init"
+                    sh "terraform get"
+                    sh "terraform plan -var-file=../dev/terraform.tfvars"
+                }
             }
-
             stage('Setup Check') {
                 setupCheck {}
             }
