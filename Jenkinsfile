@@ -41,16 +41,17 @@ node('aws-node-00') {
                 sh "chmod ugo+x terraform"
             }
 
-            stage("Terraform plan") {
-                dir("Ansaform/template") {
-
-                    sh "terraform init"
-                    sh "terraform get"
-                    sh "terraform plan -var-file=../dev/terraform.tfvars"
-                }
-            }
             stage('Setup Check') {
                 setupCheck {}
+            }
+
+            stage("Terraform plan") {
+                    dir("Ansaform/template") {
+
+                        sh "terraform init"
+                        sh "terraform get"
+                        sh "terraform plan -var-file=../dev/terraform.tfvars"
+                    }
             }
 
 
