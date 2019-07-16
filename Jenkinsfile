@@ -16,6 +16,7 @@ node('aws-node-00') {
 
 
             stage('Set default workspace') {
+                echo $WORKSPACE
                 echo env.THIS_WORKSPACE
             }
             stage('Retrieve scm vars') {
