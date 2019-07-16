@@ -12,13 +12,10 @@ node('aws-node-00') {
             JOB_DEFINITION = 'Test'
         }
 
-        ws(env.THIS_WORKSPACE) {
-
-
             stage('Set default workspace') {
                 echo env.WORKSPACE
-                echo env.THIS_WORKSPACE
             }
+
             stage('Retrieve scm vars') {
                 def checkoutVars = checkout scm
                 def commit_id = checkoutVars.GIT_COMMIT
@@ -46,7 +43,7 @@ node('aws-node-00') {
                 setupCheck {}
             }
 
-        }
+
     }
 }
 
