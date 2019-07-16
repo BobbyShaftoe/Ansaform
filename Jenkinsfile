@@ -45,11 +45,11 @@ node('aws-node-00') {
             }
 
             stage("Terraform plan") {
-                    dir("Ansaform/template") {
+                    dir("Ansaform") {
 
-                        sh "terraform init"
-                        sh "terraform get"
-                        sh "terraform plan -var-file=../dev/terraform.tfvars"
+                        sh "terraform init template"
+                        sh "terraform get template"
+                        sh "terraform plan -var-file=../dev/terraform.tfvars template"
                     }
             }
 
