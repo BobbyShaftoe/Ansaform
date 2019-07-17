@@ -37,7 +37,7 @@ node('aws-node-00') {
         }
 
         stage("Terraform plan") {
-            def ansaform_dir = '${WORKSPACE}/Ansaform'
+            def ansaform_dir = WORKSPACE + '/Ansaform'
             dir("$ansaform_dir") {
                 sh "pwd"
                 sh "ls -la"
