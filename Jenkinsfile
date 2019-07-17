@@ -14,6 +14,10 @@ node('aws-node-00') {
             sh 'rm -rf ${WORKSPACE}/*'
         }
 
+        stage('Setup Check') {
+            setupCheck {}
+        }
+
 
         stage('Retrieve scm vars') {
             def checkoutVars = checkout scm
@@ -49,21 +53,25 @@ node('aws-node-00') {
                 sh "./terraform init template"
                 sh "./terraform get template"
                 sh "./terraform plan -var-file=../dev/terraform.tfvars template"
+                sh "ls -la " + ansaform_dir
             }
         }
 
 
-        stage('Setup Check') {
-            setupCheck {}
-        }
-
-        stage('directory listing') {
-            sh 'ls -l ${WORKSPACE}'
-        }
 
 
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 //node('aws-node-00') {
