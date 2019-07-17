@@ -55,7 +55,6 @@ node('aws-node-00') {
                 sh "./terraform refresh -var-file=../dev/terraform.tfvars template"
                 sh "./terraform plan -var-file=../dev/terraform.tfvars template"
                 sh "./terraform apply -auto-approve -var-file=../dev/terraform.tfvars template"
-                sh "./terraform state pull"
 
 
                 def template_dir = WORKSPACE + '/Ansaform/template'
