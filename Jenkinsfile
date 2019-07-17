@@ -88,6 +88,7 @@ node('aws-node-00') {
 
             dir("$ansaform_reports_dir"){
                 sh "python " + junit2html_dir + "/junit2html.py -m aws-resource-attributes-test-report.xml *"
+                sh "python " + junit2html_dir + "/junit2html.py aws-resource-attributes-test-report.xml"
             }
 
         }
