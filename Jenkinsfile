@@ -53,7 +53,7 @@ node('aws-node-00') {
                 sh "./terraform init template"
                 sh "./terraform get template"
                 sh "./terraform plan -var-file=../dev/terraform.tfvars template"
-                sh "./terraform apply -var-file=../dev/terraform.tfvars template"
+                sh "./terraform apply -auto-approve -var-file=../dev/terraform.tfvars template"
                 sh "./terraform state pull"
 
                 sh "ls -la " + ansaform_dir
