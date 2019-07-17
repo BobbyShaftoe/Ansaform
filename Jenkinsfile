@@ -30,8 +30,9 @@ node('aws-node-00') {
         }
 
         stage('Download Terraform') {
-            def out = '${WORKSPACE}/Ansaform/terraform'
+            def out = '${WORKSPACE}/Ansaform/terraform.zip'
             sh "curl https://releases.hashicorp.com/terraform/0.12.4/terraform_0.12.4_linux_amd64.zip -o " + out
+            sh "unzip " + out
             sh "chmod ugo+x " + out
             sh "ls -la *"
         }
