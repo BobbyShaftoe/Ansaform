@@ -51,16 +51,17 @@ node('aws-node-00') {
                 sh "ls -la"
                 sh "file terraform"
                 sh "./terraform init template"
+                sh "../terraform state pull > terraform.tfstate"
                 sh "./terraform get template"
                 sh "./terraform refresh -var-file=../dev/terraform.tfvars template"
                 sh "./terraform plan -var-file=../dev/terraform.tfvars template"
                 sh "./terraform apply -auto-approve -var-file=../dev/terraform.tfvars template"
 
 
-                def template_dir = WORKSPACE + '/Ansaform/template'
-                dir("$template_dir") {
-                    sh "../terraform state pull > terraform.tfstate"
-                }
+//                def template_dir = WORKSPACE + '/Ansaform/template'
+//                dir("$template_dir") {
+//                    sh "../terraform state pull > terraform.tfstate"
+//                }
 
                 sh "ls -la " + ansaform_dir
             }
@@ -69,6 +70,18 @@ node('aws-node-00') {
         stage('Ansaform'){
             def terraform_statefile_path = WORKSPACE + '/Ansaform/template/terraform.tfstate'
             def ansible_dir = WORKSPACE + '/Ansaform/ansible'
+            dir("$ansible_dir"){
+                sh "ansible-playbook -i hosts.ini --extra-vars " +
+                        "terraform_statefile_path='${terraform_statefile_path}' terraform-testing.yml"
+            }
+
+        }
+
+        stage('Collate all'){
+            def terraform_statefile_path = WORKSPACE + '/Ansaform/template/terraform.tfstate'
+            def ansible_dir = WORKSPACE + '/Ansaform/ansible'
+            def ansaform_reports_dir = WORKSPACE + '/Ansaform/ansible/tests'
+            def junit2html_dir = WORKSPACE + '/Ansaform/lib/junit2html'
             dir("$ansible_dir"){
                 sh "ansible-playbook -i hosts.ini --extra-vars " +
                         "terraform_statefile_path='${terraform_statefile_path}' terraform-testing.yml"
