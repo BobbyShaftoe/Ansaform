@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
     bucket = "development-hn-tfstate"
-    key = "${var.project}/terraforrm.tfstate"
-    region = var.aws_region
+    key = "development/ansaform/terraforrm.tfstate"
+    region = "us-east-1"
   }
 }
 
