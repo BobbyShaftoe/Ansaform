@@ -60,6 +60,15 @@ node('aws-node-00') {
             }
         }
 
+        stage('build documentation') {
+            def documentation_dir = WORKSPACE + '/Ansaform/documentation'
+            sh ". /opt/virtualenv/py36/bin/activate"
+            dir("$documentation_dir") {
+                sh "make html"
+            }
+        }
+
+
 
 
 

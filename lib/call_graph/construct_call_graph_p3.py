@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 
-'''
-generates call graph of given python code file
-in dot format input for graphviz.
+"""
+    generates call graph of given python code file
+    in dot format input for graphviz.
 
-limitations:
-* statically tried to figure out functions calls
-* does not understand classes
-* algorithm is naive and may not statically find
-  all cases
-'''
+    limitations:
+    * statically tried to figure out functions calls
+    * does not understand classes
+    * algorithm is naive and may not statically find
+      all cases
+"""
 
 import sys
 import ast
