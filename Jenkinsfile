@@ -51,17 +51,16 @@ node('aws-node-00') {
                 sh "ls -la"
                 sh "file terraform"
                 sh "./terraform init template"
-                sh "../terraform state pull > terraform.tfstate"
                 sh "./terraform get template"
                 sh "./terraform refresh -var-file=../dev/terraform.tfvars template"
                 sh "./terraform plan -var-file=../dev/terraform.tfvars template"
                 sh "./terraform apply -auto-approve -var-file=../dev/terraform.tfvars template"
 
 
-//                def template_dir = WORKSPACE + '/Ansaform/template'
-//                dir("$template_dir") {
-//                    sh "../terraform state pull > terraform.tfstate"
-//                }
+                def config_dir = WORKSPACE + '/Ansaform'
+                dir("$config_dir") {
+                    sh "../terraform state pull > '${ansaform_dir}'/terraform.tfstate"
+                }
 
                 sh "ls -la " + ansaform_dir
             }
