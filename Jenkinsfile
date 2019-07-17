@@ -59,11 +59,21 @@ node('aws-node-00') {
 
                 def template_dir = WORKSPACE + '/Ansaform/template'
                 dir("$template_dir") {
-                    sh "./terraform state pull > terraform.tfstate"
+                    sh "../terraform state pull > terraform.tfstate"
                 }
 
                 sh "ls -la " + ansaform_dir
             }
+        }
+
+        stage('Ansaform'){
+            def terraform_statefile_path = WORKSPACE + '/Ansaform/template/terraform.tfstate'
+            def ansible_dir = WORKSPACE + '/Ansaform/ansible'
+            dir("$ansible_dir"){
+                sh "ansible-playbook -i hosts.ini --extra-vars " +
+                        "terraform_statefile_path='${terraform_statefile_path}' terraform-testing.yml"
+            }
+
         }
 
         stage('build documentation') {
