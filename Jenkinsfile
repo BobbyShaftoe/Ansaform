@@ -41,6 +41,7 @@ node('aws-node-00') {
             dir("$ansaform_dir") {
                 sh "pwd"
                 sh "ls -la"
+                sh "file terraform"
                 sh "./terraform init template"
                 sh "./terraform get template"
                 sh "./terraform plan -var-file=../dev/terraform.tfvars template"
