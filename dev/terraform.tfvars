@@ -2,6 +2,7 @@
 aws_id = "088841113972"
 aws_region = "us-east-1"
 environment = "development"
+project = "ansaform"
 
 az = ["us-east-1a", "us-east-1b", "us-east-1c"]
 

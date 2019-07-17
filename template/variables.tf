@@ -3,6 +3,8 @@ variable environment {
   default = ""
 }
 
+variable "project" {}
+
 variable "aws_id" {
   description = "AWS ROOT ID"
   default = ""
