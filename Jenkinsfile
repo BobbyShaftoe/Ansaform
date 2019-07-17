@@ -59,7 +59,7 @@ node('aws-node-00') {
 
                 def config_dir = WORKSPACE + '/Ansaform'
                 dir("$config_dir") {
-                    sh "../terraform state pull > '${ansaform_dir}'/terraform.tfstate"
+                    sh "../terraform state pull > template/terraform.tfstate"
                 }
 
                 sh "ls -la " + ansaform_dir
