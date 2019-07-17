@@ -82,9 +82,13 @@ node('aws-node-00') {
             def ansible_dir = WORKSPACE + '/Ansaform/ansible'
             def ansaform_reports_dir = WORKSPACE + '/Ansaform/ansible/tests'
             def junit2html_dir = WORKSPACE + '/Ansaform/lib/junit2html'
-            dir("$ansible_dir"){
-                sh "ansible-playbook -i hosts.ini --extra-vars " +
-                        "terraform_statefile_path='${terraform_statefile_path}' terraform-testing.yml"
+            def ansaform_dir = WORKSPACE + '/Ansaform'
+            def documentation_dir = WORKSPACE + '/Ansaform/documentation'
+
+            sh ". /opt/virtualenv/py36/bin/activate"
+
+            dir("$ansaform_reports_dir"){
+                sh "python " + junit2html_dir + "/junit2html.py -m aws-resource-attributes-test-report.xml *"
             }
 
         }
