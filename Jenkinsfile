@@ -34,7 +34,8 @@ node('aws-node-00') {
             def terraform_binary = '${WORKSPACE}/Ansaform/terraform'
             def terraform_zip = '${WORKSPACE}/Ansaform/terraform.zip'
             sh "curl https://releases.hashicorp.com/terraform/0.12.4/terraform_0.12.4_linux_amd64.zip -o " + terraform_zip
-            sh "unzip " + terraform_zip
+
+            sh "unzip " + terraform_zip + " -d " + '${WORKSPACE}/Ansaform'
             sh "chmod ugo+x " + terraform_binary
             sh "ls -la *"
         }
