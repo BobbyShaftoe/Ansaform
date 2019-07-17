@@ -52,6 +52,7 @@ node('aws-node-00') {
                 sh "file terraform"
                 sh "./terraform init template"
                 sh "./terraform get template"
+                sh "./terraform refresh -var-file=../dev/terraform.tfvars template"
                 sh "./terraform plan -var-file=../dev/terraform.tfvars template"
                 sh "./terraform apply -auto-approve -var-file=../dev/terraform.tfvars template"
                 sh "./terraform state pull"
