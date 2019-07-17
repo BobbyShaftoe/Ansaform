@@ -8,9 +8,10 @@ node('aws-node-00') {
 
         WORKSPACE = pwd()
 
-        stage('Set default workspace') {
+        stage('Set default workspace and cleanup') {
             echo "WORKSPACE"
             echo "${WORKSPACE}"
+            sh 'rm -rf ${WORKSPACE}/*'
         }
 
 
