@@ -74,13 +74,13 @@
 # --------------- BUILD CUSTOM DATA STRUCTURES FROM EXISTING ---------------
 
 
-
-- name: Create working dict of resources from tfstate_module_resources_with_paths using items2dict
-  set_fact:
-    tfstate_module_path_resources: "{{ tfstate_module_resources_with_paths | items2dict(key_name='path',
-    value_name='resources')
-     }}"
-  no_log: True
+### !!! DISABLED TEMPORARILY - ISSUE WITH ITEMS2DICT FILTER NOT FOUND
+#- name: Create working dict of resources from tfstate_module_resources_with_paths using items2dict
+#  set_fact:
+#    tfstate_module_path_resources: "{{ tfstate_module_resources_with_paths | items2dict(key_name='path',
+#    value_name='resources')
+#     }}"
+#  no_log: True
 
 
 
@@ -131,14 +131,16 @@
 
 
 
-- name: tfstate_module_path_resources keys
-  debug:
-    var: tfstate_module_path_resources.keys()
 
+### !!! DISABLED TEMPORARILY - ISSUE WITH ITEMS2DICT FILTER NOT FOUND
 
-- name: tfstate_module_path_resources root.subnet
-  debug:
-    var: tfstate_module_path_resources['root.subnet']
+#- name: tfstate_module_path_resources keys
+#  debug:
+#    var: tfstate_module_path_resources.keys()
+#
+#- name: tfstate_module_path_resources root.subnet
+#  debug:
+#    var: tfstate_module_path_resources['root.subnet']
 
 
 
