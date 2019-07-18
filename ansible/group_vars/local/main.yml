@@ -4,6 +4,8 @@ outputs_dir: "outputs"
 
 # Directories to be created
 
+platform: "{{ hostvars['ansible_system'] }}"
+
 tmp_dir: "{{ playbook_dir }}/tmp"
 test_results_dir: "{{ tmp_dir }}/tests"
 goss_results_dir: "{{ test_results_dir }}/goss"
@@ -18,8 +20,11 @@ goss:
   download: "https://github.com/aelsabbahy/goss/releases/download/{{ goss_version }}/goss-linux-amd64"
   binary: "/usr/local/bin/goss"
 
-goss_binary_local_source_path: "/Users/nicksinclair/go/src/github.com/aelsabbahy/goss/release/goss-darwin-amd64"
+goss_binary_local_source_paths:
+  Darwin: "/Users/nicksinclair/go/src/github.com/aelsabbahy/goss/release/goss-darwin-amd64"
+  Linux: "/usr/local/bin/goss-linux-amd64"
 
+goss_binary_local_source_path: "{{ goss_binary_local_source_paths[platform] }}"
 
 project_name: "docker-server-stack"
 terraform_template_directory: "template"
