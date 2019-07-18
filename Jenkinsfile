@@ -78,7 +78,7 @@ node('aws-node-00') {
             withPythonEnv('/opt/virtualenv/py36/bin/python') {
                 dir("$ansible_dir") {
                     sh ". /opt/virtualenv/py36/bin/activate"
-                    sh "ansible-playbook -vvvvvv -i hosts.ini --extra-vars " +
+                    sh "ansible-playbook -vv -i hosts.ini --extra-vars " +
                             "terraform_statefile_path='${terraform_statefile_path}' terraform-testing.yml"
                 }
             }

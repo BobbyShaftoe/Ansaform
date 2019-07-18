@@ -14,9 +14,9 @@ vars:
 {#    {{ tfstate_module_resources | to_nice_yaml(width=1337) | indent(2, indentfirst=False) }}#}
 
 
-
-  - name: "tfstate_module_path_resources"
-    {{ tfstate_module_path_resources | to_nice_yaml(width=1337) | indent(2, indentfirst=False) }}
+{#  !!! DISABLED TEMPORARILY - ISSUE WITH ITEMS2DICT FILTER NOT FOUND #}
+{#  - name: "tfstate_module_path_resources"#}
+{#    {{ tfstate_module_path_resources | to_nice_yaml(width=1337) | indent(2, indentfirst=False) }}#}
 
 
 
