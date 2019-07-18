@@ -5,7 +5,7 @@ import yaml
 
 from ansible.errors import AnsibleError, AnsibleParserError
 from ansible.plugins.lookup import LookupBase
-from ansible.module_utils._text import to_text
+from ansible.module_utils._text import to_text, to_native
 
 try:
     import display
