@@ -121,7 +121,7 @@ class LookupModule(LookupBase):
         return artifacts
 
 
-def enumerate_assets(modules_list: list, enumerate_key: str) -> list:
+def enumerate_assets(modules_list: list, enumerate_key: str):
     """
     Function to enumerate assets objects in a list and return an identifier attribute for each
     """
