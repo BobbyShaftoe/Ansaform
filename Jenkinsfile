@@ -46,20 +46,26 @@ node('aws-node-00') {
 
         stage("Terraform plan") {
             def ansaform_dir = WORKSPACE + '/Ansaform'
-            dir("$ansaform_dir") {
+            def template_dir = WORKSPACE + '/Ansaform/template'
+            def terraform = WORKSPACE + '/Ansaform/terraform'
+            dir("$template_dir") {
                 sh "pwd"
                 sh "ls -la"
-                sh "file terraform"
-                sh "./terraform init template"
-                sh "./terraform get template"
-                sh "./terraform refresh -var-file=../dev/terraform.tfvars template"
-                sh "./terraform plan -var-file=../dev/terraform.tfvars template"
-                sh "./terraform apply -auto-approve -var-file=../dev/terraform.tfvars template"
 
+                sh "'${terraform}' init"
+                sh "'${terraform}' get"
+                sh "'${terraform}' refresh -var-file=../dev/terraform.tfvars"
+                sh "'${terraform}' plan -var-file=../dev/terraform.tfvars"
+                sh "'${terraform}' apply -auto-approve -var-file=../dev/terraform.tfvars"
 
-                def config_dir = WORKSPACE + '/Ansaform'
-                dir("$config_dir") {
-                    sh "./terraform state pull > template/terraform.tfstate"
+//                sh "./terraform init"
+//                sh "./terraform get"
+//                sh "./terraform refresh -var-file=../dev/terraform.tfvars"
+//                sh "./terraform plan -var-file=../dev/terraform.tfvars"
+//                sh "./terraform apply -auto-approve -var-file=../dev/terraform.tfvars"
+
+                dir("$template_dir") {
+                    sh "'${terraform}' state pull > terraform.tfstate"
                 }
 
                 sh "ls -la " + ansaform_dir
