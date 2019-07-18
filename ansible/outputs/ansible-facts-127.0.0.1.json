@@ -13,10 +13,12 @@
     "ansible_all_ipv4_addresses": [
         "192.168.1.92",
         "192.168.2.1",
-        "10.94.0.10"
+        "172.27.232.24"
     ],
     "ansible_all_ipv6_addresses": [
+        "fe80::cb9:138b:323d:554%en0",
         "fe80::d497:25ff:fec6:7552%awdl0",
+        "fe80::6800:3ff:fe93:be40%bridge0",
         "fe80::741d:8508:fa68:2c27%utun0"
     ],
     "ansible_apparmor": {
@@ -70,7 +72,13 @@
                 "network": "192.168.2.0"
             }
         ],
-        "ipv6": [],
+        "ipv6": [
+            {
+                "address": "fe80::6800:3ff:fe93:be40%bridge0",
+                "prefix": "64",
+                "scope": "0xa"
+            }
+        ],
         "macaddress": "6a:00:03:93:be:40",
         "media": "Unknown",
         "media_select": "Unknown",
@@ -86,45 +94,53 @@
     "ansible_check_mode": false,
     "ansible_connection": "local",
     "ansible_date_time": {
-        "date": "2019-07-11",
-        "day": "11",
-        "epoch": "1562793875",
-        "hour": "05",
-        "iso8601": "2019-07-10T21:24:35Z",
-        "iso8601_basic": "20190711T052435161487",
-        "iso8601_basic_short": "20190711T052435",
-        "iso8601_micro": "2019-07-10T21:24:35.161584Z",
-        "minute": "24",
+        "date": "2019-07-19",
+        "day": "19",
+        "epoch": "1563472850",
+        "hour": "02",
+        "iso8601": "2019-07-18T18:00:50Z",
+        "iso8601_basic": "20190719T020050375336",
+        "iso8601_basic_short": "20190719T020050",
+        "iso8601_micro": "2019-07-18T18:00:50.375451Z",
+        "minute": "00",
         "month": "07",
-        "second": "35",
-        "time": "05:24:35",
+        "second": "50",
+        "time": "02:00:50",
         "tz": "+08",
         "tz_offset": "+0800",
-        "weekday": "Thursday",
-        "weekday_number": "4",
-        "weeknumber": "27",
+        "weekday": "Friday",
+        "weekday_number": "5",
+        "weeknumber": "28",
         "year": "2019"
     },
     "ansible_default_ipv4": {
-        "address": "10.94.0.10",
-        "broadcast": "0xffffffff",
-        "device": "utun1",
+        "address": "192.168.1.92",
+        "broadcast": "192.168.1.255",
+        "device": "en0",
         "flags": [
             "UP",
-            "POINTOPOINT",
+            "BROADCAST",
+            "SMART",
             "RUNNING",
+            "SIMPLEX",
             "MULTICAST"
         ],
-        "gateway": "10.94.0.9",
-        "interface": "utun1",
-        "macaddress": "unknown",
+        "gateway": "192.168.1.254",
+        "interface": "en0",
+        "macaddress": "1c:36:bb:ed:5c:0d",
+        "media": "Unknown",
+        "media_select": "autoselect",
         "mtu": "1500",
-        "netmask": "10.94.0.9",
-        "network": "10.94.0.8",
-        "type": "unknown"
+        "netmask": "255.255.255.0",
+        "network": "192.168.1.0",
+        "options": [
+            "PERFORMNUD",
+            "DAD"
+        ],
+        "status": "active",
+        "type": "ether"
     },
     "ansible_default_ipv6": {},
-    "ansible_dependent_role_names": [],
     "ansible_diff_mode": false,
     "ansible_distribution": "MacOSX",
     "ansible_distribution_major_version": "10",
@@ -132,10 +148,7 @@
     "ansible_distribution_version": "10.13.6",
     "ansible_dns": {
         "nameservers": [
-            "10.94.0.1"
-        ],
-        "search": [
-            "expressvpn"
+            "192.168.1.254"
         ]
     },
     "ansible_domain": "local",
@@ -159,7 +172,12 @@
                 "network": "192.168.1.0"
             }
         ],
-        "ipv6": [],
+        "ipv6": [
+            {
+                "address": "fe80::cb9:138b:323d:554%en0",
+                "prefix": "64"
+            }
+        ],
         "macaddress": "1c:36:bb:ed:5c:0d",
         "media": "Unknown",
         "media_select": "autoselect",
@@ -234,7 +252,7 @@
         "HOME": "/Users/nicksinclair",
         "IRBRC": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/.irbrc",
         "ITERM_PROFILE": "Default",
-        "ITERM_SESSION_ID": "w0t4p0:6DA2A886-940D-4ADA-B92B-E01E581B3A5A",
+        "ITERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
         "LC_CTYPE": "UTF-8",
         "LESS": "-R",
         "LOGNAME": "nicksinclair",
@@ -244,7 +262,7 @@
         "NVM_CD_FLAGS": "-q",
         "NVM_DIR": "/Users/nicksinclair/.nvm",
         "PAGER": "less",
-        "PATH": "/Users/nicksinclair/Projects/.virtualenvs/py37b/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
+        "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
         "PROJECT_HOME": "/Users/nicksinclair/Projects",
         "PWD": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
         "RUBY_VERSION": "ruby-2.5.0",
@@ -255,7 +273,7 @@
         "TERM": "xterm-256color",
         "TERM_PROGRAM": "iTerm.app",
         "TERM_PROGRAM_VERSION": "3.2.9",
-        "TERM_SESSION_ID": "w0t4p0:6DA2A886-940D-4ADA-B92B-E01E581B3A5A",
+        "TERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
         "TMPDIR": "/var/folders/dw/_swcjv0x6pq0d64k2sm4bjdh0000gn/T/",
         "USER": "nicksinclair",
         "USER_NAME": "nicksinclair",
@@ -265,7 +283,7 @@
         "VIRTUALENVWRAPPER_PROJECT_FILENAME": ".project",
         "VIRTUALENVWRAPPER_SCRIPT": "/usr/local/bin/virtualenvwrapper.sh",
         "VIRTUALENVWRAPPER_WORKON_CD": "1",
-        "VIRTUAL_ENV": "/Users/nicksinclair/Projects/.virtualenvs/py37b",
+        "VIRTUAL_ENV": "/Users/nicksinclair/Projects/.virtualenvs/gp37",
         "WORKON_HOME": "/Users/nicksinclair/Projects/.virtualenvs",
         "XPC_FLAGS": "0x0",
         "XPC_SERVICE_NAME": "0",
@@ -276,10 +294,32 @@
         "_system_name": "OSX",
         "_system_type": "Darwin",
         "_system_version": "10.13",
+        "rvm_alias_expanded": "",
+        "rvm_bin_flag": "",
         "rvm_bin_path": "/Users/nicksinclair/.rvm/bin",
+        "rvm_docs_type": "",
+        "rvm_gemstone_package_file": "",
+        "rvm_gemstone_url": "",
+        "rvm_hook": "",
+        "rvm_niceness": "",
+        "rvm_nightly_flag": "",
+        "rvm_only_path_flag": "",
         "rvm_path": "/Users/nicksinclair/.rvm",
         "rvm_prefix": "/Users/nicksinclair",
-        "rvm_version": "1.29.3 (latest)"
+        "rvm_pretty_print_flag": "",
+        "rvm_proxy": "",
+        "rvm_quiet_flag": "",
+        "rvm_ruby_bits": "",
+        "rvm_ruby_file": "",
+        "rvm_ruby_make": "",
+        "rvm_ruby_make_install": "",
+        "rvm_ruby_mode": "",
+        "rvm_script_name": "",
+        "rvm_sdk": "",
+        "rvm_silent_flag": "",
+        "rvm_use_flag": "",
+        "rvm_version": "1.29.3 (latest)",
+        "rvm_wrapper_name": ""
     },
     "ansible_facts": {
         "XHC20": {
@@ -291,14 +331,15 @@
             "mtu": "0",
             "type": "unknown"
         },
-        "_facts_gathered": true,
         "all_ipv4_addresses": [
             "192.168.1.92",
             "192.168.2.1",
-            "10.94.0.10"
+            "172.27.232.24"
         ],
         "all_ipv6_addresses": [
+            "fe80::cb9:138b:323d:554%en0",
             "fe80::d497:25ff:fec6:7552%awdl0",
+            "fe80::6800:3ff:fe93:be40%bridge0",
             "fe80::741d:8508:fa68:2c27%utun0"
         ],
         "ansible_local": {},
@@ -353,7 +394,13 @@
                     "network": "192.168.2.0"
                 }
             ],
-            "ipv6": [],
+            "ipv6": [
+                {
+                    "address": "fe80::6800:3ff:fe93:be40%bridge0",
+                    "prefix": "64",
+                    "scope": "0xa"
+                }
+            ],
             "macaddress": "6a:00:03:93:be:40",
             "media": "Unknown",
             "media_select": "Unknown",
@@ -367,55 +414,60 @@
             "type": "ether"
         },
         "date_time": {
-            "date": "2019-07-11",
-            "day": "11",
-            "epoch": "1562793875",
-            "hour": "05",
-            "iso8601": "2019-07-10T21:24:35Z",
-            "iso8601_basic": "20190711T052435161487",
-            "iso8601_basic_short": "20190711T052435",
-            "iso8601_micro": "2019-07-10T21:24:35.161584Z",
-            "minute": "24",
+            "date": "2019-07-19",
+            "day": "19",
+            "epoch": "1563472850",
+            "hour": "02",
+            "iso8601": "2019-07-18T18:00:50Z",
+            "iso8601_basic": "20190719T020050375336",
+            "iso8601_basic_short": "20190719T020050",
+            "iso8601_micro": "2019-07-18T18:00:50.375451Z",
+            "minute": "00",
             "month": "07",
-            "second": "35",
-            "time": "05:24:35",
+            "second": "50",
+            "time": "02:00:50",
             "tz": "+08",
             "tz_offset": "+0800",
-            "weekday": "Thursday",
-            "weekday_number": "4",
-            "weeknumber": "27",
+            "weekday": "Friday",
+            "weekday_number": "5",
+            "weeknumber": "28",
             "year": "2019"
         },
         "default_ipv4": {
-            "address": "10.94.0.10",
-            "broadcast": "0xffffffff",
-            "device": "utun1",
+            "address": "192.168.1.92",
+            "broadcast": "192.168.1.255",
+            "device": "en0",
             "flags": [
                 "UP",
-                "POINTOPOINT",
+                "BROADCAST",
+                "SMART",
                 "RUNNING",
+                "SIMPLEX",
                 "MULTICAST"
             ],
-            "gateway": "10.94.0.9",
-            "interface": "utun1",
-            "macaddress": "unknown",
+            "gateway": "192.168.1.254",
+            "interface": "en0",
+            "macaddress": "1c:36:bb:ed:5c:0d",
+            "media": "Unknown",
+            "media_select": "autoselect",
             "mtu": "1500",
-            "netmask": "10.94.0.9",
-            "network": "10.94.0.8",
-            "type": "unknown"
+            "netmask": "255.255.255.0",
+            "network": "192.168.1.0",
+            "options": [
+                "PERFORMNUD",
+                "DAD"
+            ],
+            "status": "active",
+            "type": "ether"
         },
         "default_ipv6": {},
-        "discovered_interpreter_python": "/usr/bin/python",
         "distribution": "MacOSX",
         "distribution_major_version": "10",
         "distribution_release": "17.7.0",
         "distribution_version": "10.13.6",
         "dns": {
             "nameservers": [
-                "10.94.0.1"
-            ],
-            "search": [
-                "expressvpn"
+                "192.168.1.254"
             ]
         },
         "domain": "local",
@@ -439,7 +491,12 @@
                     "network": "192.168.1.0"
                 }
             ],
-            "ipv6": [],
+            "ipv6": [
+                {
+                    "address": "fe80::cb9:138b:323d:554%en0",
+                    "prefix": "64"
+                }
+            ],
             "macaddress": "1c:36:bb:ed:5c:0d",
             "media": "Unknown",
             "media_select": "autoselect",
@@ -514,7 +571,7 @@
             "HOME": "/Users/nicksinclair",
             "IRBRC": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/.irbrc",
             "ITERM_PROFILE": "Default",
-            "ITERM_SESSION_ID": "w0t4p0:6DA2A886-940D-4ADA-B92B-E01E581B3A5A",
+            "ITERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
             "LC_CTYPE": "UTF-8",
             "LESS": "-R",
             "LOGNAME": "nicksinclair",
@@ -524,7 +581,7 @@
             "NVM_CD_FLAGS": "-q",
             "NVM_DIR": "/Users/nicksinclair/.nvm",
             "PAGER": "less",
-            "PATH": "/Users/nicksinclair/Projects/.virtualenvs/py37b/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
+            "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
             "PROJECT_HOME": "/Users/nicksinclair/Projects",
             "PWD": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
             "RUBY_VERSION": "ruby-2.5.0",
@@ -535,7 +592,7 @@
             "TERM": "xterm-256color",
             "TERM_PROGRAM": "iTerm.app",
             "TERM_PROGRAM_VERSION": "3.2.9",
-            "TERM_SESSION_ID": "w0t4p0:6DA2A886-940D-4ADA-B92B-E01E581B3A5A",
+            "TERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
             "TMPDIR": "/var/folders/dw/_swcjv0x6pq0d64k2sm4bjdh0000gn/T/",
             "USER": "nicksinclair",
             "USER_NAME": "nicksinclair",
@@ -545,7 +602,7 @@
             "VIRTUALENVWRAPPER_PROJECT_FILENAME": ".project",
             "VIRTUALENVWRAPPER_SCRIPT": "/usr/local/bin/virtualenvwrapper.sh",
             "VIRTUALENVWRAPPER_WORKON_CD": "1",
-            "VIRTUAL_ENV": "/Users/nicksinclair/Projects/.virtualenvs/py37b",
+            "VIRTUAL_ENV": "/Users/nicksinclair/Projects/.virtualenvs/gp37",
             "WORKON_HOME": "/Users/nicksinclair/Projects/.virtualenvs",
             "XPC_FLAGS": "0x0",
             "XPC_SERVICE_NAME": "0",
@@ -556,12 +613,33 @@
             "_system_name": "OSX",
             "_system_type": "Darwin",
             "_system_version": "10.13",
+            "rvm_alias_expanded": "",
+            "rvm_bin_flag": "",
             "rvm_bin_path": "/Users/nicksinclair/.rvm/bin",
+            "rvm_docs_type": "",
+            "rvm_gemstone_package_file": "",
+            "rvm_gemstone_url": "",
+            "rvm_hook": "",
+            "rvm_niceness": "",
+            "rvm_nightly_flag": "",
+            "rvm_only_path_flag": "",
             "rvm_path": "/Users/nicksinclair/.rvm",
             "rvm_prefix": "/Users/nicksinclair",
-            "rvm_version": "1.29.3 (latest)"
+            "rvm_pretty_print_flag": "",
+            "rvm_proxy": "",
+            "rvm_quiet_flag": "",
+            "rvm_ruby_bits": "",
+            "rvm_ruby_file": "",
+            "rvm_ruby_make": "",
+            "rvm_ruby_make_install": "",
+            "rvm_ruby_mode": "",
+            "rvm_script_name": "",
+            "rvm_sdk": "",
+            "rvm_silent_flag": "",
+            "rvm_use_flag": "",
+            "rvm_version": "1.29.3 (latest)",
+            "rvm_wrapper_name": ""
         },
-        "fibre_channel_wwn": [],
         "fips": false,
         "fqdn": "e-to-the-pi-i.local",
         "gather_subset": [
@@ -580,7 +658,6 @@
             "type": "unknown"
         },
         "hostname": "e-to-the-pi-i",
-        "hostnqn": "",
         "interfaces": [
             "XHC20",
             "awdl0",
@@ -635,7 +712,7 @@
         },
         "lsb": {},
         "machine": "x86_64",
-        "memfree_mb": 316,
+        "memfree_mb": -183,
         "memtotal_mb": 16384,
         "model": "MacBookPro11,4",
         "module_setup": true,
@@ -665,7 +742,6 @@
         "processor": "Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz",
         "processor_cores": "4",
         "processor_vcpus": "8",
-        "product_name": "MacBookPro11,4",
         "python": {
             "executable": "/usr/bin/python",
             "has_sslcontext": true,
@@ -745,10 +821,10 @@
             ],
             "ipv4": [
                 {
-                    "address": "10.94.0.10",
-                    "broadcast": "0xffffffff",
-                    "netmask": "10.94.0.9",
-                    "network": "10.94.0.8"
+                    "address": "172.27.232.24",
+                    "broadcast": "0xfffff800",
+                    "netmask": "172.27.232.24",
+                    "network": "172.27.232.24"
                 }
             ],
             "ipv6": [],
@@ -759,7 +835,6 @@
         "virtualization_role": "",
         "virtualization_type": ""
     },
-    "ansible_fibre_channel_wwn": [],
     "ansible_fips": false,
     "ansible_forks": 5,
     "ansible_fqdn": "e-to-the-pi-i.local",
@@ -776,7 +851,6 @@
         "type": "unknown"
     },
     "ansible_hostname": "e-to-the-pi-i",
-    "ansible_hostnqn": "",
     "ansible_interfaces": [
         "XHC20",
         "awdl0",
@@ -835,7 +909,7 @@
     "ansible_local": {},
     "ansible_lsb": {},
     "ansible_machine": "x86_64",
-    "ansible_memfree_mb": 316,
+    "ansible_memfree_mb": -183,
     "ansible_memtotal_mb": 16384,
     "ansible_model": "MacBookPro11,4",
     "ansible_nodename": "e-to-the-pi-i.local",
@@ -870,17 +944,10 @@
     "ansible_play_hosts_all": [
         "127.0.0.1"
     ],
-    "ansible_play_name": "local",
-    "ansible_play_role_names": [
-        "dump-ansible-vars",
-        "goss",
-        "terraform-testing"
-    ],
-    "ansible_playbook_python": "/Users/nicksinclair/Projects/.virtualenvs/py37b/bin/python3.7",
+    "ansible_playbook_python": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin/python3.7",
     "ansible_processor": "Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz",
     "ansible_processor_cores": "4",
     "ansible_processor_vcpus": "8",
-    "ansible_product_name": "MacBookPro11,4",
     "ansible_python": {
         "executable": "/usr/bin/python",
         "has_sslcontext": true,
@@ -903,11 +970,6 @@
     "ansible_python_version": "2.7.10",
     "ansible_real_group_id": 20,
     "ansible_real_user_id": 501,
-    "ansible_role_names": [
-        "goss",
-        "dump-ansible-vars",
-        "terraform-testing"
-    ],
     "ansible_run_tags": [
         "all"
     ],
@@ -969,10 +1031,10 @@
         ],
         "ipv4": [
             {
-                "address": "10.94.0.10",
-                "broadcast": "0xffffffff",
-                "netmask": "10.94.0.9",
-                "network": "10.94.0.8"
+                "address": "172.27.232.24",
+                "broadcast": "0xfffff800",
+                "netmask": "172.27.232.24",
+                "network": "172.27.232.24"
             }
         ],
         "ipv6": [],
@@ -980,18 +1042,17 @@
         "mtu": "1500",
         "type": "unknown"
     },
-    "ansible_verbosity": 1,
+    "ansible_verbosity": 0,
     "ansible_version": {
-        "full": "2.8.0",
+        "full": "2.7.10",
         "major": 2,
-        "minor": 8,
-        "revision": 0,
-        "string": "2.8.0"
+        "minor": 7,
+        "revision": 10,
+        "string": "2.7.10"
     },
     "ansible_virtualization_role": "",
     "ansible_virtualization_type": "",
     "archive_dir": ".ARCHIVE",
-    "discovered_interpreter_python": "/usr/bin/python",
     "environment": [],
     "gather_subset": [
         "all"
@@ -1000,7 +1061,11 @@
         "binary": "/usr/local/bin/goss",
         "download": "https://github.com/aelsabbahy/goss/releases/download/{{ goss_version }}/goss-linux-amd64"
     },
-    "goss_binary_local_source_path": "/Users/nicksinclair/go/src/github.com/aelsabbahy/goss/release/goss-darwin-amd64",
+    "goss_binary_local_source_path": "{{ goss_binary_local_source_paths[local_platform] }}",
+    "goss_binary_local_source_paths": {
+        "Darwin": "/Users/nicksinclair/go/src/github.com/aelsabbahy/goss/release/goss-darwin-amd64",
+        "Linux": "/usr/local/bin/goss-linux-amd64"
+    },
     "goss_results_dir": "{{ test_results_dir }}/goss",
     "goss_test_role": "{{ playbook_dir }}/roles/goss-test/tasks/main.yml",
     "goss_version": "0.3.6",
@@ -1030,10 +1095,12 @@
             "ansible_all_ipv4_addresses": [
                 "192.168.1.92",
                 "192.168.2.1",
-                "10.94.0.10"
+                "172.27.232.24"
             ],
             "ansible_all_ipv6_addresses": [
+                "fe80::cb9:138b:323d:554%en0",
                 "fe80::d497:25ff:fec6:7552%awdl0",
+                "fe80::6800:3ff:fe93:be40%bridge0",
                 "fe80::741d:8508:fa68:2c27%utun0"
             ],
             "ansible_apparmor": {
@@ -1087,7 +1154,13 @@
                         "network": "192.168.2.0"
                     }
                 ],
-                "ipv6": [],
+                "ipv6": [
+                    {
+                        "address": "fe80::6800:3ff:fe93:be40%bridge0",
+                        "prefix": "64",
+                        "scope": "0xa"
+                    }
+                ],
                 "macaddress": "6a:00:03:93:be:40",
                 "media": "Unknown",
                 "media_select": "Unknown",
@@ -1103,42 +1176,51 @@
             "ansible_check_mode": false,
             "ansible_connection": "local",
             "ansible_date_time": {
-                "date": "2019-07-11",
-                "day": "11",
-                "epoch": "1562793875",
-                "hour": "05",
-                "iso8601": "2019-07-10T21:24:35Z",
-                "iso8601_basic": "20190711T052435161487",
-                "iso8601_basic_short": "20190711T052435",
-                "iso8601_micro": "2019-07-10T21:24:35.161584Z",
-                "minute": "24",
+                "date": "2019-07-19",
+                "day": "19",
+                "epoch": "1563472850",
+                "hour": "02",
+                "iso8601": "2019-07-18T18:00:50Z",
+                "iso8601_basic": "20190719T020050375336",
+                "iso8601_basic_short": "20190719T020050",
+                "iso8601_micro": "2019-07-18T18:00:50.375451Z",
+                "minute": "00",
                 "month": "07",
-                "second": "35",
-                "time": "05:24:35",
+                "second": "50",
+                "time": "02:00:50",
                 "tz": "+08",
                 "tz_offset": "+0800",
-                "weekday": "Thursday",
-                "weekday_number": "4",
-                "weeknumber": "27",
+                "weekday": "Friday",
+                "weekday_number": "5",
+                "weeknumber": "28",
                 "year": "2019"
             },
             "ansible_default_ipv4": {
-                "address": "10.94.0.10",
-                "broadcast": "0xffffffff",
-                "device": "utun1",
+                "address": "192.168.1.92",
+                "broadcast": "192.168.1.255",
+                "device": "en0",
                 "flags": [
                     "UP",
-                    "POINTOPOINT",
+                    "BROADCAST",
+                    "SMART",
                     "RUNNING",
+                    "SIMPLEX",
                     "MULTICAST"
                 ],
-                "gateway": "10.94.0.9",
-                "interface": "utun1",
-                "macaddress": "unknown",
+                "gateway": "192.168.1.254",
+                "interface": "en0",
+                "macaddress": "1c:36:bb:ed:5c:0d",
+                "media": "Unknown",
+                "media_select": "autoselect",
                 "mtu": "1500",
-                "netmask": "10.94.0.9",
-                "network": "10.94.0.8",
-                "type": "unknown"
+                "netmask": "255.255.255.0",
+                "network": "192.168.1.0",
+                "options": [
+                    "PERFORMNUD",
+                    "DAD"
+                ],
+                "status": "active",
+                "type": "ether"
             },
             "ansible_default_ipv6": {},
             "ansible_diff_mode": false,
@@ -1148,10 +1230,7 @@
             "ansible_distribution_version": "10.13.6",
             "ansible_dns": {
                 "nameservers": [
-                    "10.94.0.1"
-                ],
-                "search": [
-                    "expressvpn"
+                    "192.168.1.254"
                 ]
             },
             "ansible_domain": "local",
@@ -1175,7 +1254,12 @@
                         "network": "192.168.1.0"
                     }
                 ],
-                "ipv6": [],
+                "ipv6": [
+                    {
+                        "address": "fe80::cb9:138b:323d:554%en0",
+                        "prefix": "64"
+                    }
+                ],
                 "macaddress": "1c:36:bb:ed:5c:0d",
                 "media": "Unknown",
                 "media_select": "autoselect",
@@ -1250,7 +1334,7 @@
                 "HOME": "/Users/nicksinclair",
                 "IRBRC": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/.irbrc",
                 "ITERM_PROFILE": "Default",
-                "ITERM_SESSION_ID": "w0t4p0:6DA2A886-940D-4ADA-B92B-E01E581B3A5A",
+                "ITERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
                 "LC_CTYPE": "UTF-8",
                 "LESS": "-R",
                 "LOGNAME": "nicksinclair",
@@ -1260,7 +1344,7 @@
                 "NVM_CD_FLAGS": "-q",
                 "NVM_DIR": "/Users/nicksinclair/.nvm",
                 "PAGER": "less",
-                "PATH": "/Users/nicksinclair/Projects/.virtualenvs/py37b/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
+                "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
                 "PROJECT_HOME": "/Users/nicksinclair/Projects",
                 "PWD": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
                 "RUBY_VERSION": "ruby-2.5.0",
@@ -1271,7 +1355,7 @@
                 "TERM": "xterm-256color",
                 "TERM_PROGRAM": "iTerm.app",
                 "TERM_PROGRAM_VERSION": "3.2.9",
-                "TERM_SESSION_ID": "w0t4p0:6DA2A886-940D-4ADA-B92B-E01E581B3A5A",
+                "TERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
                 "TMPDIR": "/var/folders/dw/_swcjv0x6pq0d64k2sm4bjdh0000gn/T/",
                 "USER": "nicksinclair",
                 "USER_NAME": "nicksinclair",
@@ -1281,7 +1365,7 @@
                 "VIRTUALENVWRAPPER_PROJECT_FILENAME": ".project",
                 "VIRTUALENVWRAPPER_SCRIPT": "/usr/local/bin/virtualenvwrapper.sh",
                 "VIRTUALENVWRAPPER_WORKON_CD": "1",
-                "VIRTUAL_ENV": "/Users/nicksinclair/Projects/.virtualenvs/py37b",
+                "VIRTUAL_ENV": "/Users/nicksinclair/Projects/.virtualenvs/gp37",
                 "WORKON_HOME": "/Users/nicksinclair/Projects/.virtualenvs",
                 "XPC_FLAGS": "0x0",
                 "XPC_SERVICE_NAME": "0",
@@ -1292,10 +1376,32 @@
                 "_system_name": "OSX",
                 "_system_type": "Darwin",
                 "_system_version": "10.13",
+                "rvm_alias_expanded": "",
+                "rvm_bin_flag": "",
                 "rvm_bin_path": "/Users/nicksinclair/.rvm/bin",
+                "rvm_docs_type": "",
+                "rvm_gemstone_package_file": "",
+                "rvm_gemstone_url": "",
+                "rvm_hook": "",
+                "rvm_niceness": "",
+                "rvm_nightly_flag": "",
+                "rvm_only_path_flag": "",
                 "rvm_path": "/Users/nicksinclair/.rvm",
                 "rvm_prefix": "/Users/nicksinclair",
-                "rvm_version": "1.29.3 (latest)"
+                "rvm_pretty_print_flag": "",
+                "rvm_proxy": "",
+                "rvm_quiet_flag": "",
+                "rvm_ruby_bits": "",
+                "rvm_ruby_file": "",
+                "rvm_ruby_make": "",
+                "rvm_ruby_make_install": "",
+                "rvm_ruby_mode": "",
+                "rvm_script_name": "",
+                "rvm_sdk": "",
+                "rvm_silent_flag": "",
+                "rvm_use_flag": "",
+                "rvm_version": "1.29.3 (latest)",
+                "rvm_wrapper_name": ""
             },
             "ansible_facts": {
                 "XHC20": {
@@ -1307,14 +1413,15 @@
                     "mtu": "0",
                     "type": "unknown"
                 },
-                "_facts_gathered": true,
                 "all_ipv4_addresses": [
                     "192.168.1.92",
                     "192.168.2.1",
-                    "10.94.0.10"
+                    "172.27.232.24"
                 ],
                 "all_ipv6_addresses": [
+                    "fe80::cb9:138b:323d:554%en0",
                     "fe80::d497:25ff:fec6:7552%awdl0",
+                    "fe80::6800:3ff:fe93:be40%bridge0",
                     "fe80::741d:8508:fa68:2c27%utun0"
                 ],
                 "ansible_local": {},
@@ -1369,7 +1476,13 @@
                             "network": "192.168.2.0"
                         }
                     ],
-                    "ipv6": [],
+                    "ipv6": [
+                        {
+                            "address": "fe80::6800:3ff:fe93:be40%bridge0",
+                            "prefix": "64",
+                            "scope": "0xa"
+                        }
+                    ],
                     "macaddress": "6a:00:03:93:be:40",
                     "media": "Unknown",
                     "media_select": "Unknown",
@@ -1383,55 +1496,60 @@
                     "type": "ether"
                 },
                 "date_time": {
-                    "date": "2019-07-11",
-                    "day": "11",
-                    "epoch": "1562793875",
-                    "hour": "05",
-                    "iso8601": "2019-07-10T21:24:35Z",
-                    "iso8601_basic": "20190711T052435161487",
-                    "iso8601_basic_short": "20190711T052435",
-                    "iso8601_micro": "2019-07-10T21:24:35.161584Z",
-                    "minute": "24",
+                    "date": "2019-07-19",
+                    "day": "19",
+                    "epoch": "1563472850",
+                    "hour": "02",
+                    "iso8601": "2019-07-18T18:00:50Z",
+                    "iso8601_basic": "20190719T020050375336",
+                    "iso8601_basic_short": "20190719T020050",
+                    "iso8601_micro": "2019-07-18T18:00:50.375451Z",
+                    "minute": "00",
                     "month": "07",
-                    "second": "35",
-                    "time": "05:24:35",
+                    "second": "50",
+                    "time": "02:00:50",
                     "tz": "+08",
                     "tz_offset": "+0800",
-                    "weekday": "Thursday",
-                    "weekday_number": "4",
-                    "weeknumber": "27",
+                    "weekday": "Friday",
+                    "weekday_number": "5",
+                    "weeknumber": "28",
                     "year": "2019"
                 },
                 "default_ipv4": {
-                    "address": "10.94.0.10",
-                    "broadcast": "0xffffffff",
-                    "device": "utun1",
+                    "address": "192.168.1.92",
+                    "broadcast": "192.168.1.255",
+                    "device": "en0",
                     "flags": [
                         "UP",
-                        "POINTOPOINT",
+                        "BROADCAST",
+                        "SMART",
                         "RUNNING",
+                        "SIMPLEX",
                         "MULTICAST"
                     ],
-                    "gateway": "10.94.0.9",
-                    "interface": "utun1",
-                    "macaddress": "unknown",
+                    "gateway": "192.168.1.254",
+                    "interface": "en0",
+                    "macaddress": "1c:36:bb:ed:5c:0d",
+                    "media": "Unknown",
+                    "media_select": "autoselect",
                     "mtu": "1500",
-                    "netmask": "10.94.0.9",
-                    "network": "10.94.0.8",
-                    "type": "unknown"
+                    "netmask": "255.255.255.0",
+                    "network": "192.168.1.0",
+                    "options": [
+                        "PERFORMNUD",
+                        "DAD"
+                    ],
+                    "status": "active",
+                    "type": "ether"
                 },
                 "default_ipv6": {},
-                "discovered_interpreter_python": "/usr/bin/python",
                 "distribution": "MacOSX",
                 "distribution_major_version": "10",
                 "distribution_release": "17.7.0",
                 "distribution_version": "10.13.6",
                 "dns": {
                     "nameservers": [
-                        "10.94.0.1"
-                    ],
-                    "search": [
-                        "expressvpn"
+                        "192.168.1.254"
                     ]
                 },
                 "domain": "local",
@@ -1455,7 +1573,12 @@
                             "network": "192.168.1.0"
                         }
                     ],
-                    "ipv6": [],
+                    "ipv6": [
+                        {
+                            "address": "fe80::cb9:138b:323d:554%en0",
+                            "prefix": "64"
+                        }
+                    ],
                     "macaddress": "1c:36:bb:ed:5c:0d",
                     "media": "Unknown",
                     "media_select": "autoselect",
@@ -1530,7 +1653,7 @@
                     "HOME": "/Users/nicksinclair",
                     "IRBRC": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/.irbrc",
                     "ITERM_PROFILE": "Default",
-                    "ITERM_SESSION_ID": "w0t4p0:6DA2A886-940D-4ADA-B92B-E01E581B3A5A",
+                    "ITERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
                     "LC_CTYPE": "UTF-8",
                     "LESS": "-R",
                     "LOGNAME": "nicksinclair",
@@ -1540,7 +1663,7 @@
                     "NVM_CD_FLAGS": "-q",
                     "NVM_DIR": "/Users/nicksinclair/.nvm",
                     "PAGER": "less",
-                    "PATH": "/Users/nicksinclair/Projects/.virtualenvs/py37b/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
+                    "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
                     "PROJECT_HOME": "/Users/nicksinclair/Projects",
                     "PWD": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
                     "RUBY_VERSION": "ruby-2.5.0",
@@ -1551,7 +1674,7 @@
                     "TERM": "xterm-256color",
                     "TERM_PROGRAM": "iTerm.app",
                     "TERM_PROGRAM_VERSION": "3.2.9",
-                    "TERM_SESSION_ID": "w0t4p0:6DA2A886-940D-4ADA-B92B-E01E581B3A5A",
+                    "TERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
                     "TMPDIR": "/var/folders/dw/_swcjv0x6pq0d64k2sm4bjdh0000gn/T/",
                     "USER": "nicksinclair",
                     "USER_NAME": "nicksinclair",
@@ -1561,7 +1684,7 @@
                     "VIRTUALENVWRAPPER_PROJECT_FILENAME": ".project",
                     "VIRTUALENVWRAPPER_SCRIPT": "/usr/local/bin/virtualenvwrapper.sh",
                     "VIRTUALENVWRAPPER_WORKON_CD": "1",
-                    "VIRTUAL_ENV": "/Users/nicksinclair/Projects/.virtualenvs/py37b",
+                    "VIRTUAL_ENV": "/Users/nicksinclair/Projects/.virtualenvs/gp37",
                     "WORKON_HOME": "/Users/nicksinclair/Projects/.virtualenvs",
                     "XPC_FLAGS": "0x0",
                     "XPC_SERVICE_NAME": "0",
@@ -1572,12 +1695,33 @@
                     "_system_name": "OSX",
                     "_system_type": "Darwin",
                     "_system_version": "10.13",
+                    "rvm_alias_expanded": "",
+                    "rvm_bin_flag": "",
                     "rvm_bin_path": "/Users/nicksinclair/.rvm/bin",
+                    "rvm_docs_type": "",
+                    "rvm_gemstone_package_file": "",
+                    "rvm_gemstone_url": "",
+                    "rvm_hook": "",
+                    "rvm_niceness": "",
+                    "rvm_nightly_flag": "",
+                    "rvm_only_path_flag": "",
                     "rvm_path": "/Users/nicksinclair/.rvm",
                     "rvm_prefix": "/Users/nicksinclair",
-                    "rvm_version": "1.29.3 (latest)"
+                    "rvm_pretty_print_flag": "",
+                    "rvm_proxy": "",
+                    "rvm_quiet_flag": "",
+                    "rvm_ruby_bits": "",
+                    "rvm_ruby_file": "",
+                    "rvm_ruby_make": "",
+                    "rvm_ruby_make_install": "",
+                    "rvm_ruby_mode": "",
+                    "rvm_script_name": "",
+                    "rvm_sdk": "",
+                    "rvm_silent_flag": "",
+                    "rvm_use_flag": "",
+                    "rvm_version": "1.29.3 (latest)",
+                    "rvm_wrapper_name": ""
                 },
-                "fibre_channel_wwn": [],
                 "fips": false,
                 "fqdn": "e-to-the-pi-i.local",
                 "gather_subset": [
@@ -1596,7 +1740,6 @@
                     "type": "unknown"
                 },
                 "hostname": "e-to-the-pi-i",
-                "hostnqn": "",
                 "interfaces": [
                     "XHC20",
                     "awdl0",
@@ -1651,7 +1794,7 @@
                 },
                 "lsb": {},
                 "machine": "x86_64",
-                "memfree_mb": 316,
+                "memfree_mb": -183,
                 "memtotal_mb": 16384,
                 "model": "MacBookPro11,4",
                 "module_setup": true,
@@ -1681,7 +1824,6 @@
                 "processor": "Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz",
                 "processor_cores": "4",
                 "processor_vcpus": "8",
-                "product_name": "MacBookPro11,4",
                 "python": {
                     "executable": "/usr/bin/python",
                     "has_sslcontext": true,
@@ -1761,10 +1903,10 @@
                     ],
                     "ipv4": [
                         {
-                            "address": "10.94.0.10",
-                            "broadcast": "0xffffffff",
-                            "netmask": "10.94.0.9",
-                            "network": "10.94.0.8"
+                            "address": "172.27.232.24",
+                            "broadcast": "0xfffff800",
+                            "netmask": "172.27.232.24",
+                            "network": "172.27.232.24"
                         }
                     ],
                     "ipv6": [],
@@ -1775,7 +1917,6 @@
                 "virtualization_role": "",
                 "virtualization_type": ""
             },
-            "ansible_fibre_channel_wwn": [],
             "ansible_fips": false,
             "ansible_forks": 5,
             "ansible_fqdn": "e-to-the-pi-i.local",
@@ -1792,7 +1933,6 @@
                 "type": "unknown"
             },
             "ansible_hostname": "e-to-the-pi-i",
-            "ansible_hostnqn": "",
             "ansible_interfaces": [
                 "XHC20",
                 "awdl0",
@@ -1851,7 +1991,7 @@
             "ansible_local": {},
             "ansible_lsb": {},
             "ansible_machine": "x86_64",
-            "ansible_memfree_mb": 316,
+            "ansible_memfree_mb": -183,
             "ansible_memtotal_mb": 16384,
             "ansible_model": "MacBookPro11,4",
             "ansible_nodename": "e-to-the-pi-i.local",
@@ -1877,11 +2017,10 @@
                 "type": "ether"
             },
             "ansible_pkg_mgr": "homebrew",
-            "ansible_playbook_python": "/Users/nicksinclair/Projects/.virtualenvs/py37b/bin/python3.7",
+            "ansible_playbook_python": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin/python3.7",
             "ansible_processor": "Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz",
             "ansible_processor_cores": "4",
             "ansible_processor_vcpus": "8",
-            "ansible_product_name": "MacBookPro11,4",
             "ansible_python": {
                 "executable": "/usr/bin/python",
                 "has_sslcontext": true,
@@ -1965,10 +2104,10 @@
                 ],
                 "ipv4": [
                     {
-                        "address": "10.94.0.10",
-                        "broadcast": "0xffffffff",
-                        "netmask": "10.94.0.9",
-                        "network": "10.94.0.8"
+                        "address": "172.27.232.24",
+                        "broadcast": "0xfffff800",
+                        "netmask": "172.27.232.24",
+                        "network": "172.27.232.24"
                     }
                 ],
                 "ipv6": [],
@@ -1976,18 +2115,17 @@
                 "mtu": "1500",
                 "type": "unknown"
             },
-            "ansible_verbosity": 1,
+            "ansible_verbosity": 0,
             "ansible_version": {
-                "full": "2.8.0",
+                "full": "2.7.10",
                 "major": 2,
-                "minor": 8,
-                "revision": 0,
-                "string": "2.8.0"
+                "minor": 7,
+                "revision": 10,
+                "string": "2.7.10"
             },
             "ansible_virtualization_role": "",
             "ansible_virtualization_type": "",
             "archive_dir": ".ARCHIVE",
-            "discovered_interpreter_python": "/usr/bin/python",
             "gather_subset": [
                 "all"
             ],
@@ -1996,6 +2134,10 @@
                 "download": "https://github.com/aelsabbahy/goss/releases/download/0.3.6/goss-linux-amd64"
             },
             "goss_binary_local_source_path": "/Users/nicksinclair/go/src/github.com/aelsabbahy/goss/release/goss-darwin-amd64",
+            "goss_binary_local_source_paths": {
+                "Darwin": "/Users/nicksinclair/go/src/github.com/aelsabbahy/goss/release/goss-darwin-amd64",
+                "Linux": "/usr/local/bin/goss-linux-amd64"
+            },
             "goss_results_dir": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/tmp/tests/goss",
             "goss_test_role": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/roles/goss-test/tasks/main.yml",
             "goss_version": "0.3.6",
@@ -2015,8 +2157,9 @@
             "inventory_file": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/hosts.ini",
             "inventory_hostname": "127.0.0.1",
             "inventory_hostname_short": "127",
+            "local_platform": "Darwin",
             "module_setup": true,
-            "omit": "__omit_place_holder__8592c2370be17c45d0d0ba0e774c0593fd22270a",
+            "omit": "__omit_place_holder__c3d39cab71a4498f96fd757acaed95eaa0531488",
             "outputs_dir": "outputs",
             "playbook_dir": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
             "project_name": "docker-server-stack",
@@ -2030,8 +2173,9 @@
     "inventory_file": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/hosts.ini",
     "inventory_hostname": "127.0.0.1",
     "inventory_hostname_short": "127",
+    "local_platform": "{{ ansible_system }}",
     "module_setup": true,
-    "omit": "__omit_place_holder__8592c2370be17c45d0d0ba0e774c0593fd22270a",
+    "omit": "__omit_place_holder__c3d39cab71a4498f96fd757acaed95eaa0531488",
     "outputs_dir": "outputs",
     "play_hosts": [
         "127.0.0.1"
@@ -2045,7 +2189,7 @@
         "terraform-testing"
     ],
     "role_path": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/roles/dump-ansible-vars",
-    "role_uuid": "6a000393-be40-2333-96df-00000000000a",
+    "role_uuid": "6a000393-be40-29c2-1207-00000000000a",
     "terraform_statefile_path": "/Users/nicksinclair/Projects/Testing/terratest/template/docker-server-stack/terraform.tfstate",
     "terraform_template_directory": "template",
     "test_results_dir": "{{ tmp_dir }}/tests",
@@ -2078,10 +2222,12 @@
         "ansible_all_ipv4_addresses": [
             "192.168.1.92",
             "192.168.2.1",
-            "10.94.0.10"
+            "172.27.232.24"
         ],
         "ansible_all_ipv6_addresses": [
+            "fe80::cb9:138b:323d:554%en0",
             "fe80::d497:25ff:fec6:7552%awdl0",
+            "fe80::6800:3ff:fe93:be40%bridge0",
             "fe80::741d:8508:fa68:2c27%utun0"
         ],
         "ansible_apparmor": {
@@ -2135,7 +2281,13 @@
                     "network": "192.168.2.0"
                 }
             ],
-            "ipv6": [],
+            "ipv6": [
+                {
+                    "address": "fe80::6800:3ff:fe93:be40%bridge0",
+                    "prefix": "64",
+                    "scope": "0xa"
+                }
+            ],
             "macaddress": "6a:00:03:93:be:40",
             "media": "Unknown",
             "media_select": "Unknown",
@@ -2151,42 +2303,51 @@
         "ansible_check_mode": false,
         "ansible_connection": "local",
         "ansible_date_time": {
-            "date": "2019-07-11",
-            "day": "11",
-            "epoch": "1562793875",
-            "hour": "05",
-            "iso8601": "2019-07-10T21:24:35Z",
-            "iso8601_basic": "20190711T052435161487",
-            "iso8601_basic_short": "20190711T052435",
-            "iso8601_micro": "2019-07-10T21:24:35.161584Z",
-            "minute": "24",
+            "date": "2019-07-19",
+            "day": "19",
+            "epoch": "1563472850",
+            "hour": "02",
+            "iso8601": "2019-07-18T18:00:50Z",
+            "iso8601_basic": "20190719T020050375336",
+            "iso8601_basic_short": "20190719T020050",
+            "iso8601_micro": "2019-07-18T18:00:50.375451Z",
+            "minute": "00",
             "month": "07",
-            "second": "35",
-            "time": "05:24:35",
+            "second": "50",
+            "time": "02:00:50",
             "tz": "+08",
             "tz_offset": "+0800",
-            "weekday": "Thursday",
-            "weekday_number": "4",
-            "weeknumber": "27",
+            "weekday": "Friday",
+            "weekday_number": "5",
+            "weeknumber": "28",
             "year": "2019"
         },
         "ansible_default_ipv4": {
-            "address": "10.94.0.10",
-            "broadcast": "0xffffffff",
-            "device": "utun1",
+            "address": "192.168.1.92",
+            "broadcast": "192.168.1.255",
+            "device": "en0",
             "flags": [
                 "UP",
-                "POINTOPOINT",
+                "BROADCAST",
+                "SMART",
                 "RUNNING",
+                "SIMPLEX",
                 "MULTICAST"
             ],
-            "gateway": "10.94.0.9",
-            "interface": "utun1",
-            "macaddress": "unknown",
+            "gateway": "192.168.1.254",
+            "interface": "en0",
+            "macaddress": "1c:36:bb:ed:5c:0d",
+            "media": "Unknown",
+            "media_select": "autoselect",
             "mtu": "1500",
-            "netmask": "10.94.0.9",
-            "network": "10.94.0.8",
-            "type": "unknown"
+            "netmask": "255.255.255.0",
+            "network": "192.168.1.0",
+            "options": [
+                "PERFORMNUD",
+                "DAD"
+            ],
+            "status": "active",
+            "type": "ether"
         },
         "ansible_default_ipv6": {},
         "ansible_diff_mode": false,
@@ -2196,10 +2357,7 @@
         "ansible_distribution_version": "10.13.6",
         "ansible_dns": {
             "nameservers": [
-                "10.94.0.1"
-            ],
-            "search": [
-                "expressvpn"
+                "192.168.1.254"
             ]
         },
         "ansible_domain": "local",
@@ -2223,7 +2381,12 @@
                     "network": "192.168.1.0"
                 }
             ],
-            "ipv6": [],
+            "ipv6": [
+                {
+                    "address": "fe80::cb9:138b:323d:554%en0",
+                    "prefix": "64"
+                }
+            ],
             "macaddress": "1c:36:bb:ed:5c:0d",
             "media": "Unknown",
             "media_select": "autoselect",
@@ -2298,7 +2461,7 @@
             "HOME": "/Users/nicksinclair",
             "IRBRC": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/.irbrc",
             "ITERM_PROFILE": "Default",
-            "ITERM_SESSION_ID": "w0t4p0:6DA2A886-940D-4ADA-B92B-E01E581B3A5A",
+            "ITERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
             "LC_CTYPE": "UTF-8",
             "LESS": "-R",
             "LOGNAME": "nicksinclair",
@@ -2308,7 +2471,7 @@
             "NVM_CD_FLAGS": "-q",
             "NVM_DIR": "/Users/nicksinclair/.nvm",
             "PAGER": "less",
-            "PATH": "/Users/nicksinclair/Projects/.virtualenvs/py37b/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
+            "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
             "PROJECT_HOME": "/Users/nicksinclair/Projects",
             "PWD": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
             "RUBY_VERSION": "ruby-2.5.0",
@@ -2319,7 +2482,7 @@
             "TERM": "xterm-256color",
             "TERM_PROGRAM": "iTerm.app",
             "TERM_PROGRAM_VERSION": "3.2.9",
-            "TERM_SESSION_ID": "w0t4p0:6DA2A886-940D-4ADA-B92B-E01E581B3A5A",
+            "TERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
             "TMPDIR": "/var/folders/dw/_swcjv0x6pq0d64k2sm4bjdh0000gn/T/",
             "USER": "nicksinclair",
             "USER_NAME": "nicksinclair",
@@ -2329,7 +2492,7 @@
             "VIRTUALENVWRAPPER_PROJECT_FILENAME": ".project",
             "VIRTUALENVWRAPPER_SCRIPT": "/usr/local/bin/virtualenvwrapper.sh",
             "VIRTUALENVWRAPPER_WORKON_CD": "1",
-            "VIRTUAL_ENV": "/Users/nicksinclair/Projects/.virtualenvs/py37b",
+            "VIRTUAL_ENV": "/Users/nicksinclair/Projects/.virtualenvs/gp37",
             "WORKON_HOME": "/Users/nicksinclair/Projects/.virtualenvs",
             "XPC_FLAGS": "0x0",
             "XPC_SERVICE_NAME": "0",
@@ -2340,10 +2503,32 @@
             "_system_name": "OSX",
             "_system_type": "Darwin",
             "_system_version": "10.13",
+            "rvm_alias_expanded": "",
+            "rvm_bin_flag": "",
             "rvm_bin_path": "/Users/nicksinclair/.rvm/bin",
+            "rvm_docs_type": "",
+            "rvm_gemstone_package_file": "",
+            "rvm_gemstone_url": "",
+            "rvm_hook": "",
+            "rvm_niceness": "",
+            "rvm_nightly_flag": "",
+            "rvm_only_path_flag": "",
             "rvm_path": "/Users/nicksinclair/.rvm",
             "rvm_prefix": "/Users/nicksinclair",
-            "rvm_version": "1.29.3 (latest)"
+            "rvm_pretty_print_flag": "",
+            "rvm_proxy": "",
+            "rvm_quiet_flag": "",
+            "rvm_ruby_bits": "",
+            "rvm_ruby_file": "",
+            "rvm_ruby_make": "",
+            "rvm_ruby_make_install": "",
+            "rvm_ruby_mode": "",
+            "rvm_script_name": "",
+            "rvm_sdk": "",
+            "rvm_silent_flag": "",
+            "rvm_use_flag": "",
+            "rvm_version": "1.29.3 (latest)",
+            "rvm_wrapper_name": ""
         },
         "ansible_facts": {
             "XHC20": {
@@ -2355,14 +2540,15 @@
                 "mtu": "0",
                 "type": "unknown"
             },
-            "_facts_gathered": true,
             "all_ipv4_addresses": [
                 "192.168.1.92",
                 "192.168.2.1",
-                "10.94.0.10"
+                "172.27.232.24"
             ],
             "all_ipv6_addresses": [
+                "fe80::cb9:138b:323d:554%en0",
                 "fe80::d497:25ff:fec6:7552%awdl0",
+                "fe80::6800:3ff:fe93:be40%bridge0",
                 "fe80::741d:8508:fa68:2c27%utun0"
             ],
             "ansible_local": {},
@@ -2417,7 +2603,13 @@
                         "network": "192.168.2.0"
                     }
                 ],
-                "ipv6": [],
+                "ipv6": [
+                    {
+                        "address": "fe80::6800:3ff:fe93:be40%bridge0",
+                        "prefix": "64",
+                        "scope": "0xa"
+                    }
+                ],
                 "macaddress": "6a:00:03:93:be:40",
                 "media": "Unknown",
                 "media_select": "Unknown",
@@ -2431,55 +2623,60 @@
                 "type": "ether"
             },
             "date_time": {
-                "date": "2019-07-11",
-                "day": "11",
-                "epoch": "1562793875",
-                "hour": "05",
-                "iso8601": "2019-07-10T21:24:35Z",
-                "iso8601_basic": "20190711T052435161487",
-                "iso8601_basic_short": "20190711T052435",
-                "iso8601_micro": "2019-07-10T21:24:35.161584Z",
-                "minute": "24",
+                "date": "2019-07-19",
+                "day": "19",
+                "epoch": "1563472850",
+                "hour": "02",
+                "iso8601": "2019-07-18T18:00:50Z",
+                "iso8601_basic": "20190719T020050375336",
+                "iso8601_basic_short": "20190719T020050",
+                "iso8601_micro": "2019-07-18T18:00:50.375451Z",
+                "minute": "00",
                 "month": "07",
-                "second": "35",
-                "time": "05:24:35",
+                "second": "50",
+                "time": "02:00:50",
                 "tz": "+08",
                 "tz_offset": "+0800",
-                "weekday": "Thursday",
-                "weekday_number": "4",
-                "weeknumber": "27",
+                "weekday": "Friday",
+                "weekday_number": "5",
+                "weeknumber": "28",
                 "year": "2019"
             },
             "default_ipv4": {
-                "address": "10.94.0.10",
-                "broadcast": "0xffffffff",
-                "device": "utun1",
+                "address": "192.168.1.92",
+                "broadcast": "192.168.1.255",
+                "device": "en0",
                 "flags": [
                     "UP",
-                    "POINTOPOINT",
+                    "BROADCAST",
+                    "SMART",
                     "RUNNING",
+                    "SIMPLEX",
                     "MULTICAST"
                 ],
-                "gateway": "10.94.0.9",
-                "interface": "utun1",
-                "macaddress": "unknown",
+                "gateway": "192.168.1.254",
+                "interface": "en0",
+                "macaddress": "1c:36:bb:ed:5c:0d",
+                "media": "Unknown",
+                "media_select": "autoselect",
                 "mtu": "1500",
-                "netmask": "10.94.0.9",
-                "network": "10.94.0.8",
-                "type": "unknown"
+                "netmask": "255.255.255.0",
+                "network": "192.168.1.0",
+                "options": [
+                    "PERFORMNUD",
+                    "DAD"
+                ],
+                "status": "active",
+                "type": "ether"
             },
             "default_ipv6": {},
-            "discovered_interpreter_python": "/usr/bin/python",
             "distribution": "MacOSX",
             "distribution_major_version": "10",
             "distribution_release": "17.7.0",
             "distribution_version": "10.13.6",
             "dns": {
                 "nameservers": [
-                    "10.94.0.1"
-                ],
-                "search": [
-                    "expressvpn"
+                    "192.168.1.254"
                 ]
             },
             "domain": "local",
@@ -2503,7 +2700,12 @@
                         "network": "192.168.1.0"
                     }
                 ],
-                "ipv6": [],
+                "ipv6": [
+                    {
+                        "address": "fe80::cb9:138b:323d:554%en0",
+                        "prefix": "64"
+                    }
+                ],
                 "macaddress": "1c:36:bb:ed:5c:0d",
                 "media": "Unknown",
                 "media_select": "autoselect",
@@ -2578,7 +2780,7 @@
                 "HOME": "/Users/nicksinclair",
                 "IRBRC": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/.irbrc",
                 "ITERM_PROFILE": "Default",
-                "ITERM_SESSION_ID": "w0t4p0:6DA2A886-940D-4ADA-B92B-E01E581B3A5A",
+                "ITERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
                 "LC_CTYPE": "UTF-8",
                 "LESS": "-R",
                 "LOGNAME": "nicksinclair",
@@ -2588,7 +2790,7 @@
                 "NVM_CD_FLAGS": "-q",
                 "NVM_DIR": "/Users/nicksinclair/.nvm",
                 "PAGER": "less",
-                "PATH": "/Users/nicksinclair/Projects/.virtualenvs/py37b/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
+                "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
                 "PROJECT_HOME": "/Users/nicksinclair/Projects",
                 "PWD": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
                 "RUBY_VERSION": "ruby-2.5.0",
@@ -2599,7 +2801,7 @@
                 "TERM": "xterm-256color",
                 "TERM_PROGRAM": "iTerm.app",
                 "TERM_PROGRAM_VERSION": "3.2.9",
-                "TERM_SESSION_ID": "w0t4p0:6DA2A886-940D-4ADA-B92B-E01E581B3A5A",
+                "TERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
                 "TMPDIR": "/var/folders/dw/_swcjv0x6pq0d64k2sm4bjdh0000gn/T/",
                 "USER": "nicksinclair",
                 "USER_NAME": "nicksinclair",
@@ -2609,7 +2811,7 @@
                 "VIRTUALENVWRAPPER_PROJECT_FILENAME": ".project",
                 "VIRTUALENVWRAPPER_SCRIPT": "/usr/local/bin/virtualenvwrapper.sh",
                 "VIRTUALENVWRAPPER_WORKON_CD": "1",
-                "VIRTUAL_ENV": "/Users/nicksinclair/Projects/.virtualenvs/py37b",
+                "VIRTUAL_ENV": "/Users/nicksinclair/Projects/.virtualenvs/gp37",
                 "WORKON_HOME": "/Users/nicksinclair/Projects/.virtualenvs",
                 "XPC_FLAGS": "0x0",
                 "XPC_SERVICE_NAME": "0",
@@ -2620,12 +2822,33 @@
                 "_system_name": "OSX",
                 "_system_type": "Darwin",
                 "_system_version": "10.13",
+                "rvm_alias_expanded": "",
+                "rvm_bin_flag": "",
                 "rvm_bin_path": "/Users/nicksinclair/.rvm/bin",
+                "rvm_docs_type": "",
+                "rvm_gemstone_package_file": "",
+                "rvm_gemstone_url": "",
+                "rvm_hook": "",
+                "rvm_niceness": "",
+                "rvm_nightly_flag": "",
+                "rvm_only_path_flag": "",
                 "rvm_path": "/Users/nicksinclair/.rvm",
                 "rvm_prefix": "/Users/nicksinclair",
-                "rvm_version": "1.29.3 (latest)"
+                "rvm_pretty_print_flag": "",
+                "rvm_proxy": "",
+                "rvm_quiet_flag": "",
+                "rvm_ruby_bits": "",
+                "rvm_ruby_file": "",
+                "rvm_ruby_make": "",
+                "rvm_ruby_make_install": "",
+                "rvm_ruby_mode": "",
+                "rvm_script_name": "",
+                "rvm_sdk": "",
+                "rvm_silent_flag": "",
+                "rvm_use_flag": "",
+                "rvm_version": "1.29.3 (latest)",
+                "rvm_wrapper_name": ""
             },
-            "fibre_channel_wwn": [],
             "fips": false,
             "fqdn": "e-to-the-pi-i.local",
             "gather_subset": [
@@ -2644,7 +2867,6 @@
                 "type": "unknown"
             },
             "hostname": "e-to-the-pi-i",
-            "hostnqn": "",
             "interfaces": [
                 "XHC20",
                 "awdl0",
@@ -2699,7 +2921,7 @@
             },
             "lsb": {},
             "machine": "x86_64",
-            "memfree_mb": 316,
+            "memfree_mb": -183,
             "memtotal_mb": 16384,
             "model": "MacBookPro11,4",
             "module_setup": true,
@@ -2729,7 +2951,6 @@
             "processor": "Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz",
             "processor_cores": "4",
             "processor_vcpus": "8",
-            "product_name": "MacBookPro11,4",
             "python": {
                 "executable": "/usr/bin/python",
                 "has_sslcontext": true,
@@ -2809,10 +3030,10 @@
                 ],
                 "ipv4": [
                     {
-                        "address": "10.94.0.10",
-                        "broadcast": "0xffffffff",
-                        "netmask": "10.94.0.9",
-                        "network": "10.94.0.8"
+                        "address": "172.27.232.24",
+                        "broadcast": "0xfffff800",
+                        "netmask": "172.27.232.24",
+                        "network": "172.27.232.24"
                     }
                 ],
                 "ipv6": [],
@@ -2823,7 +3044,6 @@
             "virtualization_role": "",
             "virtualization_type": ""
         },
-        "ansible_fibre_channel_wwn": [],
         "ansible_fips": false,
         "ansible_forks": 5,
         "ansible_fqdn": "e-to-the-pi-i.local",
@@ -2840,7 +3060,6 @@
             "type": "unknown"
         },
         "ansible_hostname": "e-to-the-pi-i",
-        "ansible_hostnqn": "",
         "ansible_interfaces": [
             "XHC20",
             "awdl0",
@@ -2899,7 +3118,7 @@
         "ansible_local": {},
         "ansible_lsb": {},
         "ansible_machine": "x86_64",
-        "ansible_memfree_mb": 316,
+        "ansible_memfree_mb": -183,
         "ansible_memtotal_mb": 16384,
         "ansible_model": "MacBookPro11,4",
         "ansible_nodename": "e-to-the-pi-i.local",
@@ -2925,11 +3144,10 @@
             "type": "ether"
         },
         "ansible_pkg_mgr": "homebrew",
-        "ansible_playbook_python": "/Users/nicksinclair/Projects/.virtualenvs/py37b/bin/python3.7",
+        "ansible_playbook_python": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin/python3.7",
         "ansible_processor": "Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz",
         "ansible_processor_cores": "4",
         "ansible_processor_vcpus": "8",
-        "ansible_product_name": "MacBookPro11,4",
         "ansible_python": {
             "executable": "/usr/bin/python",
             "has_sslcontext": true,
@@ -3013,10 +3231,10 @@
             ],
             "ipv4": [
                 {
-                    "address": "10.94.0.10",
-                    "broadcast": "0xffffffff",
-                    "netmask": "10.94.0.9",
-                    "network": "10.94.0.8"
+                    "address": "172.27.232.24",
+                    "broadcast": "0xfffff800",
+                    "netmask": "172.27.232.24",
+                    "network": "172.27.232.24"
                 }
             ],
             "ipv6": [],
@@ -3024,18 +3242,17 @@
             "mtu": "1500",
             "type": "unknown"
         },
-        "ansible_verbosity": 1,
+        "ansible_verbosity": 0,
         "ansible_version": {
-            "full": "2.8.0",
+            "full": "2.7.10",
             "major": 2,
-            "minor": 8,
-            "revision": 0,
-            "string": "2.8.0"
+            "minor": 7,
+            "revision": 10,
+            "string": "2.7.10"
         },
         "ansible_virtualization_role": "",
         "ansible_virtualization_type": "",
         "archive_dir": ".ARCHIVE",
-        "discovered_interpreter_python": "/usr/bin/python",
         "gather_subset": [
             "all"
         ],
@@ -3044,6 +3261,10 @@
             "download": "https://github.com/aelsabbahy/goss/releases/download/0.3.6/goss-linux-amd64"
         },
         "goss_binary_local_source_path": "/Users/nicksinclair/go/src/github.com/aelsabbahy/goss/release/goss-darwin-amd64",
+        "goss_binary_local_source_paths": {
+            "Darwin": "/Users/nicksinclair/go/src/github.com/aelsabbahy/goss/release/goss-darwin-amd64",
+            "Linux": "/usr/local/bin/goss-linux-amd64"
+        },
         "goss_results_dir": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/tmp/tests/goss",
         "goss_test_role": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/roles/goss-test/tasks/main.yml",
         "goss_version": "0.3.6",
@@ -3063,8 +3284,9 @@
         "inventory_file": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/hosts.ini",
         "inventory_hostname": "127.0.0.1",
         "inventory_hostname_short": "127",
+        "local_platform": "Darwin",
         "module_setup": true,
-        "omit": "__omit_place_holder__8592c2370be17c45d0d0ba0e774c0593fd22270a",
+        "omit": "__omit_place_holder__c3d39cab71a4498f96fd757acaed95eaa0531488",
         "outputs_dir": "outputs",
         "playbook_dir": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
         "project_name": "docker-server-stack",

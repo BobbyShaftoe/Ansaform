@@ -1,8 +1,14 @@
 
+- name: "Check if goss binary is already in path"
+  stat:
+    path: "{{ goss.binary }}"
+  register: stat_goss_binary
+
 - name: "Install Goss binary"
   copy:
     src: "{{ goss_binary_local_source_path }}"
     dest: "{{ goss.binary }}"
+  when: stat_goss_binary.stat.exists == false
 
 #
 #- name: "Download Goss"
@@ -20,3 +26,4 @@
   with_items:
     - "{{ tmp_dir }}"
     - "{{ goss_results_dir }}"
+
