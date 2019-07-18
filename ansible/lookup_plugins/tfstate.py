@@ -114,8 +114,9 @@ class LookupModule(LookupBase):
                 else:
                     raise AnsibleParserError("Some parse error")
 
-            except Exception:
-                raise
+            except Exception as e:
+                AnsibleError('Something happened, this was original exception: %s' % to_native(e))
+                # raise
                 # raise Exception("Error in handling enumerate actions")
 
         return artifacts
