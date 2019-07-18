@@ -68,7 +68,7 @@ node('aws-node-00') {
                     sh "'${terraform}' state pull > terraform.tfstate"
                 }
 
-                sh "ls -la " + ansaform_dir
+                sh "ls -la " + template_dir
             }
         }
 

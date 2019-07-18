@@ -13,6 +13,11 @@
 # https://github.com/adammck/terraform-inventory
 
 
+- name: "Terraform statefile path"
+  debug:
+    var: terraform_statefile_path
+
+
 - name: Lookup Terraform state
   set_fact:
     tfstate: "{{ lookup('tfstate', terraform_statefile_path) }}"
