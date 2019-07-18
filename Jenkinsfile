@@ -76,7 +76,8 @@ node('aws-node-00') {
             def terraform_statefile_path = WORKSPACE + '/Ansaform/template/terraform.tfstate'
             def ansible_dir = WORKSPACE + '/Ansaform/ansible'
             dir("$ansible_dir"){
-                sh "ansible-playbook -i hosts.ini --extra-vars " +
+                sh ". /opt/virtualenv/py36/bin/activate"
+                sh "ansible-playbook -vvv -i hosts.ini --extra-vars " +
                         "terraform_statefile_path='${terraform_statefile_path}' terraform-testing.yml"
             }
 
