@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="goss" errors="0" tests="1" failures="0" skipped="0" time="0.001" timestamp="2019-07-11T22:05:23+08:00">
+<testcase name="Matching aws resource type for aws_route_table.docker_int_route_1 matches" time="0.000">
+<system-out>Matching: aws resource type for aws_route_table.docker_int_route_1: matches: matches expectation: [{&#34;match-regexp&#34;:&#34;.*&#34;}]</system-out>
+</testcase>
+</testsuite>

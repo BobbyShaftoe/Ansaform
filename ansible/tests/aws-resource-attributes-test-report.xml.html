@@ -1,0 +1,2023 @@
+
+        <html>
+        <head>
+            <title>aws-resource-attributes-test-report.xml - Junit Test Report</title>
+            <style type="text/css">
+              h1 {
+    font-family: Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: lighter;
+    color: #586078;
+}
+
+h2 {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.4em;
+    color: #40495d;
+    font-weight: lighter;
+    padding-top: .5em;
+}
+
+ul > li {
+    font-size: 1em;
+    line-height: 1.4em;
+    text-indent: .2em;
+}
+
+li > a {
+    font-family: Helvetica, sans-serif;
+    color: #416e97;
+    font-size: .9em;
+    line-height: 1.3em;
+}
+
+hr {
+    color: #dddddd;
+    margin-bottom: 1em;
+}
+
+
+body {
+    margin-bottom: 3em;
+    padding-left: .2em;
+    font-family: Helvetica, sans-serif;
+    color: #616677;
+}
+
+.testclass > td {
+    border-bottom: .4em solid #949494;
+    color: #4c484e;
+    background-color: #c7c7c7;
+    padding: 2em;
+    padding-bottom: 1em;
+    font-size: 1em;
+}
+
+table > tbody > tr > td {
+    background-color: #f0f0f7;
+    padding-left: 1em;
+    padding-right: 2em;
+    padding-bottom: .3em;
+    padding-top: .3em;
+    text-align: left;
+}
+
+table > tbody > tr > th {
+    background-color: #efefeb;
+    padding-left: 2em;
+    padding-right: 1em;
+    padding-bottom: .3em;
+    padding-top: .3em;
+}
+
+
+.testclass > div {
+    padding: 2em;
+    padding-top: 1em;
+
+}
+
+.testclass > a > div {
+    font-size: 1.2em;
+    color: #5f6773;
+    font-family: Helvetica, sans-serif;
+    padding-bottom: .7em;
+}
+
+.testcase > div {
+    border-left: .3em solid #2365a9;
+    padding-left: 1em;
+}
+
+.testcase pre {
+    display: block;
+    padding: .6em;
+    padding-left: 2em;
+    margin-right: 1em;
+    margin-top: 1em;
+
+    background-color: #f8faff;
+    color: #2f2f2f;
+    white-space: pre-wrap;
+    border-radius: 1em;
+    text-indent: .5em;
+    line-height: 1.4em;
+}
+
+
+.testcase .details b {
+    font-size: 1em;
+    font-family: Helvetica, sans-serif;
+    color: #4c6366;
+}
+
+.testcase .details .testname b {
+    display: block;
+    padding-top: .4em;
+}
+
+.testcase-link {
+    text-decoration: none;
+}
+
+.testcase-cell {
+    height: 1.8em;
+    width: 1.8em;
+    margin: .3em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.testcase-cell a {
+    display: inline-block;
+    margin: -1em;
+    padding: 1em;
+}
+
+.testcase-combined {
+    white-space: pre;
+    padding-left: 1em;
+}
+
+.stdout, .stderr, .property {
+    background-color: #e4f0e9;
+    color: #1f431a;
+    padding-top: .6em;
+    padding-bottom: .1em;
+    margin-top: -.9em;
+}
+
+.skipped {
+    background-color: #fffceb;
+    color: #716e3c;
+    padding-top: .6em;
+    padding-bottom: .1em;
+    margin-top: -.9em;
+}
+
+.failure {
+    background-color: #f9ece2;
+    color: #8b6353;
+    padding-top: .6em;
+    padding-bottom: .1em;
+    margin-top: -.9em;
+}
+
+.passed {
+    background-color: limegreen;
+}
+
+.tooltip {
+    visibility: hidden;
+    padding: .2em;
+    z-index: 1;
+    position: absolute;
+    background: #fff8dc;
+    border: .1em solid #333333;
+    margin-top: 1.5em;
+    margin-left: 1em;
+    opacity: 0;
+}
+
+.tooltip-parent:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.testcase:hover {
+    background-color: #f2f0f0;
+    color: #1c8078;
+}
+
+.result-stats {
+    margin: auto;
+}
+
+
+            </style>
+        </head><body><h1>Test Report</h1><ul><li><a href="#833245f5-009d-4187-bbf8-9b3acbb23254">goss</a></li><li><a href="#9e98b164-ad1c-4ec8-92ee-a7aa52816671">goss</a></li><li><a href="#4b212f75-8236-40f8-a295-549dae8997c1">goss</a></li><li><a href="#afd721b1-9dff-4807-9ded-799727e06b23">goss</a></li><li><a href="#f6d96e2a-3142-4069-931a-6aa309ffecbe">goss</a></li><li><a href="#0056c5a1-0f73-404e-bad5-202420f56832">goss</a></li><li><a href="#f390314b-a7af-4980-8e49-a7ec0f77f59d">goss</a></li><li><a href="#f1276fef-acd4-49ce-adba-8d1d593e21eb">goss</a></li><li><a href="#caf67876-dd5b-4843-b3ec-c9ccfb8eda95">goss</a></li><li><a href="#fba64228-3ce6-41ce-945b-3eff176e3427">goss</a></li><li><a href="#ccf7bf7b-744a-4493-9f9c-c9564b0cc9ba">goss</a></li><li><a href="#ae6f19b7-3a40-4095-862f-b10068b738c3">goss</a></li><li><a href="#875d55fb-bc19-411e-929a-d080c43451c6">goss</a></li><li><a href="#43cc072e-ece4-4fd5-8e8b-95730a4647cb">goss</a></li><li><a href="#eb65afc3-10c9-4bcd-a040-9b8f55b19636">goss</a></li><li><a href="#9a93e424-650c-424e-8504-de68f24b6baf">goss</a></li><li><a href="#ecdc1c74-c5a2-4061-bc67-d285017cd865">goss</a></li><li><a href="#fc3ae8ad-1712-4f94-88e2-216b07be8951">goss</a></li><li><a href="#645af1af-08ae-42e2-b387-cc05a09537cf">goss</a></li><li><a href="#f6d1ca8c-90dd-4c3d-9a9d-8d57c2652afa">goss</a></li><li><a href="#94af6b14-1582-432b-9640-9ae7901ca969">goss</a></li><li><a href="#c9f85516-51a0-4315-a110-1c8fa23c30c3">goss</a></li><li><a href="#bfaeba25-31f1-40a4-ba06-6d38936406d7">goss</a></li><li><a href="#61b0d25c-0bfd-46ca-bb80-292a505ad8c4">goss</a></li><li><a href="#6787e3c7-23b5-4ec2-bcbf-c1c43fd320f5">goss</a></li></ul>
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="833245f5-009d-4187-bbf8-9b3acbb23254">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.0 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#3b0ab633-74e3-489f-b627-1c76167073b7">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#ab047bed-e450-4237-b64c-3b19534a7c14">Matching aws resource type for aws_eip.default matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="3b0ab633-74e3-489f-b627-1c76167073b7">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="ab047bed-e450-4237-b64c-3b19534a7c14">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_eip.default matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_eip.default: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="9e98b164-ad1c-4ec8-92ee-a7aa52816671">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#4bf7c24f-a1b4-426f-9c68-d4f1a36a86ae">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#dda795d6-4b4c-4918-a244-48df3e354b70">Matching aws resource type for aws_instance.ec2 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="4bf7c24f-a1b4-426f-9c68-d4f1a36a86ae">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="dda795d6-4b4c-4918-a244-48df3e354b70">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_instance.ec2 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_instance.ec2: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="4b212f75-8236-40f8-a295-549dae8997c1">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#b5a9956e-24e3-4599-b0db-1599d4180cba">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#507590f9-cafe-459f-a210-faa4920651a6">Matching aws resource type for aws_main_route_table_association.docker_ext_route_0 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="b5a9956e-24e3-4599-b0db-1599d4180cba">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="507590f9-cafe-459f-a210-faa4920651a6">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_main_route_table_association.docker_ext_route_0 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_main_route_table_association.docker_ext_route_0: matches:
+                matches expectation: [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="afd721b1-9dff-4807-9ded-799727e06b23">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#4012f254-f588-4b3c-aa4e-e51b9f0c64ca">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#0c815067-bdcf-40d4-a587-e53a817bd243">Matching aws resource type for aws_route.docker_ext_route_0 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="4012f254-f588-4b3c-aa4e-e51b9f0c64ca">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="0c815067-bdcf-40d4-a587-e53a817bd243">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_route.docker_ext_route_0 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_route.docker_ext_route_0: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="f6d96e2a-3142-4069-931a-6aa309ffecbe">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#2ba720fc-10dc-450d-bdad-49ce24115504">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#925d1657-e8ef-4407-ba82-15ecdd727305">Matching aws resource type for aws_route_table.docker_ext_route_0 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="2ba720fc-10dc-450d-bdad-49ce24115504">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="925d1657-e8ef-4407-ba82-15ecdd727305">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_route_table.docker_ext_route_0 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_route_table.docker_ext_route_0: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="0056c5a1-0f73-404e-bad5-202420f56832">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#5ad17755-3bc7-4d90-becc-ee33890211d4">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#fb2e9cda-da89-4066-a4e8-5574dc0a8d5d">Matching aws resource type for aws_route_table.docker_int_route_1 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="5ad17755-3bc7-4d90-becc-ee33890211d4">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="fb2e9cda-da89-4066-a4e8-5574dc0a8d5d">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_route_table.docker_int_route_1 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_route_table.docker_int_route_1: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="f390314b-a7af-4980-8e49-a7ec0f77f59d">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.0 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#d18c814b-5a0c-4695-8b2e-0ed3fb675491">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#c4faa50d-a552-4b8a-8806-8aeb7649fbdc">Matching aws resource type for aws_route_table_association.api_ext_ass0 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="d18c814b-5a0c-4695-8b2e-0ed3fb675491">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="c4faa50d-a552-4b8a-8806-8aeb7649fbdc">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_route_table_association.api_ext_ass0 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_route_table_association.api_ext_ass0: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="f1276fef-acd4-49ce-adba-8d1d593e21eb">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#a1fbf9da-dfe1-49ad-b060-ba5e1598f0cc">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#dbf2dcd7-b57e-411c-a3bf-3575f4b9094f">Matching aws resource type for aws_route_table_association.api_ext_ass1 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="a1fbf9da-dfe1-49ad-b060-ba5e1598f0cc">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="dbf2dcd7-b57e-411c-a3bf-3575f4b9094f">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_route_table_association.api_ext_ass1 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_route_table_association.api_ext_ass1: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="caf67876-dd5b-4843-b3ec-c9ccfb8eda95">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.0 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#6cdf470b-566c-4094-9ae4-39d6c371166b">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#19e67d49-e075-4d5a-9e7f-9334a7d3b777">Matching aws resource type for aws_route_table_association.api_ext_ass2 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="6cdf470b-566c-4094-9ae4-39d6c371166b">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="19e67d49-e075-4d5a-9e7f-9334a7d3b777">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_route_table_association.api_ext_ass2 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_route_table_association.api_ext_ass2: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="fba64228-3ce6-41ce-945b-3eff176e3427">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#a5631ee8-16d5-4fea-a27f-962cb48e285a">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#444ed525-95f5-47ce-952e-698013e7263d">Matching aws resource type for aws_route_table_association.api_int_ass3 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="a5631ee8-16d5-4fea-a27f-962cb48e285a">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="444ed525-95f5-47ce-952e-698013e7263d">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_route_table_association.api_int_ass3 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_route_table_association.api_int_ass3: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="ccf7bf7b-744a-4493-9f9c-c9564b0cc9ba">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#9eab378e-6f0d-495e-b39d-ea63a1ca242c">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#0608a12e-59ce-4696-b71d-a092d4c70661">Matching aws resource type for aws_route_table_association.api_int_ass4 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="9eab378e-6f0d-495e-b39d-ea63a1ca242c">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="0608a12e-59ce-4696-b71d-a092d4c70661">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_route_table_association.api_int_ass4 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_route_table_association.api_int_ass4: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="ae6f19b7-3a40-4095-862f-b10068b738c3">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#262a7fdd-d255-4e32-a88e-4aad3de5b5d6">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#9b40e257-08d5-4140-87f9-b5e935b6d46a">Matching aws resource type for aws_route_table_association.api_int_ass5 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="262a7fdd-d255-4e32-a88e-4aad3de5b5d6">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="9b40e257-08d5-4140-87f9-b5e935b6d46a">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_route_table_association.api_int_ass5 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_route_table_association.api_int_ass5: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="875d55fb-bc19-411e-929a-d080c43451c6">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#36d41925-7558-4b48-9d51-599923cc6b11">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#3e9fe198-c2b7-4e24-ae86-f4466a8b7f8c">Matching aws resource type for aws_security_group.main_security_group matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="36d41925-7558-4b48-9d51-599923cc6b11">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="3e9fe198-c2b7-4e24-ae86-f4466a8b7f8c">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_security_group.main_security_group matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_security_group.main_security_group: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="43cc072e-ece4-4fd5-8e8b-95730a4647cb">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.0 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#87b7d9ef-31a8-4169-96fb-5ce9c0f09712">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#344f538c-2d31-401b-b82e-ecf8b3922240">Matching aws resource type for aws_security_group_rule.main_security_group_rule matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="87b7d9ef-31a8-4169-96fb-5ce9c0f09712">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="344f538c-2d31-401b-b82e-ecf8b3922240">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_security_group_rule.main_security_group_rule matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_security_group_rule.main_security_group_rule: matches:
+                matches expectation: [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="eb65afc3-10c9-4bcd-a040-9b8f55b19636">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.0 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#d59cc56a-d484-43cc-8e2c-06419d418e04">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#5561d8d4-89a8-4d3b-8801-51048e0eee45">Matching aws resource type for aws_subnet.docker_ext_subnet_0 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="d59cc56a-d484-43cc-8e2c-06419d418e04">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="5561d8d4-89a8-4d3b-8801-51048e0eee45">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_subnet.docker_ext_subnet_0 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_subnet.docker_ext_subnet_0: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="9a93e424-650c-424e-8504-de68f24b6baf">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#f1bbc2f1-e07a-4908-b4e9-888efb4965ba">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#52b21489-6ec2-47d3-b9a0-0ce8f6d3853c">Matching aws resource type for aws_subnet.docker_ext_subnet_1 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="f1bbc2f1-e07a-4908-b4e9-888efb4965ba">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="52b21489-6ec2-47d3-b9a0-0ce8f6d3853c">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_subnet.docker_ext_subnet_1 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_subnet.docker_ext_subnet_1: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="ecdc1c74-c5a2-4061-bc67-d285017cd865">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#c6aaf106-8712-4a45-bae0-4c64064459bb">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#62b545ce-c9f6-4d66-bd61-beda9538e63b">Matching aws resource type for aws_subnet.docker_ext_subnet_2 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="c6aaf106-8712-4a45-bae0-4c64064459bb">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="62b545ce-c9f6-4d66-bd61-beda9538e63b">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_subnet.docker_ext_subnet_2 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_subnet.docker_ext_subnet_2: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="fc3ae8ad-1712-4f94-88e2-216b07be8951">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#e0744933-bd39-4977-98be-e1b5958fba33">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#4e8e55e5-129c-4e3e-8746-3e12fdb2a74f">Matching aws resource type for aws_subnet.docker_int_subnet_3 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="e0744933-bd39-4977-98be-e1b5958fba33">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="4e8e55e5-129c-4e3e-8746-3e12fdb2a74f">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_subnet.docker_int_subnet_3 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_subnet.docker_int_subnet_3: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="645af1af-08ae-42e2-b387-cc05a09537cf">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#8e282050-b66a-4868-a6f7-fcae50c75626">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#ed805f54-baae-4333-8d2e-f829036404ee">Matching aws resource type for aws_subnet.docker_int_subnet_4 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="8e282050-b66a-4868-a6f7-fcae50c75626">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="ed805f54-baae-4333-8d2e-f829036404ee">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_subnet.docker_int_subnet_4 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_subnet.docker_int_subnet_4: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="f6d1ca8c-90dd-4c3d-9a9d-8d57c2652afa">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#8e7c591e-407b-408d-bdb3-9e73786a33c9">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#b4976591-813c-49c4-a271-26c57c480da5">Matching aws resource type for aws_subnet.docker_int_subnet_5 matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="8e7c591e-407b-408d-bdb3-9e73786a33c9">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="b4976591-813c-49c4-a271-26c57c480da5">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_subnet.docker_int_subnet_5 matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_subnet.docker_int_subnet_5: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="94af6b14-1582-432b-9640-9ae7901ca969">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#99be1c9c-7eb9-4a84-a0bf-7e3c7c4c19ee">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#add91de8-932b-43a1-a064-1febee2c55fd">Matching aws resource type for aws_vpc_dhcp_options.docker_vpc_dhcp_id matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="99be1c9c-7eb9-4a84-a0bf-7e3c7c4c19ee">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="add91de8-932b-43a1-a064-1febee2c55fd">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for aws_vpc_dhcp_options.docker_vpc_dhcp_id matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for aws_vpc_dhcp_options.docker_vpc_dhcp_id: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="c9f85516-51a0-4315-a110-1c8fa23c30c3">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#e7d8209c-726e-4d9f-be11-5d6cb991c646">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#eb021e77-26ee-4be0-acfa-51e240a43970">Matching aws resource type for data.aws_ami.centos matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="e7d8209c-726e-4d9f-be11-5d6cb991c646">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="eb021e77-26ee-4be0-acfa-51e240a43970">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for data.aws_ami.centos matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for data.aws_ami.centos: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="bfaeba25-31f1-40a4-ba06-6d38936406d7">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#d74edb96-d71e-4c6d-838d-0b1d7e504d2d">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#3baa7c31-385c-4e83-a578-c65fb0f62a0b">Matching aws resource type for data.aws_internet_gateway.ig matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="d74edb96-d71e-4c6d-838d-0b1d7e504d2d">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="3baa7c31-385c-4e83-a578-c65fb0f62a0b">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for data.aws_internet_gateway.ig matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for data.aws_internet_gateway.ig: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="61b0d25c-0bfd-46ca-bb80-292a505ad8c4">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.0 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#cfb9605d-9f3d-40c5-8d7f-b53f7f7ca8da">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#10590e79-af8b-4a17-82ad-1c643491fd50">Matching aws resource type for data.aws_vpc.selected matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="cfb9605d-9f3d-40c5-8d7f-b53f7f7ca8da">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="10590e79-af8b-4a17-82ad-1c643491fd50">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for data.aws_vpc.selected matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for data.aws_vpc.selected: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        
+        <div class="testsuite">
+            <h2>Test Suite: goss</h2><a name="6787e3c7-23b5-4ec2-bcbf-c1c43fd320f5">
+            
+            
+            <table>
+            <tr><th align="left">Duration</th><td align="right">0.001 sec</td></tr>
+            <tr><th align="left">Test Cases</th><td align="right">1</td></tr>
+            <tr><th align="left">Failures</th><td align="right">0</td></tr>
+            
+            
+            </table>
+            <a name="toc"></a>
+            <h2>Results Index</h2>
+            
+        <ul>
+            
+            
+            <li>All Test Classes
+            <ul>
+            <li>
+                <a href="#30df5509-9459-4de3-9bf9-bfd7a0322fe4">no-testclass</a>
+                <ul>
+                
+                    <li>
+                        <a href="#c8308680-c570-4b6c-8af5-c2a64cea0e0f">Matching aws resource type for data.aws_vpc.this_vpc matches</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            </ul>
+            </li>
+        </ul>
+        
+            <hr size="2"/>
+            <h2>Test Results</h2>
+            <div class="testclasses">
+            
+        <hr size="2"/>
+        <a name="30df5509-9459-4de3-9bf9-bfd7a0322fe4">
+        <div class="testclass">
+            <div>Test Class: no-testclass</div>
+            <div class="testcases">
+            
+    <a name="c8308680-c570-4b6c-8af5-c2a64cea0e0f">
+        <div class="testcase">
+            <div class="details">
+                <span class="testname"><b>Matching aws resource type for data.aws_vpc.this_vpc matches</b></span><br/>
+                <span class="testclassname">no-testclass</span><br/>
+                <span class="duration">Time Taken: 0.0s</span>
+            </div>
+            
+            
+            <hr size="1"/>
+            
+            
+            <div class="stdout"><i>Stdout</i><br/>
+                <pre>Matching: aws resource type for data.aws_vpc.this_vpc: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </pre></div>
+            <hr size="1"/>
+            <div class="stderr"><i>Stderr</i><br/>
+                <pre></pre></div>
+                
+        </div>
+    </a>
+        
+            </div>
+        </div>
+        </a>
+        
+            </div>
+        </div>
+        </body></html>

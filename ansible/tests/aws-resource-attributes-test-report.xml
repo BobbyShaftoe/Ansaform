@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites duration="0.0">
+    <testsuite name="goss" time="0.0">
+        <testcase classname="no-testclass" name="Matching aws resource type for aws_eip.default matches" time="0.0">
+            <system-out>Matching: aws resource type for aws_eip.default: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass" name="Matching aws resource type for aws_instance.ec2 matches" time="0.0">
+            <system-out>Matching: aws resource type for aws_instance.ec2: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass"
+                  name="Matching aws resource type for aws_main_route_table_association.docker_ext_route_0 matches"
+                  time="0.0">
+            <system-out>Matching: aws resource type for aws_main_route_table_association.docker_ext_route_0: matches:
+                matches expectation: [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass" name="Matching aws resource type for aws_route.docker_ext_route_0 matches"
+                  time="0.0">
+            <system-out>Matching: aws resource type for aws_route.docker_ext_route_0: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass"
+                  name="Matching aws resource type for aws_route_table.docker_ext_route_0 matches" time="0.0">
+            <system-out>Matching: aws resource type for aws_route_table.docker_ext_route_0: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass"
+                  name="Matching aws resource type for aws_route_table.docker_int_route_1 matches" time="0.0">
+            <system-out>Matching: aws resource type for aws_route_table.docker_int_route_1: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.0">
+        <testcase classname="no-testclass"
+                  name="Matching aws resource type for aws_route_table_association.api_ext_ass0 matches" time="0.0">
+            <system-out>Matching: aws resource type for aws_route_table_association.api_ext_ass0: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass"
+                  name="Matching aws resource type for aws_route_table_association.api_ext_ass1 matches" time="0.0">
+            <system-out>Matching: aws resource type for aws_route_table_association.api_ext_ass1: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.0">
+        <testcase classname="no-testclass"
+                  name="Matching aws resource type for aws_route_table_association.api_ext_ass2 matches" time="0.0">
+            <system-out>Matching: aws resource type for aws_route_table_association.api_ext_ass2: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass"
+                  name="Matching aws resource type for aws_route_table_association.api_int_ass3 matches" time="0.0">
+            <system-out>Matching: aws resource type for aws_route_table_association.api_int_ass3: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass"
+                  name="Matching aws resource type for aws_route_table_association.api_int_ass4 matches" time="0.0">
+            <system-out>Matching: aws resource type for aws_route_table_association.api_int_ass4: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass"
+                  name="Matching aws resource type for aws_route_table_association.api_int_ass5 matches" time="0.0">
+            <system-out>Matching: aws resource type for aws_route_table_association.api_int_ass5: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass"
+                  name="Matching aws resource type for aws_security_group.main_security_group matches" time="0.0">
+            <system-out>Matching: aws resource type for aws_security_group.main_security_group: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.0">
+        <testcase classname="no-testclass"
+                  name="Matching aws resource type for aws_security_group_rule.main_security_group_rule matches"
+                  time="0.0">
+            <system-out>Matching: aws resource type for aws_security_group_rule.main_security_group_rule: matches:
+                matches expectation: [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.0">
+        <testcase classname="no-testclass" name="Matching aws resource type for aws_subnet.docker_ext_subnet_0 matches"
+                  time="0.0">
+            <system-out>Matching: aws resource type for aws_subnet.docker_ext_subnet_0: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass" name="Matching aws resource type for aws_subnet.docker_ext_subnet_1 matches"
+                  time="0.0">
+            <system-out>Matching: aws resource type for aws_subnet.docker_ext_subnet_1: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass" name="Matching aws resource type for aws_subnet.docker_ext_subnet_2 matches"
+                  time="0.0">
+            <system-out>Matching: aws resource type for aws_subnet.docker_ext_subnet_2: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass" name="Matching aws resource type for aws_subnet.docker_int_subnet_3 matches"
+                  time="0.0">
+            <system-out>Matching: aws resource type for aws_subnet.docker_int_subnet_3: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass" name="Matching aws resource type for aws_subnet.docker_int_subnet_4 matches"
+                  time="0.0">
+            <system-out>Matching: aws resource type for aws_subnet.docker_int_subnet_4: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass" name="Matching aws resource type for aws_subnet.docker_int_subnet_5 matches"
+                  time="0.0">
+            <system-out>Matching: aws resource type for aws_subnet.docker_int_subnet_5: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass"
+                  name="Matching aws resource type for aws_vpc_dhcp_options.docker_vpc_dhcp_id matches" time="0.0">
+            <system-out>Matching: aws resource type for aws_vpc_dhcp_options.docker_vpc_dhcp_id: matches: matches
+                expectation: [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass" name="Matching aws resource type for data.aws_ami.centos matches" time="0.0">
+            <system-out>Matching: aws resource type for data.aws_ami.centos: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass" name="Matching aws resource type for data.aws_internet_gateway.ig matches"
+                  time="0.0">
+            <system-out>Matching: aws resource type for data.aws_internet_gateway.ig: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.0">
+        <testcase classname="no-testclass" name="Matching aws resource type for data.aws_vpc.selected matches"
+                  time="0.0">
+            <system-out>Matching: aws resource type for data.aws_vpc.selected: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name="goss" time="0.001">
+        <testcase classname="no-testclass" name="Matching aws resource type for data.aws_vpc.this_vpc matches"
+                  time="0.0">
+            <system-out>Matching: aws resource type for data.aws_vpc.this_vpc: matches: matches expectation:
+                [{"match-regexp":".*"}]
+            </system-out>
+        </testcase>
+    </testsuite>
+</testsuites>
