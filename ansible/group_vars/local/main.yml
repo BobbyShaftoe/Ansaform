@@ -32,5 +32,7 @@ terraform_template_directory: "template"
 #terraform_statefile_path: "{{ playbook_dir }}/../{{ terraform_template_directory }}/{{ project_name }}/terraform.tfstate"
 
 
-terraform_statefile_path: "/Users/nicksinclair/Projects/Testing/terratest/template/docker-server-stack/terraform.tfstate"
+#terraform_statefile_path: "/Users/nicksinclair/Projects/Testing/terratest/template/docker-server-stack/terraform
+#.tfstate"
+terraform_statefile_path: "../template/terraform.tfstate"
 

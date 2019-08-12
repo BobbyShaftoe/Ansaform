@@ -12,14 +12,13 @@
     },
     "ansible_all_ipv4_addresses": [
         "192.168.1.92",
-        "192.168.2.1",
-        "172.27.232.24"
+        "192.168.2.1"
     ],
     "ansible_all_ipv6_addresses": [
-        "fe80::cb9:138b:323d:554%en0",
-        "fe80::d497:25ff:fec6:7552%awdl0",
+        "fe80::c5f:b1d3:9de3:f7ef%en0",
+        "fe80::40be:2ff:fe5d:db65%awdl0",
         "fe80::6800:3ff:fe93:be40%bridge0",
-        "fe80::741d:8508:fa68:2c27%utun0"
+        "fe80::232:eaaf:15fa:5a3d%utun0"
     ],
     "ansible_apparmor": {
         "status": "disabled"
@@ -38,12 +37,12 @@
         "ipv4": [],
         "ipv6": [
             {
-                "address": "fe80::d497:25ff:fec6:7552%awdl0",
+                "address": "fe80::40be:2ff:fe5d:db65%awdl0",
                 "prefix": "64",
                 "scope": "0x9"
             }
         ],
-        "macaddress": "d6:97:25:c6:75:52",
+        "macaddress": "42:be:02:5d:db:65",
         "media": "Unknown",
         "media_select": "autoselect",
         "mtu": "1484",
@@ -94,23 +93,23 @@
     "ansible_check_mode": false,
     "ansible_connection": "local",
     "ansible_date_time": {
-        "date": "2019-07-19",
-        "day": "19",
-        "epoch": "1563472850",
-        "hour": "02",
-        "iso8601": "2019-07-18T18:00:50Z",
-        "iso8601_basic": "20190719T020050375336",
-        "iso8601_basic_short": "20190719T020050",
-        "iso8601_micro": "2019-07-18T18:00:50.375451Z",
-        "minute": "00",
-        "month": "07",
-        "second": "50",
-        "time": "02:00:50",
+        "date": "2019-08-10",
+        "day": "10",
+        "epoch": "1565406373",
+        "hour": "11",
+        "iso8601": "2019-08-10T03:06:13Z",
+        "iso8601_basic": "20190810T110613914351",
+        "iso8601_basic_short": "20190810T110613",
+        "iso8601_micro": "2019-08-10T03:06:13.914460Z",
+        "minute": "06",
+        "month": "08",
+        "second": "13",
+        "time": "11:06:13",
         "tz": "+08",
         "tz_offset": "+0800",
-        "weekday": "Friday",
-        "weekday_number": "5",
-        "weeknumber": "28",
+        "weekday": "Saturday",
+        "weekday_number": "6",
+        "weeknumber": "31",
         "year": "2019"
     },
     "ansible_default_ipv4": {
@@ -174,7 +173,7 @@
         ],
         "ipv6": [
             {
-                "address": "fe80::cb9:138b:323d:554%en0",
+                "address": "fe80::c5f:b1d3:9de3:f7ef%en0",
                 "prefix": "64"
             }
         ],
@@ -240,9 +239,7 @@
         "type": "ether"
     },
     "ansible_env": {
-        "Apple_PubSub_Socket_Render": "/private/tmp/com.apple.launchd.UdvnIZ4BYX/Render",
-        "COLORFGBG": "7;0",
-        "COLORTERM": "truecolor",
+        "Apple_PubSub_Socket_Render": "/private/tmp/com.apple.launchd.JzyNft6xdN/Render",
         "COMMAND_MODE": "unix2003",
         "GEM_HOME": "/Users/nicksinclair/.rvm/gems/ruby-2.5.0",
         "GEM_PATH": "/Users/nicksinclair/.rvm/gems/ruby-2.5.0:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global",
@@ -251,10 +248,10 @@
         "GOROOT": "/usr/local/go",
         "HOME": "/Users/nicksinclair",
         "IRBRC": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/.irbrc",
-        "ITERM_PROFILE": "Default",
-        "ITERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
+        "JAVA_HOME": "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home",
         "LC_CTYPE": "UTF-8",
         "LESS": "-R",
+        "LOGIN_SHELL": "1",
         "LOGNAME": "nicksinclair",
         "LSCOLORS": "Gxfxcxdxbxegedabagacad",
         "MY_RUBY_HOME": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0",
@@ -262,18 +259,16 @@
         "NVM_CD_FLAGS": "-q",
         "NVM_DIR": "/Users/nicksinclair/.nvm",
         "PAGER": "less",
-        "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
+        "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/usr/local/go/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/neo4j/bin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin:/Users/nicksinclair/go/bin",
         "PROJECT_HOME": "/Users/nicksinclair/Projects",
         "PWD": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
         "RUBY_VERSION": "ruby-2.5.0",
         "SECURITYSESSIONID": "186a8",
         "SHELL": "/bin/zsh",
         "SHLVL": "3",
-        "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.Hz3ca57kZH/Listeners",
+        "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.ycgcUZTah4/Listeners",
         "TERM": "xterm-256color",
-        "TERM_PROGRAM": "iTerm.app",
-        "TERM_PROGRAM_VERSION": "3.2.9",
-        "TERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
+        "TERMINAL_EMULATOR": "JetBrains-JediTerm",
         "TMPDIR": "/var/folders/dw/_swcjv0x6pq0d64k2sm4bjdh0000gn/T/",
         "USER": "nicksinclair",
         "USER_NAME": "nicksinclair",
@@ -287,39 +282,22 @@
         "WORKON_HOME": "/Users/nicksinclair/Projects/.virtualenvs",
         "XPC_FLAGS": "0x0",
         "XPC_SERVICE_NAME": "0",
+        "ZDOTDIR": "",
         "ZSH": "/Users/nicksinclair/.oh-my-zsh",
         "_": "/usr/bin/python",
+        "_INTELLIJ_FORCE_SET_GOPATH": "/Users/nicksinclair/go",
+        "_INTELLIJ_FORCE_SET_GOROOT": "/usr/local/go",
+        "_INTELLIJ_FORCE_SET_PATH": "/usr/local/go/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/neo4j/bin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin:/Users/nicksinclair/go/bin",
         "__CF_USER_TEXT_ENCODING": "0x1F5:0x0:0x64",
+        "__INTELLIJ_COMMAND_HISTFILE__": "/Users/nicksinclair/Library/Preferences/IntelliJIdea2019.2/terminal/history/history-11",
         "_system_arch": "x86_64",
         "_system_name": "OSX",
         "_system_type": "Darwin",
         "_system_version": "10.13",
-        "rvm_alias_expanded": "",
-        "rvm_bin_flag": "",
         "rvm_bin_path": "/Users/nicksinclair/.rvm/bin",
-        "rvm_docs_type": "",
-        "rvm_gemstone_package_file": "",
-        "rvm_gemstone_url": "",
-        "rvm_hook": "",
-        "rvm_niceness": "",
-        "rvm_nightly_flag": "",
-        "rvm_only_path_flag": "",
         "rvm_path": "/Users/nicksinclair/.rvm",
         "rvm_prefix": "/Users/nicksinclair",
-        "rvm_pretty_print_flag": "",
-        "rvm_proxy": "",
-        "rvm_quiet_flag": "",
-        "rvm_ruby_bits": "",
-        "rvm_ruby_file": "",
-        "rvm_ruby_make": "",
-        "rvm_ruby_make_install": "",
-        "rvm_ruby_mode": "",
-        "rvm_script_name": "",
-        "rvm_sdk": "",
-        "rvm_silent_flag": "",
-        "rvm_use_flag": "",
-        "rvm_version": "1.29.3 (latest)",
-        "rvm_wrapper_name": ""
+        "rvm_version": "1.29.3 (latest)"
     },
     "ansible_facts": {
         "XHC20": {
@@ -333,14 +311,13 @@
         },
         "all_ipv4_addresses": [
             "192.168.1.92",
-            "192.168.2.1",
-            "172.27.232.24"
+            "192.168.2.1"
         ],
         "all_ipv6_addresses": [
-            "fe80::cb9:138b:323d:554%en0",
-            "fe80::d497:25ff:fec6:7552%awdl0",
+            "fe80::c5f:b1d3:9de3:f7ef%en0",
+            "fe80::40be:2ff:fe5d:db65%awdl0",
             "fe80::6800:3ff:fe93:be40%bridge0",
-            "fe80::741d:8508:fa68:2c27%utun0"
+            "fe80::232:eaaf:15fa:5a3d%utun0"
         ],
         "ansible_local": {},
         "apparmor": {
@@ -360,12 +337,12 @@
             "ipv4": [],
             "ipv6": [
                 {
-                    "address": "fe80::d497:25ff:fec6:7552%awdl0",
+                    "address": "fe80::40be:2ff:fe5d:db65%awdl0",
                     "prefix": "64",
                     "scope": "0x9"
                 }
             ],
-            "macaddress": "d6:97:25:c6:75:52",
+            "macaddress": "42:be:02:5d:db:65",
             "media": "Unknown",
             "media_select": "autoselect",
             "mtu": "1484",
@@ -414,23 +391,23 @@
             "type": "ether"
         },
         "date_time": {
-            "date": "2019-07-19",
-            "day": "19",
-            "epoch": "1563472850",
-            "hour": "02",
-            "iso8601": "2019-07-18T18:00:50Z",
-            "iso8601_basic": "20190719T020050375336",
-            "iso8601_basic_short": "20190719T020050",
-            "iso8601_micro": "2019-07-18T18:00:50.375451Z",
-            "minute": "00",
-            "month": "07",
-            "second": "50",
-            "time": "02:00:50",
+            "date": "2019-08-10",
+            "day": "10",
+            "epoch": "1565406373",
+            "hour": "11",
+            "iso8601": "2019-08-10T03:06:13Z",
+            "iso8601_basic": "20190810T110613914351",
+            "iso8601_basic_short": "20190810T110613",
+            "iso8601_micro": "2019-08-10T03:06:13.914460Z",
+            "minute": "06",
+            "month": "08",
+            "second": "13",
+            "time": "11:06:13",
             "tz": "+08",
             "tz_offset": "+0800",
-            "weekday": "Friday",
-            "weekday_number": "5",
-            "weeknumber": "28",
+            "weekday": "Saturday",
+            "weekday_number": "6",
+            "weeknumber": "31",
             "year": "2019"
         },
         "default_ipv4": {
@@ -493,7 +470,7 @@
             ],
             "ipv6": [
                 {
-                    "address": "fe80::cb9:138b:323d:554%en0",
+                    "address": "fe80::c5f:b1d3:9de3:f7ef%en0",
                     "prefix": "64"
                 }
             ],
@@ -559,9 +536,7 @@
             "type": "ether"
         },
         "env": {
-            "Apple_PubSub_Socket_Render": "/private/tmp/com.apple.launchd.UdvnIZ4BYX/Render",
-            "COLORFGBG": "7;0",
-            "COLORTERM": "truecolor",
+            "Apple_PubSub_Socket_Render": "/private/tmp/com.apple.launchd.JzyNft6xdN/Render",
             "COMMAND_MODE": "unix2003",
             "GEM_HOME": "/Users/nicksinclair/.rvm/gems/ruby-2.5.0",
             "GEM_PATH": "/Users/nicksinclair/.rvm/gems/ruby-2.5.0:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global",
@@ -570,10 +545,10 @@
             "GOROOT": "/usr/local/go",
             "HOME": "/Users/nicksinclair",
             "IRBRC": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/.irbrc",
-            "ITERM_PROFILE": "Default",
-            "ITERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
+            "JAVA_HOME": "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home",
             "LC_CTYPE": "UTF-8",
             "LESS": "-R",
+            "LOGIN_SHELL": "1",
             "LOGNAME": "nicksinclair",
             "LSCOLORS": "Gxfxcxdxbxegedabagacad",
             "MY_RUBY_HOME": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0",
@@ -581,18 +556,16 @@
             "NVM_CD_FLAGS": "-q",
             "NVM_DIR": "/Users/nicksinclair/.nvm",
             "PAGER": "less",
-            "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
+            "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/usr/local/go/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/neo4j/bin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin:/Users/nicksinclair/go/bin",
             "PROJECT_HOME": "/Users/nicksinclair/Projects",
             "PWD": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
             "RUBY_VERSION": "ruby-2.5.0",
             "SECURITYSESSIONID": "186a8",
             "SHELL": "/bin/zsh",
             "SHLVL": "3",
-            "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.Hz3ca57kZH/Listeners",
+            "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.ycgcUZTah4/Listeners",
             "TERM": "xterm-256color",
-            "TERM_PROGRAM": "iTerm.app",
-            "TERM_PROGRAM_VERSION": "3.2.9",
-            "TERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
+            "TERMINAL_EMULATOR": "JetBrains-JediTerm",
             "TMPDIR": "/var/folders/dw/_swcjv0x6pq0d64k2sm4bjdh0000gn/T/",
             "USER": "nicksinclair",
             "USER_NAME": "nicksinclair",
@@ -606,39 +579,22 @@
             "WORKON_HOME": "/Users/nicksinclair/Projects/.virtualenvs",
             "XPC_FLAGS": "0x0",
             "XPC_SERVICE_NAME": "0",
+            "ZDOTDIR": "",
             "ZSH": "/Users/nicksinclair/.oh-my-zsh",
             "_": "/usr/bin/python",
+            "_INTELLIJ_FORCE_SET_GOPATH": "/Users/nicksinclair/go",
+            "_INTELLIJ_FORCE_SET_GOROOT": "/usr/local/go",
+            "_INTELLIJ_FORCE_SET_PATH": "/usr/local/go/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/neo4j/bin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin:/Users/nicksinclair/go/bin",
             "__CF_USER_TEXT_ENCODING": "0x1F5:0x0:0x64",
+            "__INTELLIJ_COMMAND_HISTFILE__": "/Users/nicksinclair/Library/Preferences/IntelliJIdea2019.2/terminal/history/history-11",
             "_system_arch": "x86_64",
             "_system_name": "OSX",
             "_system_type": "Darwin",
             "_system_version": "10.13",
-            "rvm_alias_expanded": "",
-            "rvm_bin_flag": "",
             "rvm_bin_path": "/Users/nicksinclair/.rvm/bin",
-            "rvm_docs_type": "",
-            "rvm_gemstone_package_file": "",
-            "rvm_gemstone_url": "",
-            "rvm_hook": "",
-            "rvm_niceness": "",
-            "rvm_nightly_flag": "",
-            "rvm_only_path_flag": "",
             "rvm_path": "/Users/nicksinclair/.rvm",
             "rvm_prefix": "/Users/nicksinclair",
-            "rvm_pretty_print_flag": "",
-            "rvm_proxy": "",
-            "rvm_quiet_flag": "",
-            "rvm_ruby_bits": "",
-            "rvm_ruby_file": "",
-            "rvm_ruby_make": "",
-            "rvm_ruby_make_install": "",
-            "rvm_ruby_mode": "",
-            "rvm_script_name": "",
-            "rvm_sdk": "",
-            "rvm_silent_flag": "",
-            "rvm_use_flag": "",
-            "rvm_version": "1.29.3 (latest)",
-            "rvm_wrapper_name": ""
+            "rvm_version": "1.29.3 (latest)"
         },
         "fips": false,
         "fqdn": "e-to-the-pi-i.local",
@@ -669,8 +625,7 @@
             "lo0",
             "p2p0",
             "stf0",
-            "utun0",
-            "utun1"
+            "utun0"
         ],
         "is_chroot": false,
         "iscsi_iqn": "",
@@ -712,7 +667,7 @@
         },
         "lsb": {},
         "machine": "x86_64",
-        "memfree_mb": -183,
+        "memfree_mb": -278,
         "memtotal_mb": 16384,
         "model": "MacBookPro11,4",
         "module_setup": true,
@@ -798,7 +753,7 @@
             "ipv4": [],
             "ipv6": [
                 {
-                    "address": "fe80::741d:8508:fa68:2c27%utun0",
+                    "address": "fe80::232:eaaf:15fa:5a3d%utun0",
                     "prefix": "64",
                     "scope": "0xb"
                 }
@@ -809,27 +764,6 @@
                 "PERFORMNUD",
                 "DAD"
             ],
-            "type": "unknown"
-        },
-        "utun1": {
-            "device": "utun1",
-            "flags": [
-                "UP",
-                "POINTOPOINT",
-                "RUNNING",
-                "MULTICAST"
-            ],
-            "ipv4": [
-                {
-                    "address": "172.27.232.24",
-                    "broadcast": "0xfffff800",
-                    "netmask": "172.27.232.24",
-                    "network": "172.27.232.24"
-                }
-            ],
-            "ipv6": [],
-            "macaddress": "unknown",
-            "mtu": "1500",
             "type": "unknown"
         },
         "virtualization_role": "",
@@ -862,8 +796,7 @@
         "lo0",
         "p2p0",
         "stf0",
-        "utun0",
-        "utun1"
+        "utun0"
     ],
     "ansible_inventory_sources": [
         "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/hosts.ini"
@@ -909,7 +842,7 @@
     "ansible_local": {},
     "ansible_lsb": {},
     "ansible_machine": "x86_64",
-    "ansible_memfree_mb": -183,
+    "ansible_memfree_mb": -278,
     "ansible_memtotal_mb": 16384,
     "ansible_model": "MacBookPro11,4",
     "ansible_nodename": "e-to-the-pi-i.local",
@@ -1008,7 +941,7 @@
         "ipv4": [],
         "ipv6": [
             {
-                "address": "fe80::741d:8508:fa68:2c27%utun0",
+                "address": "fe80::232:eaaf:15fa:5a3d%utun0",
                 "prefix": "64",
                 "scope": "0xb"
             }
@@ -1019,27 +952,6 @@
             "PERFORMNUD",
             "DAD"
         ],
-        "type": "unknown"
-    },
-    "ansible_utun1": {
-        "device": "utun1",
-        "flags": [
-            "UP",
-            "POINTOPOINT",
-            "RUNNING",
-            "MULTICAST"
-        ],
-        "ipv4": [
-            {
-                "address": "172.27.232.24",
-                "broadcast": "0xfffff800",
-                "netmask": "172.27.232.24",
-                "network": "172.27.232.24"
-            }
-        ],
-        "ipv6": [],
-        "macaddress": "unknown",
-        "mtu": "1500",
         "type": "unknown"
     },
     "ansible_verbosity": 0,
@@ -1094,14 +1006,13 @@
             },
             "ansible_all_ipv4_addresses": [
                 "192.168.1.92",
-                "192.168.2.1",
-                "172.27.232.24"
+                "192.168.2.1"
             ],
             "ansible_all_ipv6_addresses": [
-                "fe80::cb9:138b:323d:554%en0",
-                "fe80::d497:25ff:fec6:7552%awdl0",
+                "fe80::c5f:b1d3:9de3:f7ef%en0",
+                "fe80::40be:2ff:fe5d:db65%awdl0",
                 "fe80::6800:3ff:fe93:be40%bridge0",
-                "fe80::741d:8508:fa68:2c27%utun0"
+                "fe80::232:eaaf:15fa:5a3d%utun0"
             ],
             "ansible_apparmor": {
                 "status": "disabled"
@@ -1120,12 +1031,12 @@
                 "ipv4": [],
                 "ipv6": [
                     {
-                        "address": "fe80::d497:25ff:fec6:7552%awdl0",
+                        "address": "fe80::40be:2ff:fe5d:db65%awdl0",
                         "prefix": "64",
                         "scope": "0x9"
                     }
                 ],
-                "macaddress": "d6:97:25:c6:75:52",
+                "macaddress": "42:be:02:5d:db:65",
                 "media": "Unknown",
                 "media_select": "autoselect",
                 "mtu": "1484",
@@ -1176,23 +1087,23 @@
             "ansible_check_mode": false,
             "ansible_connection": "local",
             "ansible_date_time": {
-                "date": "2019-07-19",
-                "day": "19",
-                "epoch": "1563472850",
-                "hour": "02",
-                "iso8601": "2019-07-18T18:00:50Z",
-                "iso8601_basic": "20190719T020050375336",
-                "iso8601_basic_short": "20190719T020050",
-                "iso8601_micro": "2019-07-18T18:00:50.375451Z",
-                "minute": "00",
-                "month": "07",
-                "second": "50",
-                "time": "02:00:50",
+                "date": "2019-08-10",
+                "day": "10",
+                "epoch": "1565406373",
+                "hour": "11",
+                "iso8601": "2019-08-10T03:06:13Z",
+                "iso8601_basic": "20190810T110613914351",
+                "iso8601_basic_short": "20190810T110613",
+                "iso8601_micro": "2019-08-10T03:06:13.914460Z",
+                "minute": "06",
+                "month": "08",
+                "second": "13",
+                "time": "11:06:13",
                 "tz": "+08",
                 "tz_offset": "+0800",
-                "weekday": "Friday",
-                "weekday_number": "5",
-                "weeknumber": "28",
+                "weekday": "Saturday",
+                "weekday_number": "6",
+                "weeknumber": "31",
                 "year": "2019"
             },
             "ansible_default_ipv4": {
@@ -1256,7 +1167,7 @@
                 ],
                 "ipv6": [
                     {
-                        "address": "fe80::cb9:138b:323d:554%en0",
+                        "address": "fe80::c5f:b1d3:9de3:f7ef%en0",
                         "prefix": "64"
                     }
                 ],
@@ -1322,9 +1233,7 @@
                 "type": "ether"
             },
             "ansible_env": {
-                "Apple_PubSub_Socket_Render": "/private/tmp/com.apple.launchd.UdvnIZ4BYX/Render",
-                "COLORFGBG": "7;0",
-                "COLORTERM": "truecolor",
+                "Apple_PubSub_Socket_Render": "/private/tmp/com.apple.launchd.JzyNft6xdN/Render",
                 "COMMAND_MODE": "unix2003",
                 "GEM_HOME": "/Users/nicksinclair/.rvm/gems/ruby-2.5.0",
                 "GEM_PATH": "/Users/nicksinclair/.rvm/gems/ruby-2.5.0:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global",
@@ -1333,10 +1242,10 @@
                 "GOROOT": "/usr/local/go",
                 "HOME": "/Users/nicksinclair",
                 "IRBRC": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/.irbrc",
-                "ITERM_PROFILE": "Default",
-                "ITERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
+                "JAVA_HOME": "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home",
                 "LC_CTYPE": "UTF-8",
                 "LESS": "-R",
+                "LOGIN_SHELL": "1",
                 "LOGNAME": "nicksinclair",
                 "LSCOLORS": "Gxfxcxdxbxegedabagacad",
                 "MY_RUBY_HOME": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0",
@@ -1344,18 +1253,16 @@
                 "NVM_CD_FLAGS": "-q",
                 "NVM_DIR": "/Users/nicksinclair/.nvm",
                 "PAGER": "less",
-                "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
+                "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/usr/local/go/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/neo4j/bin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin:/Users/nicksinclair/go/bin",
                 "PROJECT_HOME": "/Users/nicksinclair/Projects",
                 "PWD": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
                 "RUBY_VERSION": "ruby-2.5.0",
                 "SECURITYSESSIONID": "186a8",
                 "SHELL": "/bin/zsh",
                 "SHLVL": "3",
-                "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.Hz3ca57kZH/Listeners",
+                "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.ycgcUZTah4/Listeners",
                 "TERM": "xterm-256color",
-                "TERM_PROGRAM": "iTerm.app",
-                "TERM_PROGRAM_VERSION": "3.2.9",
-                "TERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
+                "TERMINAL_EMULATOR": "JetBrains-JediTerm",
                 "TMPDIR": "/var/folders/dw/_swcjv0x6pq0d64k2sm4bjdh0000gn/T/",
                 "USER": "nicksinclair",
                 "USER_NAME": "nicksinclair",
@@ -1369,39 +1276,22 @@
                 "WORKON_HOME": "/Users/nicksinclair/Projects/.virtualenvs",
                 "XPC_FLAGS": "0x0",
                 "XPC_SERVICE_NAME": "0",
+                "ZDOTDIR": "",
                 "ZSH": "/Users/nicksinclair/.oh-my-zsh",
                 "_": "/usr/bin/python",
+                "_INTELLIJ_FORCE_SET_GOPATH": "/Users/nicksinclair/go",
+                "_INTELLIJ_FORCE_SET_GOROOT": "/usr/local/go",
+                "_INTELLIJ_FORCE_SET_PATH": "/usr/local/go/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/neo4j/bin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin:/Users/nicksinclair/go/bin",
                 "__CF_USER_TEXT_ENCODING": "0x1F5:0x0:0x64",
+                "__INTELLIJ_COMMAND_HISTFILE__": "/Users/nicksinclair/Library/Preferences/IntelliJIdea2019.2/terminal/history/history-11",
                 "_system_arch": "x86_64",
                 "_system_name": "OSX",
                 "_system_type": "Darwin",
                 "_system_version": "10.13",
-                "rvm_alias_expanded": "",
-                "rvm_bin_flag": "",
                 "rvm_bin_path": "/Users/nicksinclair/.rvm/bin",
-                "rvm_docs_type": "",
-                "rvm_gemstone_package_file": "",
-                "rvm_gemstone_url": "",
-                "rvm_hook": "",
-                "rvm_niceness": "",
-                "rvm_nightly_flag": "",
-                "rvm_only_path_flag": "",
                 "rvm_path": "/Users/nicksinclair/.rvm",
                 "rvm_prefix": "/Users/nicksinclair",
-                "rvm_pretty_print_flag": "",
-                "rvm_proxy": "",
-                "rvm_quiet_flag": "",
-                "rvm_ruby_bits": "",
-                "rvm_ruby_file": "",
-                "rvm_ruby_make": "",
-                "rvm_ruby_make_install": "",
-                "rvm_ruby_mode": "",
-                "rvm_script_name": "",
-                "rvm_sdk": "",
-                "rvm_silent_flag": "",
-                "rvm_use_flag": "",
-                "rvm_version": "1.29.3 (latest)",
-                "rvm_wrapper_name": ""
+                "rvm_version": "1.29.3 (latest)"
             },
             "ansible_facts": {
                 "XHC20": {
@@ -1415,14 +1305,13 @@
                 },
                 "all_ipv4_addresses": [
                     "192.168.1.92",
-                    "192.168.2.1",
-                    "172.27.232.24"
+                    "192.168.2.1"
                 ],
                 "all_ipv6_addresses": [
-                    "fe80::cb9:138b:323d:554%en0",
-                    "fe80::d497:25ff:fec6:7552%awdl0",
+                    "fe80::c5f:b1d3:9de3:f7ef%en0",
+                    "fe80::40be:2ff:fe5d:db65%awdl0",
                     "fe80::6800:3ff:fe93:be40%bridge0",
-                    "fe80::741d:8508:fa68:2c27%utun0"
+                    "fe80::232:eaaf:15fa:5a3d%utun0"
                 ],
                 "ansible_local": {},
                 "apparmor": {
@@ -1442,12 +1331,12 @@
                     "ipv4": [],
                     "ipv6": [
                         {
-                            "address": "fe80::d497:25ff:fec6:7552%awdl0",
+                            "address": "fe80::40be:2ff:fe5d:db65%awdl0",
                             "prefix": "64",
                             "scope": "0x9"
                         }
                     ],
-                    "macaddress": "d6:97:25:c6:75:52",
+                    "macaddress": "42:be:02:5d:db:65",
                     "media": "Unknown",
                     "media_select": "autoselect",
                     "mtu": "1484",
@@ -1496,23 +1385,23 @@
                     "type": "ether"
                 },
                 "date_time": {
-                    "date": "2019-07-19",
-                    "day": "19",
-                    "epoch": "1563472850",
-                    "hour": "02",
-                    "iso8601": "2019-07-18T18:00:50Z",
-                    "iso8601_basic": "20190719T020050375336",
-                    "iso8601_basic_short": "20190719T020050",
-                    "iso8601_micro": "2019-07-18T18:00:50.375451Z",
-                    "minute": "00",
-                    "month": "07",
-                    "second": "50",
-                    "time": "02:00:50",
+                    "date": "2019-08-10",
+                    "day": "10",
+                    "epoch": "1565406373",
+                    "hour": "11",
+                    "iso8601": "2019-08-10T03:06:13Z",
+                    "iso8601_basic": "20190810T110613914351",
+                    "iso8601_basic_short": "20190810T110613",
+                    "iso8601_micro": "2019-08-10T03:06:13.914460Z",
+                    "minute": "06",
+                    "month": "08",
+                    "second": "13",
+                    "time": "11:06:13",
                     "tz": "+08",
                     "tz_offset": "+0800",
-                    "weekday": "Friday",
-                    "weekday_number": "5",
-                    "weeknumber": "28",
+                    "weekday": "Saturday",
+                    "weekday_number": "6",
+                    "weeknumber": "31",
                     "year": "2019"
                 },
                 "default_ipv4": {
@@ -1575,7 +1464,7 @@
                     ],
                     "ipv6": [
                         {
-                            "address": "fe80::cb9:138b:323d:554%en0",
+                            "address": "fe80::c5f:b1d3:9de3:f7ef%en0",
                             "prefix": "64"
                         }
                     ],
@@ -1641,9 +1530,7 @@
                     "type": "ether"
                 },
                 "env": {
-                    "Apple_PubSub_Socket_Render": "/private/tmp/com.apple.launchd.UdvnIZ4BYX/Render",
-                    "COLORFGBG": "7;0",
-                    "COLORTERM": "truecolor",
+                    "Apple_PubSub_Socket_Render": "/private/tmp/com.apple.launchd.JzyNft6xdN/Render",
                     "COMMAND_MODE": "unix2003",
                     "GEM_HOME": "/Users/nicksinclair/.rvm/gems/ruby-2.5.0",
                     "GEM_PATH": "/Users/nicksinclair/.rvm/gems/ruby-2.5.0:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global",
@@ -1652,10 +1539,10 @@
                     "GOROOT": "/usr/local/go",
                     "HOME": "/Users/nicksinclair",
                     "IRBRC": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/.irbrc",
-                    "ITERM_PROFILE": "Default",
-                    "ITERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
+                    "JAVA_HOME": "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home",
                     "LC_CTYPE": "UTF-8",
                     "LESS": "-R",
+                    "LOGIN_SHELL": "1",
                     "LOGNAME": "nicksinclair",
                     "LSCOLORS": "Gxfxcxdxbxegedabagacad",
                     "MY_RUBY_HOME": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0",
@@ -1663,18 +1550,16 @@
                     "NVM_CD_FLAGS": "-q",
                     "NVM_DIR": "/Users/nicksinclair/.nvm",
                     "PAGER": "less",
-                    "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
+                    "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/usr/local/go/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/neo4j/bin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin:/Users/nicksinclair/go/bin",
                     "PROJECT_HOME": "/Users/nicksinclair/Projects",
                     "PWD": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
                     "RUBY_VERSION": "ruby-2.5.0",
                     "SECURITYSESSIONID": "186a8",
                     "SHELL": "/bin/zsh",
                     "SHLVL": "3",
-                    "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.Hz3ca57kZH/Listeners",
+                    "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.ycgcUZTah4/Listeners",
                     "TERM": "xterm-256color",
-                    "TERM_PROGRAM": "iTerm.app",
-                    "TERM_PROGRAM_VERSION": "3.2.9",
-                    "TERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
+                    "TERMINAL_EMULATOR": "JetBrains-JediTerm",
                     "TMPDIR": "/var/folders/dw/_swcjv0x6pq0d64k2sm4bjdh0000gn/T/",
                     "USER": "nicksinclair",
                     "USER_NAME": "nicksinclair",
@@ -1688,39 +1573,22 @@
                     "WORKON_HOME": "/Users/nicksinclair/Projects/.virtualenvs",
                     "XPC_FLAGS": "0x0",
                     "XPC_SERVICE_NAME": "0",
+                    "ZDOTDIR": "",
                     "ZSH": "/Users/nicksinclair/.oh-my-zsh",
                     "_": "/usr/bin/python",
+                    "_INTELLIJ_FORCE_SET_GOPATH": "/Users/nicksinclair/go",
+                    "_INTELLIJ_FORCE_SET_GOROOT": "/usr/local/go",
+                    "_INTELLIJ_FORCE_SET_PATH": "/usr/local/go/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/neo4j/bin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin:/Users/nicksinclair/go/bin",
                     "__CF_USER_TEXT_ENCODING": "0x1F5:0x0:0x64",
+                    "__INTELLIJ_COMMAND_HISTFILE__": "/Users/nicksinclair/Library/Preferences/IntelliJIdea2019.2/terminal/history/history-11",
                     "_system_arch": "x86_64",
                     "_system_name": "OSX",
                     "_system_type": "Darwin",
                     "_system_version": "10.13",
-                    "rvm_alias_expanded": "",
-                    "rvm_bin_flag": "",
                     "rvm_bin_path": "/Users/nicksinclair/.rvm/bin",
-                    "rvm_docs_type": "",
-                    "rvm_gemstone_package_file": "",
-                    "rvm_gemstone_url": "",
-                    "rvm_hook": "",
-                    "rvm_niceness": "",
-                    "rvm_nightly_flag": "",
-                    "rvm_only_path_flag": "",
                     "rvm_path": "/Users/nicksinclair/.rvm",
                     "rvm_prefix": "/Users/nicksinclair",
-                    "rvm_pretty_print_flag": "",
-                    "rvm_proxy": "",
-                    "rvm_quiet_flag": "",
-                    "rvm_ruby_bits": "",
-                    "rvm_ruby_file": "",
-                    "rvm_ruby_make": "",
-                    "rvm_ruby_make_install": "",
-                    "rvm_ruby_mode": "",
-                    "rvm_script_name": "",
-                    "rvm_sdk": "",
-                    "rvm_silent_flag": "",
-                    "rvm_use_flag": "",
-                    "rvm_version": "1.29.3 (latest)",
-                    "rvm_wrapper_name": ""
+                    "rvm_version": "1.29.3 (latest)"
                 },
                 "fips": false,
                 "fqdn": "e-to-the-pi-i.local",
@@ -1751,8 +1619,7 @@
                     "lo0",
                     "p2p0",
                     "stf0",
-                    "utun0",
-                    "utun1"
+                    "utun0"
                 ],
                 "is_chroot": false,
                 "iscsi_iqn": "",
@@ -1794,7 +1661,7 @@
                 },
                 "lsb": {},
                 "machine": "x86_64",
-                "memfree_mb": -183,
+                "memfree_mb": -278,
                 "memtotal_mb": 16384,
                 "model": "MacBookPro11,4",
                 "module_setup": true,
@@ -1880,7 +1747,7 @@
                     "ipv4": [],
                     "ipv6": [
                         {
-                            "address": "fe80::741d:8508:fa68:2c27%utun0",
+                            "address": "fe80::232:eaaf:15fa:5a3d%utun0",
                             "prefix": "64",
                             "scope": "0xb"
                         }
@@ -1891,27 +1758,6 @@
                         "PERFORMNUD",
                         "DAD"
                     ],
-                    "type": "unknown"
-                },
-                "utun1": {
-                    "device": "utun1",
-                    "flags": [
-                        "UP",
-                        "POINTOPOINT",
-                        "RUNNING",
-                        "MULTICAST"
-                    ],
-                    "ipv4": [
-                        {
-                            "address": "172.27.232.24",
-                            "broadcast": "0xfffff800",
-                            "netmask": "172.27.232.24",
-                            "network": "172.27.232.24"
-                        }
-                    ],
-                    "ipv6": [],
-                    "macaddress": "unknown",
-                    "mtu": "1500",
                     "type": "unknown"
                 },
                 "virtualization_role": "",
@@ -1944,8 +1790,7 @@
                 "lo0",
                 "p2p0",
                 "stf0",
-                "utun0",
-                "utun1"
+                "utun0"
             ],
             "ansible_inventory_sources": [
                 "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/hosts.ini"
@@ -1991,7 +1836,7 @@
             "ansible_local": {},
             "ansible_lsb": {},
             "ansible_machine": "x86_64",
-            "ansible_memfree_mb": -183,
+            "ansible_memfree_mb": -278,
             "ansible_memtotal_mb": 16384,
             "ansible_model": "MacBookPro11,4",
             "ansible_nodename": "e-to-the-pi-i.local",
@@ -2081,7 +1926,7 @@
                 "ipv4": [],
                 "ipv6": [
                     {
-                        "address": "fe80::741d:8508:fa68:2c27%utun0",
+                        "address": "fe80::232:eaaf:15fa:5a3d%utun0",
                         "prefix": "64",
                         "scope": "0xb"
                     }
@@ -2092,27 +1937,6 @@
                     "PERFORMNUD",
                     "DAD"
                 ],
-                "type": "unknown"
-            },
-            "ansible_utun1": {
-                "device": "utun1",
-                "flags": [
-                    "UP",
-                    "POINTOPOINT",
-                    "RUNNING",
-                    "MULTICAST"
-                ],
-                "ipv4": [
-                    {
-                        "address": "172.27.232.24",
-                        "broadcast": "0xfffff800",
-                        "netmask": "172.27.232.24",
-                        "network": "172.27.232.24"
-                    }
-                ],
-                "ipv6": [],
-                "macaddress": "unknown",
-                "mtu": "1500",
                 "type": "unknown"
             },
             "ansible_verbosity": 0,
@@ -2159,11 +1983,11 @@
             "inventory_hostname_short": "127",
             "local_platform": "Darwin",
             "module_setup": true,
-            "omit": "__omit_place_holder__c3d39cab71a4498f96fd757acaed95eaa0531488",
+            "omit": "__omit_place_holder__d7830c0fa46da08510f36ba96a5cc4715aa43d61",
             "outputs_dir": "outputs",
             "playbook_dir": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
             "project_name": "docker-server-stack",
-            "terraform_statefile_path": "/Users/nicksinclair/Projects/Testing/terratest/template/docker-server-stack/terraform.tfstate",
+            "terraform_statefile_path": "../template/terraform.tfstate",
             "terraform_template_directory": "template",
             "test_results_dir": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/tmp/tests",
             "tmp_dir": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/tmp"
@@ -2175,7 +1999,7 @@
     "inventory_hostname_short": "127",
     "local_platform": "{{ ansible_system }}",
     "module_setup": true,
-    "omit": "__omit_place_holder__c3d39cab71a4498f96fd757acaed95eaa0531488",
+    "omit": "__omit_place_holder__d7830c0fa46da08510f36ba96a5cc4715aa43d61",
     "outputs_dir": "outputs",
     "play_hosts": [
         "127.0.0.1"
@@ -2189,8 +2013,8 @@
         "terraform-testing"
     ],
     "role_path": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/roles/dump-ansible-vars",
-    "role_uuid": "6a000393-be40-29c2-1207-00000000000a",
-    "terraform_statefile_path": "/Users/nicksinclair/Projects/Testing/terratest/template/docker-server-stack/terraform.tfstate",
+    "role_uuid": "6a000393-be40-8650-c345-00000000000a",
+    "terraform_statefile_path": "../template/terraform.tfstate",
     "terraform_template_directory": "template",
     "test_results_dir": "{{ tmp_dir }}/tests",
     "tmp_dir": "{{ playbook_dir }}/tmp"
@@ -2221,14 +2045,13 @@
         },
         "ansible_all_ipv4_addresses": [
             "192.168.1.92",
-            "192.168.2.1",
-            "172.27.232.24"
+            "192.168.2.1"
         ],
         "ansible_all_ipv6_addresses": [
-            "fe80::cb9:138b:323d:554%en0",
-            "fe80::d497:25ff:fec6:7552%awdl0",
+            "fe80::c5f:b1d3:9de3:f7ef%en0",
+            "fe80::40be:2ff:fe5d:db65%awdl0",
             "fe80::6800:3ff:fe93:be40%bridge0",
-            "fe80::741d:8508:fa68:2c27%utun0"
+            "fe80::232:eaaf:15fa:5a3d%utun0"
         ],
         "ansible_apparmor": {
             "status": "disabled"
@@ -2247,12 +2070,12 @@
             "ipv4": [],
             "ipv6": [
                 {
-                    "address": "fe80::d497:25ff:fec6:7552%awdl0",
+                    "address": "fe80::40be:2ff:fe5d:db65%awdl0",
                     "prefix": "64",
                     "scope": "0x9"
                 }
             ],
-            "macaddress": "d6:97:25:c6:75:52",
+            "macaddress": "42:be:02:5d:db:65",
             "media": "Unknown",
             "media_select": "autoselect",
             "mtu": "1484",
@@ -2303,23 +2126,23 @@
         "ansible_check_mode": false,
         "ansible_connection": "local",
         "ansible_date_time": {
-            "date": "2019-07-19",
-            "day": "19",
-            "epoch": "1563472850",
-            "hour": "02",
-            "iso8601": "2019-07-18T18:00:50Z",
-            "iso8601_basic": "20190719T020050375336",
-            "iso8601_basic_short": "20190719T020050",
-            "iso8601_micro": "2019-07-18T18:00:50.375451Z",
-            "minute": "00",
-            "month": "07",
-            "second": "50",
-            "time": "02:00:50",
+            "date": "2019-08-10",
+            "day": "10",
+            "epoch": "1565406373",
+            "hour": "11",
+            "iso8601": "2019-08-10T03:06:13Z",
+            "iso8601_basic": "20190810T110613914351",
+            "iso8601_basic_short": "20190810T110613",
+            "iso8601_micro": "2019-08-10T03:06:13.914460Z",
+            "minute": "06",
+            "month": "08",
+            "second": "13",
+            "time": "11:06:13",
             "tz": "+08",
             "tz_offset": "+0800",
-            "weekday": "Friday",
-            "weekday_number": "5",
-            "weeknumber": "28",
+            "weekday": "Saturday",
+            "weekday_number": "6",
+            "weeknumber": "31",
             "year": "2019"
         },
         "ansible_default_ipv4": {
@@ -2383,7 +2206,7 @@
             ],
             "ipv6": [
                 {
-                    "address": "fe80::cb9:138b:323d:554%en0",
+                    "address": "fe80::c5f:b1d3:9de3:f7ef%en0",
                     "prefix": "64"
                 }
             ],
@@ -2449,9 +2272,7 @@
             "type": "ether"
         },
         "ansible_env": {
-            "Apple_PubSub_Socket_Render": "/private/tmp/com.apple.launchd.UdvnIZ4BYX/Render",
-            "COLORFGBG": "7;0",
-            "COLORTERM": "truecolor",
+            "Apple_PubSub_Socket_Render": "/private/tmp/com.apple.launchd.JzyNft6xdN/Render",
             "COMMAND_MODE": "unix2003",
             "GEM_HOME": "/Users/nicksinclair/.rvm/gems/ruby-2.5.0",
             "GEM_PATH": "/Users/nicksinclair/.rvm/gems/ruby-2.5.0:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global",
@@ -2460,10 +2281,10 @@
             "GOROOT": "/usr/local/go",
             "HOME": "/Users/nicksinclair",
             "IRBRC": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/.irbrc",
-            "ITERM_PROFILE": "Default",
-            "ITERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
+            "JAVA_HOME": "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home",
             "LC_CTYPE": "UTF-8",
             "LESS": "-R",
+            "LOGIN_SHELL": "1",
             "LOGNAME": "nicksinclair",
             "LSCOLORS": "Gxfxcxdxbxegedabagacad",
             "MY_RUBY_HOME": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0",
@@ -2471,18 +2292,16 @@
             "NVM_CD_FLAGS": "-q",
             "NVM_DIR": "/Users/nicksinclair/.nvm",
             "PAGER": "less",
-            "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
+            "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/usr/local/go/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/neo4j/bin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin:/Users/nicksinclair/go/bin",
             "PROJECT_HOME": "/Users/nicksinclair/Projects",
             "PWD": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
             "RUBY_VERSION": "ruby-2.5.0",
             "SECURITYSESSIONID": "186a8",
             "SHELL": "/bin/zsh",
             "SHLVL": "3",
-            "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.Hz3ca57kZH/Listeners",
+            "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.ycgcUZTah4/Listeners",
             "TERM": "xterm-256color",
-            "TERM_PROGRAM": "iTerm.app",
-            "TERM_PROGRAM_VERSION": "3.2.9",
-            "TERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
+            "TERMINAL_EMULATOR": "JetBrains-JediTerm",
             "TMPDIR": "/var/folders/dw/_swcjv0x6pq0d64k2sm4bjdh0000gn/T/",
             "USER": "nicksinclair",
             "USER_NAME": "nicksinclair",
@@ -2496,39 +2315,22 @@
             "WORKON_HOME": "/Users/nicksinclair/Projects/.virtualenvs",
             "XPC_FLAGS": "0x0",
             "XPC_SERVICE_NAME": "0",
+            "ZDOTDIR": "",
             "ZSH": "/Users/nicksinclair/.oh-my-zsh",
             "_": "/usr/bin/python",
+            "_INTELLIJ_FORCE_SET_GOPATH": "/Users/nicksinclair/go",
+            "_INTELLIJ_FORCE_SET_GOROOT": "/usr/local/go",
+            "_INTELLIJ_FORCE_SET_PATH": "/usr/local/go/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/neo4j/bin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin:/Users/nicksinclair/go/bin",
             "__CF_USER_TEXT_ENCODING": "0x1F5:0x0:0x64",
+            "__INTELLIJ_COMMAND_HISTFILE__": "/Users/nicksinclair/Library/Preferences/IntelliJIdea2019.2/terminal/history/history-11",
             "_system_arch": "x86_64",
             "_system_name": "OSX",
             "_system_type": "Darwin",
             "_system_version": "10.13",
-            "rvm_alias_expanded": "",
-            "rvm_bin_flag": "",
             "rvm_bin_path": "/Users/nicksinclair/.rvm/bin",
-            "rvm_docs_type": "",
-            "rvm_gemstone_package_file": "",
-            "rvm_gemstone_url": "",
-            "rvm_hook": "",
-            "rvm_niceness": "",
-            "rvm_nightly_flag": "",
-            "rvm_only_path_flag": "",
             "rvm_path": "/Users/nicksinclair/.rvm",
             "rvm_prefix": "/Users/nicksinclair",
-            "rvm_pretty_print_flag": "",
-            "rvm_proxy": "",
-            "rvm_quiet_flag": "",
-            "rvm_ruby_bits": "",
-            "rvm_ruby_file": "",
-            "rvm_ruby_make": "",
-            "rvm_ruby_make_install": "",
-            "rvm_ruby_mode": "",
-            "rvm_script_name": "",
-            "rvm_sdk": "",
-            "rvm_silent_flag": "",
-            "rvm_use_flag": "",
-            "rvm_version": "1.29.3 (latest)",
-            "rvm_wrapper_name": ""
+            "rvm_version": "1.29.3 (latest)"
         },
         "ansible_facts": {
             "XHC20": {
@@ -2542,14 +2344,13 @@
             },
             "all_ipv4_addresses": [
                 "192.168.1.92",
-                "192.168.2.1",
-                "172.27.232.24"
+                "192.168.2.1"
             ],
             "all_ipv6_addresses": [
-                "fe80::cb9:138b:323d:554%en0",
-                "fe80::d497:25ff:fec6:7552%awdl0",
+                "fe80::c5f:b1d3:9de3:f7ef%en0",
+                "fe80::40be:2ff:fe5d:db65%awdl0",
                 "fe80::6800:3ff:fe93:be40%bridge0",
-                "fe80::741d:8508:fa68:2c27%utun0"
+                "fe80::232:eaaf:15fa:5a3d%utun0"
             ],
             "ansible_local": {},
             "apparmor": {
@@ -2569,12 +2370,12 @@
                 "ipv4": [],
                 "ipv6": [
                     {
-                        "address": "fe80::d497:25ff:fec6:7552%awdl0",
+                        "address": "fe80::40be:2ff:fe5d:db65%awdl0",
                         "prefix": "64",
                         "scope": "0x9"
                     }
                 ],
-                "macaddress": "d6:97:25:c6:75:52",
+                "macaddress": "42:be:02:5d:db:65",
                 "media": "Unknown",
                 "media_select": "autoselect",
                 "mtu": "1484",
@@ -2623,23 +2424,23 @@
                 "type": "ether"
             },
             "date_time": {
-                "date": "2019-07-19",
-                "day": "19",
-                "epoch": "1563472850",
-                "hour": "02",
-                "iso8601": "2019-07-18T18:00:50Z",
-                "iso8601_basic": "20190719T020050375336",
-                "iso8601_basic_short": "20190719T020050",
-                "iso8601_micro": "2019-07-18T18:00:50.375451Z",
-                "minute": "00",
-                "month": "07",
-                "second": "50",
-                "time": "02:00:50",
+                "date": "2019-08-10",
+                "day": "10",
+                "epoch": "1565406373",
+                "hour": "11",
+                "iso8601": "2019-08-10T03:06:13Z",
+                "iso8601_basic": "20190810T110613914351",
+                "iso8601_basic_short": "20190810T110613",
+                "iso8601_micro": "2019-08-10T03:06:13.914460Z",
+                "minute": "06",
+                "month": "08",
+                "second": "13",
+                "time": "11:06:13",
                 "tz": "+08",
                 "tz_offset": "+0800",
-                "weekday": "Friday",
-                "weekday_number": "5",
-                "weeknumber": "28",
+                "weekday": "Saturday",
+                "weekday_number": "6",
+                "weeknumber": "31",
                 "year": "2019"
             },
             "default_ipv4": {
@@ -2702,7 +2503,7 @@
                 ],
                 "ipv6": [
                     {
-                        "address": "fe80::cb9:138b:323d:554%en0",
+                        "address": "fe80::c5f:b1d3:9de3:f7ef%en0",
                         "prefix": "64"
                     }
                 ],
@@ -2768,9 +2569,7 @@
                 "type": "ether"
             },
             "env": {
-                "Apple_PubSub_Socket_Render": "/private/tmp/com.apple.launchd.UdvnIZ4BYX/Render",
-                "COLORFGBG": "7;0",
-                "COLORTERM": "truecolor",
+                "Apple_PubSub_Socket_Render": "/private/tmp/com.apple.launchd.JzyNft6xdN/Render",
                 "COMMAND_MODE": "unix2003",
                 "GEM_HOME": "/Users/nicksinclair/.rvm/gems/ruby-2.5.0",
                 "GEM_PATH": "/Users/nicksinclair/.rvm/gems/ruby-2.5.0:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global",
@@ -2779,10 +2578,10 @@
                 "GOROOT": "/usr/local/go",
                 "HOME": "/Users/nicksinclair",
                 "IRBRC": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/.irbrc",
-                "ITERM_PROFILE": "Default",
-                "ITERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
+                "JAVA_HOME": "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home",
                 "LC_CTYPE": "UTF-8",
                 "LESS": "-R",
+                "LOGIN_SHELL": "1",
                 "LOGNAME": "nicksinclair",
                 "LSCOLORS": "Gxfxcxdxbxegedabagacad",
                 "MY_RUBY_HOME": "/Users/nicksinclair/.rvm/rubies/ruby-2.5.0",
@@ -2790,18 +2589,16 @@
                 "NVM_CD_FLAGS": "-q",
                 "NVM_DIR": "/Users/nicksinclair/.nvm",
                 "PAGER": "less",
-                "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin",
+                "PATH": "/Users/nicksinclair/Projects/.virtualenvs/gp37/bin:/usr/local/go/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/neo4j/bin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin:/Users/nicksinclair/go/bin",
                 "PROJECT_HOME": "/Users/nicksinclair/Projects",
                 "PWD": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
                 "RUBY_VERSION": "ruby-2.5.0",
                 "SECURITYSESSIONID": "186a8",
                 "SHELL": "/bin/zsh",
                 "SHLVL": "3",
-                "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.Hz3ca57kZH/Listeners",
+                "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.ycgcUZTah4/Listeners",
                 "TERM": "xterm-256color",
-                "TERM_PROGRAM": "iTerm.app",
-                "TERM_PROGRAM_VERSION": "3.2.9",
-                "TERM_SESSION_ID": "w0t3p0:74C6EFFB-D65D-434C-988C-4A69B9A489C9",
+                "TERMINAL_EMULATOR": "JetBrains-JediTerm",
                 "TMPDIR": "/var/folders/dw/_swcjv0x6pq0d64k2sm4bjdh0000gn/T/",
                 "USER": "nicksinclair",
                 "USER_NAME": "nicksinclair",
@@ -2815,39 +2612,22 @@
                 "WORKON_HOME": "/Users/nicksinclair/Projects/.virtualenvs",
                 "XPC_FLAGS": "0x0",
                 "XPC_SERVICE_NAME": "0",
+                "ZDOTDIR": "",
                 "ZSH": "/Users/nicksinclair/.oh-my-zsh",
                 "_": "/usr/bin/python",
+                "_INTELLIJ_FORCE_SET_GOPATH": "/Users/nicksinclair/go",
+                "_INTELLIJ_FORCE_SET_GOROOT": "/usr/local/go",
+                "_INTELLIJ_FORCE_SET_PATH": "/usr/local/go/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0/bin:/Users/nicksinclair/.rvm/gems/ruby-2.5.0@global/bin:/Users/nicksinclair/.rvm/rubies/ruby-2.5.0/bin:/Users/nicksinclair/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin:/usr/local/neo4j/bin:/usr/local/go:/usr/local/go/bin:/Users/nicksinclair/go:/Users/nicksinclair/go/bin:/Users/nicksinclair/.rvm/bin:/Users/nicksinclair/go/bin",
                 "__CF_USER_TEXT_ENCODING": "0x1F5:0x0:0x64",
+                "__INTELLIJ_COMMAND_HISTFILE__": "/Users/nicksinclair/Library/Preferences/IntelliJIdea2019.2/terminal/history/history-11",
                 "_system_arch": "x86_64",
                 "_system_name": "OSX",
                 "_system_type": "Darwin",
                 "_system_version": "10.13",
-                "rvm_alias_expanded": "",
-                "rvm_bin_flag": "",
                 "rvm_bin_path": "/Users/nicksinclair/.rvm/bin",
-                "rvm_docs_type": "",
-                "rvm_gemstone_package_file": "",
-                "rvm_gemstone_url": "",
-                "rvm_hook": "",
-                "rvm_niceness": "",
-                "rvm_nightly_flag": "",
-                "rvm_only_path_flag": "",
                 "rvm_path": "/Users/nicksinclair/.rvm",
                 "rvm_prefix": "/Users/nicksinclair",
-                "rvm_pretty_print_flag": "",
-                "rvm_proxy": "",
-                "rvm_quiet_flag": "",
-                "rvm_ruby_bits": "",
-                "rvm_ruby_file": "",
-                "rvm_ruby_make": "",
-                "rvm_ruby_make_install": "",
-                "rvm_ruby_mode": "",
-                "rvm_script_name": "",
-                "rvm_sdk": "",
-                "rvm_silent_flag": "",
-                "rvm_use_flag": "",
-                "rvm_version": "1.29.3 (latest)",
-                "rvm_wrapper_name": ""
+                "rvm_version": "1.29.3 (latest)"
             },
             "fips": false,
             "fqdn": "e-to-the-pi-i.local",
@@ -2878,8 +2658,7 @@
                 "lo0",
                 "p2p0",
                 "stf0",
-                "utun0",
-                "utun1"
+                "utun0"
             ],
             "is_chroot": false,
             "iscsi_iqn": "",
@@ -2921,7 +2700,7 @@
             },
             "lsb": {},
             "machine": "x86_64",
-            "memfree_mb": -183,
+            "memfree_mb": -278,
             "memtotal_mb": 16384,
             "model": "MacBookPro11,4",
             "module_setup": true,
@@ -3007,7 +2786,7 @@
                 "ipv4": [],
                 "ipv6": [
                     {
-                        "address": "fe80::741d:8508:fa68:2c27%utun0",
+                        "address": "fe80::232:eaaf:15fa:5a3d%utun0",
                         "prefix": "64",
                         "scope": "0xb"
                     }
@@ -3018,27 +2797,6 @@
                     "PERFORMNUD",
                     "DAD"
                 ],
-                "type": "unknown"
-            },
-            "utun1": {
-                "device": "utun1",
-                "flags": [
-                    "UP",
-                    "POINTOPOINT",
-                    "RUNNING",
-                    "MULTICAST"
-                ],
-                "ipv4": [
-                    {
-                        "address": "172.27.232.24",
-                        "broadcast": "0xfffff800",
-                        "netmask": "172.27.232.24",
-                        "network": "172.27.232.24"
-                    }
-                ],
-                "ipv6": [],
-                "macaddress": "unknown",
-                "mtu": "1500",
                 "type": "unknown"
             },
             "virtualization_role": "",
@@ -3071,8 +2829,7 @@
             "lo0",
             "p2p0",
             "stf0",
-            "utun0",
-            "utun1"
+            "utun0"
         ],
         "ansible_inventory_sources": [
             "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/hosts.ini"
@@ -3118,7 +2875,7 @@
         "ansible_local": {},
         "ansible_lsb": {},
         "ansible_machine": "x86_64",
-        "ansible_memfree_mb": -183,
+        "ansible_memfree_mb": -278,
         "ansible_memtotal_mb": 16384,
         "ansible_model": "MacBookPro11,4",
         "ansible_nodename": "e-to-the-pi-i.local",
@@ -3208,7 +2965,7 @@
             "ipv4": [],
             "ipv6": [
                 {
-                    "address": "fe80::741d:8508:fa68:2c27%utun0",
+                    "address": "fe80::232:eaaf:15fa:5a3d%utun0",
                     "prefix": "64",
                     "scope": "0xb"
                 }
@@ -3219,27 +2976,6 @@
                 "PERFORMNUD",
                 "DAD"
             ],
-            "type": "unknown"
-        },
-        "ansible_utun1": {
-            "device": "utun1",
-            "flags": [
-                "UP",
-                "POINTOPOINT",
-                "RUNNING",
-                "MULTICAST"
-            ],
-            "ipv4": [
-                {
-                    "address": "172.27.232.24",
-                    "broadcast": "0xfffff800",
-                    "netmask": "172.27.232.24",
-                    "network": "172.27.232.24"
-                }
-            ],
-            "ipv6": [],
-            "macaddress": "unknown",
-            "mtu": "1500",
             "type": "unknown"
         },
         "ansible_verbosity": 0,
@@ -3286,11 +3022,11 @@
         "inventory_hostname_short": "127",
         "local_platform": "Darwin",
         "module_setup": true,
-        "omit": "__omit_place_holder__c3d39cab71a4498f96fd757acaed95eaa0531488",
+        "omit": "__omit_place_holder__d7830c0fa46da08510f36ba96a5cc4715aa43d61",
         "outputs_dir": "outputs",
         "playbook_dir": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible",
         "project_name": "docker-server-stack",
-        "terraform_statefile_path": "/Users/nicksinclair/Projects/Testing/terratest/template/docker-server-stack/terraform.tfstate",
+        "terraform_statefile_path": "../template/terraform.tfstate",
         "terraform_template_directory": "template",
         "test_results_dir": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/tmp/tests",
         "tmp_dir": "/Users/nicksinclair/Projects/Testing/Ansaform/ansible/tmp"

@@ -5,7 +5,7 @@ variable environment {
 
 variable "project" {}
 
-variable "aws_id" {
+variable "account_id" {
   description = "AWS ROOT ID"
   default = ""
 }
