@@ -211,6 +211,8 @@ class LookupModule(LookupBase):
                     artifacts = [dict(tfstate_dict)]
                     return artifacts
 
+
+                # Handle the cases where 'attributes' has been passed as argument
                 if 'attributes' in lookup_args:
                     if lookup_args['attributes'] == 'list':
                         return [module_path_lists]

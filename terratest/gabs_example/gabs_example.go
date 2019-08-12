@@ -46,7 +46,7 @@ func gabsExample() {
 
 	gObj, err := jsonParsed.JSONPointer("/outter/alsoInner/array1/1")
 	check(err)
-	fmt.Printf("%T, %s\n", gObj, gObj)
+	fmt.Printf("JSONPointer: %T, %s\n", gObj, gObj)
 
 	value, ok = gObj.Data().(float64)
 	// value == 40.0, ok == true
@@ -80,4 +80,5 @@ func gabsExample() {
 	for _, child := range jsonParsed.S("array").Children() {
 		fmt.Println(child.Data().(string))
 	}
+
 }

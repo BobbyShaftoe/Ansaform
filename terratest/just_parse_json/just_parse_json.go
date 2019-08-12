@@ -1,4 +1,4 @@
-package terratest_helpers
+package just_parse_json
 
 import (
 	"encoding/json"
