@@ -99,3 +99,74 @@ Kelsey Hightower (@kelseyhightower)  `https://t.co/BPQT3GiDXc`
   266  history | egrep 'json|state|plan'
   267  history | egrep 'json|state|plan|sentinel'
 ```
+
+
+```
+# file tf.policy
+allowed_node_sizes = [
+	"s-1vcpu-2gb",
+]
+
+allowed_regions = [
+	"ams3",
+]
+
+allowed_tf_versions = [
+	"0.12.0",
+]
+
+node_pool_max_size = 3
+
+tf_version = rule {
+	input.terraform_version in allowed_tf_versions
+}
+
+no_destroys = func() {
+	for input.resource_changes as change {
+		if change.change.actions contains "destroy" {
+			print("No destroys allowed")
+			return (false)
+		}
+	}
+	return (true)
+}
+
+max_nodepool_size = func() {
+	for input.resource_changes as change {
+		if change.address contains "digitalocean_kubernetes_cluster" {
+			for change.change.after.node_pool as pool {
+				if pool.node_count > node_pool_max_size {
+					error("Node pool", pool.name, "shouldn't exceed max node size", node_pool_max_size, "it's currently", pool.node_count)
+				}
+			}
+		}
+	}
+	return (true)
+}
+
+region_check = func() {
+	for input.configuration.root_module.resources as resource {
+		if resource.expressions.region.constant_value not in allowed_regions {
+			return (false)
+		}
+	}
+	return (true)
+}
+
+node_size = func() {
+	for input.resource_changes as change {
+		if change.address contains "digitalocean_kubernetes_cluster" {
+			for change.change.after.node_pool as pool {
+				if pool.size not in allowed_node_sizes {
+					return (false)
+				}
+			}
+		}
+	}
+	return (true)
+}
+
+main = rule {
+	tf_version and no_destroys() and region_check() and max_nodepool_size() and node_size()
+}
+```
