@@ -76,3 +76,26 @@ _"They also provide Docker images if that's your thing._"
 
 Kelsey Hightower (@kelseyhightower)  `https://t.co/BPQT3GiDXc`
 
+
+```
+  171  sudo cp Sentinel/sentinel /usr/local/bin
+  172  sudo chmod 0755 Sentinel/sentinel /usr/local/bin
+  175  sudo -R chmod 0755 Sentinel/sentinel /usr/local/bin
+  176  sudo  chmod -R 0755 Sentinel/sentinel /usr/local/bin
+  178  sudo  chmod -R 0755  /usr/local/bin/sentinel
+  180  sentinel
+  187  go get github.com/tapirs/tfjson
+  189  go get github.com/tapirs/tfjson
+  202  tfjson
+  229  tfjson plan.out
+  231  sentinel apply -global input="`tfjson plan.out`" policy.tf
+  232  sentinel apply -global input="`tfjson plan.out`" tf.policy
+  234  sentinel apply -global input="`tfjson plan.out`" tf.policy
+  248  terraform plan -help
+  249  terraform plan -out=plan.out
+  250  terraform-11 plan -out=plan.out
+  264  git clone https://github.com/multicloud-iac/terraform-sentinel-policies.git
+  265  sentinel apply -global input="`tfjson plan.out`" tf.policy
+  266  history | egrep 'json|state|plan'
+  267  history | egrep 'json|state|plan|sentinel'
+```
