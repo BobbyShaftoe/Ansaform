@@ -170,3 +170,32 @@ main = rule {
 	tf_version and no_destroys() and region_check() and max_nodepool_size() and node_size()
 }
 ```
+
+
+```
+# file: tf.policy
+
+print("input.data.destroy is", input.data.destroy)
+
+no_destroys = rule {
+	input.data.destroy is false
+}
+
+dont_touch_my_kube = func(data) {
+	for data as i, j {
+		// skipping the destroy value since there is a dedicated rule for it
+		if i == "destroy" {
+			continue
+		} else {
+			print(i)
+			if i contains "digitalocean_kubernetes_cluster" {
+				print("Refusing modification of digitalocean_kubernetes_cluster resources")
+				return (false)
+			}
+		}
+	}
+	return(true)
+}
+
+main = rule { no_destroys and dont_touch_my_kube(input.data) }
+```
