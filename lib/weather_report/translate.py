@@ -8,8 +8,69 @@ import itertools
 from pprint import pprint
 from optparse import OptionParser
 import pandas as pd
+from pandas.core.indexes.multi import MultiIndex
 from collections import Counter
 import re
+
+
+def flatten_df(df):
+    """
+    Function that will reliably flatten a dataframe
+    This function is recommended as a simple interface to the heavy flatten_multiindex function
+
+    :param df: A dataframe
+    :return: A dataframe with Index of only one dimension
+    """
+    df = df.reset_index()
+    df.columns = flatten_multiindex(df.columns)
+    return df
+
+
+def flatten_multiindex(mi, sep=" - ", format=None):
+    """
+    This function is the work horse to handle all range of Indicies on dataframes, such as multi indexed dataframes,
+    or any number of dimensions of Indexes
+
+    :param mi: MultiIndex of dataframe
+    :param sep: Separator used in heading names
+    :param format: Format string for header names
+    :return: Flattened index of dataframe
+    """
+
+    if issubclass(type(mi), pd.core.indexes.multi.MultiIndex):
+        # Flatten multi-index headers
+        if format is None:
+            # Flatten by putting sep between each header value
+            flat_index = [sep.join([str(x) for x in tup]).strip(sep)
+                          for tup in mi.values]
+        else:
+            # Flatten according to the provided format string
+            flat_index = []
+            for tuple in mi.values:
+
+                placeholders = []
+                for name in mi.names:
+                    if name is None:
+                        name = ""
+                    name = "{" + str(name) + "}"
+                    placeholders.append(name)
+
+                # Check if index segment contains each placeholder
+                if all([item != "" for item in tuple]):
+                    # Replace placeholders in format with corresponding values
+                    flat_name = format
+                    for i, val in enumerate(tuple):  # Iterates over the values in this index segment
+                        flat_name = flat_name.replace(placeholders[i], val)
+                else:
+                    # If the segment doesn't contain all placeholders, just join them with sep instead
+                    flat_name = sep.join(tuple).strip(sep)
+                flat_index.append(flat_name)
+    elif issubclass(type(mi), pd.core.indexes.base.Index):
+        return mi
+    else:
+        raise TypeError(f"Expected Index but got {type(mi)}")
+
+    return flat_index
 
 
 def dicts_to_data_frame(dicts):

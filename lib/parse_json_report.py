@@ -3,6 +3,11 @@
   Reference on Pandas:
     - https://www.skytowner.com/explore/splitting_dictionary_into_separate_columns_in_pandas_dataframe
     - https://github.com/pandas-dev/pandas/issues/36245
+
+    - https://bitbucket.org/hrojas/learn-pandas/src/master/
+    - https://pandas.pydata.org/pandas-docs/version/1.0.2/getting_started/tutorials.html
+    - https://github.com/BobbyShaftoe/effective-pandas
+    - https://nbviewer.jupyter.org/urls/bitbucket.org/hrojas/learn-pandas/raw/master/lessons/Cookbook%20-%20Select.ipynb#
 """
 import sys
 
@@ -14,6 +19,11 @@ import pandas as pd
 from pprint import pprint
 import json
 
+pd.set_option("large_repr", "truncate")
+pd.set_option("expand_frame_repr", False)
+pd.set_option("max_rows", 5)
+pd.set_option("max_columns", 9)
+pd.set_option("max_colwidth", 16)
 
 json_data = wrl.read_json('../template/tfstate_formatted.json')
 
@@ -89,6 +99,13 @@ print('\nCreating separate dataframes\n')
 
 df1_cols = set(csl).symmetric_difference(set(new_df.columns))
 pprint(df1_cols)
+
+
+res = wrt.flatten_df(new_df)
+
+print('Flatened dataframe\n{}\n'.format(res))
+print('Flatened dataframe info\n{}\n'.format(res.info))
+print('Flatened dataframe axes\n{}\n'.format(res.axes))
 
 
 
