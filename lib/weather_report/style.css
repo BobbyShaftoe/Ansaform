@@ -1,0 +1,340 @@
+
+body {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 100;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: Arial,Monaco,Andale Mono,Ubuntu Mono,monospace;
+}
+
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: .25
+}
+
+hr:not([size]) {
+    height: 1px
+}
+
+.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2
+}
+
+
+
+.h5,h5 {
+    font-size: 1.25rem
+}
+
+.h6,h6 {
+    font-size: 1rem
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+
+
+
+ol,ul {
+    padding-left: 2rem
+}
+
+dl,ol,ul {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+
+ol ol,ol ul,ul ol,ul ul {
+    margin-bottom: 0
+}
+
+dt {
+    font-weight: 700
+}
+
+dd {
+    margin-bottom: .5rem;
+    margin-left: 0
+}
+
+blockquote {
+    margin: 0 0 1rem
+}
+
+b,strong {
+    font-weight: bolder
+}
+
+.small,small {
+    font-size: .875em
+}
+
+
+
+a {
+    color: #1266f1;
+    text-decoration: underline
+}
+
+a:hover {
+    color: #0e52c1
+}
+
+a:not([href]):not([class]),a:not([href]):not([class]):hover {
+    color: inherit;
+    text-decoration: none
+}
+
+
+pre {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+    font-size: .875em
+}
+
+pre code {
+    font-size: inherit;
+    color: inherit;
+    word-break: normal
+}
+
+code {
+    font-size: .875em;
+    color: #d63384;
+    word-wrap: break-word
+}
+
+a>code {
+    color: inherit
+}
+
+
+img,svg {
+    vertical-align: middle
+}
+
+table {
+    caption-side: bottom;
+    border-collapse: collapse
+}
+
+caption {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #757575;
+    text-align: left
+}
+
+th {
+    text-align: inherit;
+    text-align: -webkit-match-parent
+}
+
+tbody,td,tfoot,th,thead,tr {
+    border: none;
+    /*border: 0 solid;*/
+    border-color: inherit;
+    font-weight: 100;
+    font-family: Arial,Helvetica,Monaco,Andale Mono,Ubuntu Mono,monospace;
+}
+
+tr {
+    line-height: 1.3em;
+}
+
+td {
+    text-indent: 5px;
+}
+
+
+label {
+    display: inline-block
+}
+
+
+
+
+
+.table {
+    --mdb-table-bg: transparent;
+    --mdb-table-striped-color: #212529;
+    --mdb-table-striped-bg: rgba(0,0,0,0.05);
+    --mdb-table-active-color: #212529;
+    --mdb-table-active-bg: rgba(0,0,0,0.1);
+    --mdb-table-hover-color: #212529;
+    --mdb-table-hover-bg: rgba(0,0,0,0.075);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+    border-color: #e0e0e0;
+    border-spacing:0.2rem 0.4rem;
+    border-collapse: separate;
+    text-indent: 3px;
+}
+
+.table>:not(caption)>*>* {
+    background-color: var(--mdb-table-bg);
+    border-bottom-width: 1px;
+    -webkit-box-shadow: inset 0 0 0 9999px var(--mdb-table-accent-bg);
+    box-shadow: inset 0 0 0 9999px var(--mdb-table-accent-bg)
+}
+
+.table>tbody {
+    vertical-align: inherit
+}
+
+.table>thead {
+    vertical-align: middle;
+    color: #f1f6fa;
+    font-size: 1em;
+    background-color: #457699;
+    letter-spacing: 1px;
+}
+
+.caption-top {
+    caption-side: top
+}
+
+.table-bordered>:not(caption)>* {
+    border-width: 1px 0
+}
+
+.table-bordered>:not(caption)>*>* {
+    border-width: 0 1px
+}
+
+.table-borderless>:not(caption)>*>* {
+    border-bottom-width: 0
+}
+
+.table-striped>tbody>tr:nth-of-type(even) {
+    --mdb-table-accent-bg: var(--mdb-table-striped-bg);
+    color: var(--mdb-table-striped-color);
+}
+
+.table-active {
+    --mdb-table-accent-bg: var(--mdb-table-active-bg);
+    color: var(--mdb-table-active-color)
+}
+
+.table-hover>tbody>tr:hover {
+    --mdb-table-accent-bg: var(--mdb-table-hover-bg)
+}
+
+
+.table-primary {
+    --mdb-table-bg: #d0e0fc;
+    --mdb-table-striped-bg: #c6d5ef;
+    --mdb-table-striped-color: #000;
+    --mdb-table-active-bg: #bbcae3;
+    --mdb-table-active-color: #000;
+    --mdb-table-hover-bg: #c0cfe9;
+    --mdb-table-hover-color: #000;
+    color: #000;
+    border-color: #bbcae3
+}
+
+.table-secondary {
+    --mdb-table-bg: #f0d8ff;
+    --mdb-table-striped-bg: #e4cdf2;
+    --mdb-table-striped-color: #000;
+    --mdb-table-active-bg: #d8c2e6;
+    --mdb-table-active-color: #000;
+    --mdb-table-hover-bg: #dec8ec;
+    --mdb-table-hover-color: #000;
+    color: #000;
+    border-color: #d8c2e6
+}
+
+.table-success {
+    --mdb-table-bg: #ccf1db;
+    --mdb-table-striped-bg: #c2e5d0;
+    --mdb-table-striped-color: #000;
+    --mdb-table-active-bg: #b8d9c5;
+    --mdb-table-active-color: #000;
+    --mdb-table-hover-bg: #bddfcb;
+    --mdb-table-hover-color: #000;
+    color: #000;
+    border-color: #b8d9c5
+}
+
+.table-info {
+    --mdb-table-bg: #d7f2fb;
+    --mdb-table-striped-bg: #cce6ee;
+    --mdb-table-striped-color: #000;
+    --mdb-table-active-bg: #c2dae2;
+    --mdb-table-active-color: #000;
+    --mdb-table-hover-bg: #c7e0e8;
+    --mdb-table-hover-color: #000;
+    color: #000;
+    border-color: #c2dae2
+}
+
+.table-warning {
+    --mdb-table-bg: #fec;
+    --mdb-table-striped-bg: #f2e2c2;
+    --mdb-table-striped-color: #000;
+    --mdb-table-active-bg: #e6d6b8;
+    --mdb-table-active-color: #000;
+    --mdb-table-hover-bg: #ecdcbd;
+    --mdb-table-hover-color: #000;
+    color: #000;
+    border-color: #e6d6b8
+}
+
+.table-danger {
+    --mdb-table-bg: #fed6dd;
+    --mdb-table-striped-bg: #f1cbd2;
+    --mdb-table-striped-color: #000;
+    --mdb-table-active-bg: #e5c1c7;
+    --mdb-table-active-color: #000;
+    --mdb-table-hover-bg: #ebc6cc;
+    --mdb-table-hover-color: #000;
+    color: #000;
+    border-color: #e5c1c7
+}
+
+.table-light {
+    --mdb-table-bg: #fbfbfb;
+    --mdb-table-striped-bg: #eee;
+    --mdb-table-striped-color: #000;
+    --mdb-table-active-bg: #e2e2e2;
+    --mdb-table-active-color: #000;
+    --mdb-table-hover-bg: #e8e8e8;
+    --mdb-table-hover-color: #000;
+    color: #000;
+    border-color: #e2e2e2
+}
+
+.table-dark {
+    --mdb-table-bg: #262626;
+    --mdb-table-striped-bg: #313131;
+    --mdb-table-striped-color: #fff;
+    --mdb-table-active-bg: #3c3c3c;
+    --mdb-table-active-color: #fff;
+    --mdb-table-hover-bg: #363636;
+    --mdb-table-hover-color: #fff;
+    color: #fff;
+    border-color: #3c3c3c
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+
+

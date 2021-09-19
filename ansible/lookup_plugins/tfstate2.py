@@ -29,8 +29,8 @@ try:
     import display
 except ImportError:
     from ansible.utils.display import Display
-    display = Display()
 
+    display = Display()
 
 #  Terrraform version 12 as default
 #  --------------------------------
@@ -59,7 +59,6 @@ class LookupModule(LookupBase):
 
         global lookupfile, tfstate_resource_attributes_schema, lookup_args
         lookup_args = kwargs
-
 
         #  Attributes in the Terraforem state schema for version 0.12.x
         #  (see above where this is assigned: '_terraform_version' = 'v12')
@@ -92,8 +91,6 @@ class LookupModule(LookupBase):
                 'provider': '',
                 'instances': ''
             }})
-
-
 
         # tfstate_resource_instances_attributes_schema = OrderedDict({
         #     'v12': {
@@ -165,11 +162,6 @@ class LookupModule(LookupBase):
         #         }
         #     }
 
-
-
-
-
-
         for term in terms:
             """
             When the playbook specifies a lookup, this method is run. 
@@ -191,7 +183,7 @@ class LookupModule(LookupBase):
             except AnsibleParserError:
                 print(AnsibleError("could not locate file in lookup: {}".format(term)))
                 raise
-            except AnsibleError:
+            except AnsibleError as e:
                 print(AnsibleError('Something happened, this was original exception: %s' % to_native(e)))
                 raise
             except Exception as e:
@@ -211,7 +203,6 @@ class LookupModule(LookupBase):
                     artifacts = [dict(tfstate_dict)]
                     return artifacts
 
-
                 # Handle the cases where 'attributes' has been passed as argument
                 if 'attributes' in lookup_args:
                     if lookup_args['attributes'] == 'list':
@@ -227,7 +218,6 @@ class LookupModule(LookupBase):
                         # Add instance keys to module all attributes
                         return module_all_attributes
 
-
                 # Process option to return specific sections
                 if 'section' in kwargs:
                     assets = contents_json[kwargs['section']]
@@ -236,14 +226,13 @@ class LookupModule(LookupBase):
             except AnsibleParserError:
                 print(AnsibleError('Something happened, this was original exception: %s' % to_native(e)))
                 raise
-            except AnsibleError:
+            except AnsibleError as e:
                 print(AnsibleError('Something happened, this was original exception: %s' % to_native(e)))
             except Exception as e:
                 print('An unexpected exception happened', str(e))
                 raise
 
         return artifacts
-
 
 
 def enumerate_assets(modules_list, enumerate_key):
@@ -301,8 +290,9 @@ def get_tfstate_attributes(resources, lookup_args):
             module_name_attributes_dict = {'name': resource['name'], 'module': resource['module']}
 
             # Update the tfstate resource schema defined in this class, with all resource attributes
-            [tfstate_resource_attributes_dict.update({k: resource[k]})
-             for k in dict(tfstate_resource_attributes_dict) if k in resource]
+            [tfstate_resource_attributes_dict.update({k: resource[k]}) for k in dict(
+                tfstate_resource_attributes_dict)
+             if k in resource]
 
             # Update the tfstate resource schema with module names and paths
             tfstate_resource_attributes_dict.update(module_name_attributes_dict)
@@ -316,21 +306,20 @@ def get_tfstate_attributes(resources, lookup_args):
             for instance in resource['instances']:
                 module_all_instance_attribute_keys.append(instance.keys())
 
-
         # Reshape option passed in as argument of lookup function handled here
         # Depending on type, default data structure is transformed
         # Reshape options are: ['merge', 'flatten', '1l', '2l']
         if 'reshape' in lookup_args:
-            module_name_attributes, module_all_attributes = merge_data_structure(module_name_attributes, module_all_attributes)
+            module_name_attributes, module_all_attributes = merge_data_structure(module_name_attributes,
+                                                                                 module_all_attributes)
 
-    except AnsibleError:
+    except AnsibleError as e:
         AnsibleError('Something happened, this was original exception: %s' % to_native(e))
     except Exception as e:
         print('An unexpected exception happened', str(e))
         raise
 
     return module_name_attributes, module_all_attributes
-
 
 
 def merge_data_structure(module_name_attributes, module_all_attributes):
@@ -353,14 +342,12 @@ def merge_data_structure(module_name_attributes, module_all_attributes):
     return module_name_attributes, module_all_attributes
 
 
-
 def add_instance_attributes():
     """
 
     :return:
     """
     return []
-
 
 
 def enumerate_module_paths(module_path_lists):
